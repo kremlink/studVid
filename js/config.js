@@ -1,0 +1,60 @@
+export let config={
+ metrika:{name:64365469},
+ ls:{
+  name:'ls-vid'
+ },
+ 'index':{
+  preload:{
+   '1':{
+    /*'images/':{imgs:['question-photo.png','map-bg2.png']},
+    'images/packing/':{j:[12,8,5],tmpl:['packing-[i]-[j].png','packing-[i]-[j]-p.png']}*/
+   }
+  }
+ },
+ 'timer':{
+  url:'timer.php?time='
+ },
+ board:{//rename and redo
+  defName:'Noname',
+  url:'php.php?board='
+ },
+ sound:{
+  template:'<audio src="../sounds/<%= src %>.mp3" preload="auto"></audio>'
+ },
+ 'player':{
+  btnBack:30,
+  timecodes:{
+   '1':[//noAutoClose:true|repeatable:true|delayedPause:-1|noVidAutoPlay:true|checkpoint:true|iniTimer:true
+    {start:1,invoked:false,iniTimer:true,noAutoClose:true,data:{interactive:'Start',type:'name'}}
+   ]
+  },
+  redirect:{//needed?
+   '1':'end.php'
+  },
+  quality:{
+   '1':[
+    {
+     //speed:[4,1000],
+     width:'(min-width:1281px)',
+     src:'../oceans.mp4',
+     label:'720P'
+    },
+    {
+     //speed:[3,4],
+     width:'(min-width:801px) and (max-width:1280px)',
+     src:'../oceans1.mp4',
+     label:'480P'
+    },
+    {
+     //speed:[0,3],
+     width:'(max-width:800px)',
+     src:'../oceans.mp4',
+     label:'360P'
+    }
+   ]
+  }
+ },
+ interactives:{
+
+ }
+};

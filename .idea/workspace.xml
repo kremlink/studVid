@@ -1,0 +1,1525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/js/modules/boardMgr/view.js" line="43" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/SASHA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/www.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Strange bugs.rtf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TZ.rtf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/css/style.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/html/board.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/html/components/ep1-sprite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/html/components/ep2-sprite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/html/components/ep3-sprite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/html/components/ep4-sprite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/html/components/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/html/components/head.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/html/components/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/html/components/scripts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/html/components/shared-sprite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/html/components/src.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/html/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/html/index1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/html/index2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/html/index3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/jsTmpl-d.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/jsTmpl.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/base/_all.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/base/_exts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/base/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/base/_normalize.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/base/_rules.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/base/_vars.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/components/_all.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/components/_ep1.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/components/_ep2.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/components/_ep3.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/components/_ep4.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/components/_footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/components/_header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/components/_main.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/components/_shared.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/components/_video.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/components/_wobble.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/core/_all.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/core/_base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/core/_exts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/core/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/partials/_all.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/partials/_board.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/sprites/_all.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/sprites/_shared.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/scss/style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/sprites/shared-sprite/nothing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/sprites/tmpl.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/2-14-text-bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/2-14-text-top.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/button-bottom.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/button-top.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/clock-bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/list-bg-bot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/list-bg-top.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/map-10km.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/map-2km.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/map-4km.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/map-wheel-2km.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/map-wheel-4km.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/pipes-bg-bot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/pipes-bg-top.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/pipes-elements-hover.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/pipes-elements-i-n.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/pipes-elements-i-y.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/pipes-elements-l-n.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/pipes-elements-l-y.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/pipes-elements-t-n.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/pipes-elements-t-y.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/pop-poloski1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/question-bg-add.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/question-bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/text-bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep1-sprite/text-top.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep2-sprite/2-10-button-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep2-sprite/2-10-button-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep2-sprite/2-14-arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep2-sprite/2-14-horizontal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep2-sprite/2-14-hover.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep2-sprite/2-14-text-bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep2-sprite/2-14-text-pic.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep2-sprite/2-14-text-top.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep2-sprite/2-14-vert.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep2-sprite/2-17-map-bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep2-sprite/2-17-map-grid.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep2-sprite/2-17-map-next.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep2-sprite/clock-bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep2-sprite/pop-poloski1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep2-sprite/text-bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep2-sprite/text-top.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-1-r.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-1-w.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-10-r.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-10-w.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-2-r.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-2-w.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-3-r.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-3-w.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-4-r.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-4-w.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-5-r.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-5-w.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-6-r.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-6-w.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-7-r.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-7-w.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-8-r.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-8-w.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-9-r.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-9-w.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-02-bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-07-3-cover.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-07-5-cover.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-07-7-cover.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-07-error.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-07-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-07-skip.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/3-21-aim-fixed.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/clock-bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/pop-poloski1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/text-bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep3-sprite/text-top.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/2-10-button-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/2-10-button-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/3-07-error.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/3-07-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/3-07-skip.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/4-18-3-cover.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/btn-1-call.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/btn-2-warm.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/btn-3-connection.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/btn-4-food.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/btn-5-tree.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/btn-derevo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/btn-freeze.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/btn-run.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/button-bottom.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/button-down-h.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/button-left-h.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/button-right-h.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/button-top.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/button-up-h.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/clock-bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/device.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/over-video.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/pop-poloski1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/text-bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/text-top.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/svgSprites/ep4-sprite/top.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/board.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/video-js.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/but-click.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/icon-30.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/icon-back.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bf/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bf/lib/toggle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bf/lib/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/built.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/lib/backbone.localStorage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/lib/backbone.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/lib/event.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/lib/imagesloaded.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/lib/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/lib/lottie.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/lib/silvermine-videojs-quality-selector.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/lib/underscore.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/lib/video.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/baseInteractive/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/baseInteractive/view.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/boardMgr/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/boardMgr/view.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/index-page/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/index-page/view.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/lsMgr/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/lsMgr/view.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/main/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/main/view.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/metrika.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/player/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/player/view.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/soundMgr/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/soundMgr/view.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/start/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/start/view.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/timer/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/timer/view.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="www" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>lottie</find>
+      <find>seeki</find>
+      <find>pause()</find>
+      <find>map-bg</find>
+      <find>map-bg2</find>
+      <find>&lt;img</find>
+      <find>timer.svg</find>
+      <find>photo</find>
+      <find>timer.s</find>
+      <find>map-bg1</find>
+      <find>firts</find>
+      <find>first</find>
+      <find>photos</find>
+      <find>.svg</find>
+      <find>.jpg</find>
+      <find>.png</find>
+      <find>3-21-aim-fixed</find>
+      <find>4-z</find>
+      <find>tart-pop</find>
+      <find>main:step</find>
+      <find>main:toggle</find>
+      <find>page:timer</find>
+      <find>fs</find>
+      <find>app</find>
+      <find>curr</find>
+      <find>curti</find>
+      <find>ls.cur</find>
+      <find>ls.pcur</find>
+      <find>curt</find>
+      <find>epind</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>this.pData</replace>
+      <replace>{</replace>
+      <replace>getTech</replace>
+      <replace>data.quality[epIndex]</replace>
+      <replace>$bgSound</replace>
+      <replace>$bgVideo</replace>
+      <replace>icon-ep2</replace>
+      <replace>icon-ep3</replace>
+      <replace>icon-ep1</replace>
+      <replace>icon-ep4</replace>
+      <replace>&lt;video class=&quot;ov-video&quot; preload=&quot;auto&quot; loop muted playsinline&gt;</replace>
+    </replaceStrings>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/js/modules/boat/view.js" />
+        <option value="$PROJECT_DIR$/js/modules/map/data.js" />
+        <option value="$PROJECT_DIR$/js/modules/cartogr/view.js" />
+        <option value="$PROJECT_DIR$/js/modules/forest/view.js" />
+        <option value="$PROJECT_DIR$/js/modules/leaflet/view.js" />
+        <option value="$PROJECT_DIR$/js/modules/start/view.js" />
+        <option value="$PROJECT_DIR$/config.js" />
+        <option value="$PROJECT_DIR$/js/modules/index/view.js" />
+        <option value="$PROJECT_DIR$/js/modules/boardMgr/data.js" />
+        <option value="$PROJECT_DIR$/_dev/scss/partials/_index.scss" />
+        <option value="$PROJECT_DIR$/js/bf/base.js" />
+        <option value="$PROJECT_DIR$/_dev/scss/base/_rules.scss" />
+        <option value="$PROJECT_DIR$/js/modules/board-page/data.js" />
+        <option value="$PROJECT_DIR$/js/modules/board-page/view.js" />
+        <option value="$PROJECT_DIR$/_dev/html/board.html" />
+        <option value="$PROJECT_DIR$/_dev/scss/partials/_board.scss" />
+        <option value="$PROJECT_DIR$/js/modules/qs/view.js" />
+        <option value="$PROJECT_DIR$/js/modules/soundMgr/data.js" />
+        <option value="$PROJECT_DIR$/js/modules/vibrate/data.js" />
+        <option value="$PROJECT_DIR$/js/modules/vibrate/view.js" />
+        <option value="$PROJECT_DIR$/js/modules/catch/view.js" />
+        <option value="$PROJECT_DIR$/_dev/html/index2.html" />
+        <option value="$PROJECT_DIR$/episode3.html" />
+        <option value="$PROJECT_DIR$/episode2.html" />
+        <option value="$PROJECT_DIR$/episode1.html" />
+        <option value="$PROJECT_DIR$/episode4.html" />
+        <option value="$PROJECT_DIR$/_dev/html/index3.html" />
+        <option value="$PROJECT_DIR$/_dev/scss/components/_ep3.scss" />
+        <option value="$PROJECT_DIR$/js/modules/photos/data.js" />
+        <option value="$PROJECT_DIR$/js/modules/photos/view.js" />
+        <option value="$PROJECT_DIR$/_dev/scss/components/_ep1.scss" />
+        <option value="$PROJECT_DIR$/_dev/scss/components/_ep4.scss" />
+        <option value="$PROJECT_DIR$/js/modules/baseInteractive/data.js" />
+        <option value="$PROJECT_DIR$/js/modules/map/view.js" />
+        <option value="$PROJECT_DIR$/_dev/html/index.html" />
+        <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/js/modules/baseInteractive/view.js" />
+        <option value="$PROJECT_DIR$/js/modules/lsMgr/data.js" />
+        <option value="$PROJECT_DIR$/_dev/scss/components/_main.scss" />
+        <option value="$PROJECT_DIR$/js/modules/player/data.js" />
+        <option value="$PROJECT_DIR$/js/modules/main/data.js" />
+        <option value="$PROJECT_DIR$/js/modules/index-page/data.js" />
+        <option value="$PROJECT_DIR$/js/modules/player/view.js" />
+        <option value="$PROJECT_DIR$/js/modules/timer/data.js" />
+        <option value="$PROJECT_DIR$/js/modules/main/view.js" />
+        <option value="$PROJECT_DIR$/js/modules/index-page/view.js" />
+        <option value="$PROJECT_DIR$/js/modules/timer/view.js" />
+        <option value="$PROJECT_DIR$/js/modules/boardMgr/view.js" />
+        <option value="$PROJECT_DIR$/js/modules/lsMgr/view.js" />
+        <option value="$PROJECT_DIR$/_dev/html/index1.html" />
+        <option value="$PROJECT_DIR$/js/config.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="1929" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectId" id="1pF8Hv4Wrs0pUbJYIYxJYfodWrM" />
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>SASS/SCSS</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="_dev" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="_dev" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="_dev" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="_dev" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="_dev" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="_dev" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="baseInteractive" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="board-page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="boardMgr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="boat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="cartogr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="catch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="forest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="index-page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="leaflet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="lsMgr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="map" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="player" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="qs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="radar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="scheme" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="soundMgr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="start" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="timer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="vibrate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="options.lastSelected" value="editing.templates" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sasha\Desktop\Projects\la\src\js\modules\baseInteractive" />
+      <recent name="G:\Sashino\PapkaSasha\z-o-t\template\html5-template\usual-template\www\scss" />
+      <recent name="G:\Sashino\PapkaSasha\z-o-t\template\html5-template\usual-template\www\scss\base\sprites" />
+      <recent name="G:\Sashino\PapkaSasha\z-o-t\template\html5-template\usual-template\www\css\components" />
+      <recent name="G:\Sashino\PapkaSasha\z-o-t\template\html5-template\usual-template\www\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sasha\Desktop\Projects\la\src\js\modules" />
+      <recent name="C:\Users\Sasha\Desktop\Projects\la\src\_dev\html" />
+      <recent name="C:\Users\Sasha\Desktop\Projects\la\src\_dev\scss\components" />
+      <recent name="C:\Users\Sasha\Desktop\Projects\la\src\js\modules\baseInteractive" />
+      <recent name="C:\Users\Sasha\Desktop\Projects\la\src\js\modules\main" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="" />
+      <created>1402423124441</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1402423124441</updated>
+      <workItem from="1503348524326" duration="79000" />
+      <workItem from="1503478779587" duration="734000" />
+      <workItem from="1507115259073" duration="391000" />
+      <workItem from="1520330763960" duration="29000" />
+      <workItem from="1539803962617" duration="56000" />
+      <workItem from="1539804997991" duration="21000" />
+      <workItem from="1593118034931" duration="86096000" />
+      <workItem from="1594179094292" duration="41198000" />
+      <workItem from="1594548972180" duration="19648000" />
+      <workItem from="1594892909460" duration="74257000" />
+      <workItem from="1595514451281" duration="54692000" />
+      <workItem from="1596474320843" duration="1436000" />
+      <workItem from="1596541091691" duration="1874000" />
+      <workItem from="1596737558802" duration="39000" />
+      <workItem from="1597130031435" duration="28000" />
+      <workItem from="1597130372484" duration="74000" />
+      <workItem from="1597269951697" duration="32000" />
+      <workItem from="1597270095565" duration="2749000" />
+      <workItem from="1597395247025" duration="9602000" />
+      <workItem from="1597481240405" duration="603000" />
+      <workItem from="1597833781693" duration="92939000" />
+      <workItem from="1598513934050" duration="3431000" />
+      <workItem from="1599553130444" duration="2407000" />
+      <workItem from="1599823251516" duration="2214000" />
+      <workItem from="1600245440187" duration="129000" />
+      <workItem from="1600257326942" duration="6785000" />
+      <workItem from="1600628456627" duration="85248000" />
+      <workItem from="1602232803180" duration="24330000" />
+      <workItem from="1603018860721" duration="252548000" />
+      <workItem from="1610984994854" duration="1926000" />
+      <workItem from="1614767405317" duration="2581000" />
+      <workItem from="1615276413116" duration="6286000" />
+      <workItem from="1615746344781" duration="35551000" />
+      <workItem from="1616431070545" duration="1028000" />
+    </task>
+    <task id="LOCAL-00003" summary="update steps&#10;add timer">
+      <created>1593691902289</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1593691902289</updated>
+    </task>
+    <task id="LOCAL-00004" summary="qs start update">
+      <created>1593693164505</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1593693164505</updated>
+    </task>
+    <task id="LOCAL-00005" summary="qs logic&#10;qs prototype design">
+      <created>1593770722285</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1593770722285</updated>
+    </task>
+    <task id="LOCAL-00006" summary="catch process">
+      <created>1594197825396</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1594197825396</updated>
+    </task>
+    <task id="LOCAL-00007" summary="v.1.0.0">
+      <created>1594678158446</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1594678158446</updated>
+    </task>
+    <task id="LOCAL-00008" summary="timer base">
+      <created>1595244252577</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1595244252577</updated>
+    </task>
+    <task id="LOCAL-00009" summary="base interface view">
+      <created>1595281652547</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1595281652547</updated>
+    </task>
+    <task id="LOCAL-00010" summary="all interactive elements update&#10;timer fix">
+      <created>1595324680341</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1595324680341</updated>
+    </task>
+    <task id="LOCAL-00011" summary="start screen&#10;quality process">
+      <created>1595456870565</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1595456870565</updated>
+    </task>
+    <task id="LOCAL-00012" summary="css fixes&#10;end event">
+      <created>1595940483709</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1595940483709</updated>
+    </task>
+    <task id="LOCAL-00013" summary="ep2 process&#10;production flag add&#10;config update">
+      <created>1597406412402</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1597406412403</updated>
+    </task>
+    <task id="LOCAL-00014" summary="ep2 progress&#10;cartograph process">
+      <created>1597857335851</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1597857335851</updated>
+    </task>
+    <task id="LOCAL-00015" summary="ep2 progress&#10;cartograph process">
+      <created>1597868482570</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1597868482570</updated>
+    </task>
+    <task id="LOCAL-00016" summary="cartograph process">
+      <created>1597923021613</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1597923021613</updated>
+    </task>
+    <task id="LOCAL-00017" summary="cartograph process">
+      <created>1597927002507</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1597927002507</updated>
+    </task>
+    <task id="LOCAL-00018" summary="forest process">
+      <created>1598019418460</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1598019418460</updated>
+    </task>
+    <task id="LOCAL-00019" summary="forest process">
+      <created>1598129976419</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1598129976419</updated>
+    </task>
+    <task id="LOCAL-00020" summary="forest ready&#10;vibrate v3 ready">
+      <created>1598264267716</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1598264267716</updated>
+    </task>
+    <task id="LOCAL-00021" summary="simple &quot;one&quot; fix">
+      <created>1598298397231</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1598298397231</updated>
+    </task>
+    <task id="LOCAL-00022" summary="different steps upgrade ('type' in params)&#10;map (3-buttons show/hide vid)">
+      <created>1598360931722</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1598360931722</updated>
+    </task>
+    <task id="LOCAL-00023" summary="fixes">
+      <created>1598468003653</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1598468003653</updated>
+    </task>
+    <task id="LOCAL-00024" summary="episode3&#10;&#10;interactive 3">
+      <created>1600633915627</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1600633915627</updated>
+    </task>
+    <task id="LOCAL-00025" summary="interactive 1">
+      <created>1600716549770</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1600716549770</updated>
+    </task>
+    <task id="LOCAL-00026" summary="interactive 4 process">
+      <created>1601069724345</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1601069724345</updated>
+    </task>
+    <task id="LOCAL-00027" summary="interactive 4">
+      <created>1601148938745</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1601148938745</updated>
+    </task>
+    <task id="LOCAL-00028" summary="timecodes logic upgrade">
+      <created>1602281248159</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1602281248159</updated>
+    </task>
+    <task id="LOCAL-00029" summary="timecodes logic upgrade">
+      <created>1602326236454</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1602326236454</updated>
+    </task>
+    <task id="LOCAL-00030" summary="backtracking">
+      <created>1602371286872</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1602371286872</updated>
+    </task>
+    <task id="LOCAL-00031" summary="leaflet interactive repeatable">
+      <created>1602372534296</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1602372534296</updated>
+    </task>
+    <task id="LOCAL-00032" summary="&quot;go&quot; interactive after subtitles">
+      <created>1602453672452</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1602453672452</updated>
+    </task>
+    <task id="LOCAL-00033" summary="metrika">
+      <created>1602538514871</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1602538514871</updated>
+    </task>
+    <task id="LOCAL-00034" summary="interactives base update&#10;&#10;photos update&#10;leaflet update&#10;start update&#10;vibrate update">
+      <created>1603035576078</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1603035576078</updated>
+    </task>
+    <task id="LOCAL-00035" summary="episode 2,3 interactives update">
+      <created>1603059393227</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1603059393227</updated>
+    </task>
+    <task id="LOCAL-00036" summary="episode1&#10;vibrate">
+      <created>1603061112899</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1603061112899</updated>
+    </task>
+    <task id="LOCAL-00037" summary="episode1&#10;all interactives fix">
+      <created>1603103073942</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1603103073942</updated>
+    </task>
+    <task id="LOCAL-00038" summary="board mgr fix">
+      <created>1603103856244</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1603103856244</updated>
+    </task>
+    <task id="LOCAL-00039" summary="vibrate v4 process">
+      <created>1603148835674</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1603148835674</updated>
+    </task>
+    <task id="LOCAL-00040" summary="vibrate v4 process">
+      <created>1603151643833</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1603151643833</updated>
+    </task>
+    <task id="LOCAL-00041" summary="episode 4 process">
+      <created>1603233247070</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1603233247070</updated>
+    </task>
+    <task id="LOCAL-00042" summary="ep4 map:four&#10;preload fix&#10;misc fixes">
+      <created>1603367827517</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1603367827517</updated>
+    </task>
+    <task id="LOCAL-00043" summary="sprites for each episode&#10;quality&#10;map four fix">
+      <created>1603406871441</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1603406871441</updated>
+    </task>
+    <task id="LOCAL-00044" summary="boat process">
+      <created>1603576987563</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1603576987563</updated>
+    </task>
+    <task id="LOCAL-00045" summary="boat process">
+      <created>1603617275434</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1603617275434</updated>
+    </task>
+    <task id="LOCAL-00046" summary="boat&#10;timer localstorage&#10;board localstorage">
+      <created>1603665494413</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1603665494413</updated>
+    </task>
+    <task id="LOCAL-00047" summary="board fix">
+      <created>1603665794419</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1603665794420</updated>
+    </task>
+    <task id="LOCAL-00048" summary="score process">
+      <created>1603873500344</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1603873500344</updated>
+    </task>
+    <task id="LOCAL-00049" summary="score&#10;bugfixes&#10;&#10;board and app clr upgrade">
+      <created>1604348782565</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1604348782565</updated>
+    </task>
+    <task id="LOCAL-00050" summary="events refactoring">
+      <created>1604355104682</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1604355104683</updated>
+    </task>
+    <task id="LOCAL-00051" summary="&quot;continue&quot;">
+      <created>1604437645532</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1604437645532</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="765595000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="0" width="1929" height="1047" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17407213" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3283582" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32942432" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3272921" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Changes" order="10" />
+      <window_info anchor="bottom" id="Application Servers" order="12" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.18336888" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="episode3&#10;&#10;interactive 3" />
+    <MESSAGE value="interactive 1" />
+    <MESSAGE value="interactive 4 process" />
+    <MESSAGE value="interactive 4" />
+    <MESSAGE value="timecodes logic upgrade" />
+    <MESSAGE value="backtracking" />
+    <MESSAGE value="leaflet interactive repeatable" />
+    <MESSAGE value="&quot;go&quot; interactive after subtitles" />
+    <MESSAGE value="metrika" />
+    <MESSAGE value="interactives base update&#10;&#10;photos update&#10;leaflet update&#10;start update&#10;vibrate update" />
+    <MESSAGE value="episode 2,3 interactives update" />
+    <MESSAGE value="episode1&#10;vibrate" />
+    <MESSAGE value="episode1&#10;all interactives fix" />
+    <MESSAGE value="board mgr fix" />
+    <MESSAGE value="vibrate v4 process" />
+    <MESSAGE value="episode 4 process" />
+    <MESSAGE value="ep4 map:four&#10;preload fix&#10;misc fixes" />
+    <MESSAGE value="sprites for each episode&#10;quality&#10;map four fix" />
+    <MESSAGE value="boat process" />
+    <MESSAGE value="boat&#10;timer localstorage&#10;board localstorage" />
+    <MESSAGE value="board fix" />
+    <MESSAGE value="score process" />
+    <MESSAGE value="score&#10;bugfixes&#10;&#10;board and app clr upgrade" />
+    <MESSAGE value="events refactoring" />
+    <MESSAGE value="&quot;continue&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;continue&quot;" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/bf/lib/toggle.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_dev/scss/core/_mixins.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/boat/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_dev/scss/base/_vars.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_dev/scss/partials/_board.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="140" column="9" lean-forward="true" selection-start-line="140" selection-start-column="9" selection-end-line="140" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_dev/html/board.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="66" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/soundMgr/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/catch/data.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_dev/html/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/catch/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/lib/lottie.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="12459" selection-start-line="12" selection-start-column="12455" selection-end-line="12" selection-end-column="12459" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/photos/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/photos/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/qs/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/board-page/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/episode2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="331" column="58" selection-start-line="331" selection-start-column="58" selection-end-line="331" selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_dev/scss/components/_ep2.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_dev/scss/components/_ep1.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="134" column="9" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_dev/scss/components/_ep3.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/episode3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="144" column="71" selection-start-line="144" selection-start-column="71" selection-end-line="144" selection-end-column="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/vibrate/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="48" column="2" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_dev/html/index3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1068">
+          <caret line="229" column="107" selection-start-line="229" selection-start-column="107" selection-end-line="229" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="96" selection-start-line="7" selection-start-column="96" selection-end-line="7" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/baseInteractive/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/episode1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="2210" column="37" selection-start-line="2210" selection-start-column="35" selection-end-line="2210" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/episode4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="108" column="146" lean-forward="true" selection-start-line="108" selection-start-column="135" selection-end-line="108" selection-end-column="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/vibrate/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_dev/scss/base/_rules.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/map/data.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/bf/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="122" column="40" lean-forward="true" selection-start-line="122" selection-start-column="2" selection-end-line="122" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/map/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="139" column="16" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_dev/scss/components/_ep4.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="144" column="10" selection-start-line="144" selection-start-column="10" selection-end-line="144" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_dev/scss/components/_video.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/board-page/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/baseInteractive/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_dev/scss/components/_main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5491">
+          <caret line="323" column="3" selection-start-line="323" selection-start-column="3" selection-end-line="323" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/main/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/player/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/lsMgr/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/index-page/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/timer/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/main/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="55" column="3" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/player/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2737">
+          <caret line="162" column="5" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/boardMgr/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/index-page/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="76" column="59" selection-start-line="76" selection-start-column="59" selection-end-line="76" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/lsMgr/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="66" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_dev/html/index1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4879">
+          <caret line="287" column="71" selection-start-line="287" selection-start-column="71" selection-end-line="287" selection-end-column="71" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/timer/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="65" column="3" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_dev/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6188">
+          <caret line="364" column="18" selection-start-line="364" selection-start-column="18" selection-end-line="364" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#9130#9136#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="54" column="42" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

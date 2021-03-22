@@ -1,0 +1,43 @@
+@include exports("@path:base\_rules.scss"){/*@path:base\_rules.scss*/
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&subset=cyrillic');
+
+  .safe-hide-svg{
+    @include abs($l:0,$t:-100px);
+    width:1px;
+    height:1px;
+    overflow:hidden;
+  }
+
+  //----------------------------
+
+  html{
+    height:100%;
+  }
+
+  //@include modal('#wrap-wrap');
+
+  body{
+    height:100%;
+    font:1.575vw/1.25 font();
+    background:#000;
+    //padding-bottom:1px;//needed?!
+    @include no-sel();
+    @include med(){
+      padding:0;
+    }
+    @media (min-aspect-ratio:16/9){
+      font-size:2.8vh;
+    }
+  }
+
+  #wrap{
+    height:100%;
+    position:relative;
+    overflow:hidden;
+    min-width:$miw;
+  }
+
+  //--------------------
+
+
+}

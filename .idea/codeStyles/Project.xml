@@ -1,0 +1,16 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <CssCodeStyleSettings>
+      <option name="SPACE_AFTER_COLON" value="false" />
+      <option name="SPACE_BEFORE_OPENING_BRACE" value="false" />
+      <option name="ENFORCE_QUOTES_ON_FORMAT" value="true" />
+    </CssCodeStyleSettings>
+    <ScssCodeStyleSettings>
+      <option name="SPACE_AFTER_COLON" value="false" />
+      <option name="SPACE_BEFORE_OPENING_BRACE" value="false" />
+    </ScssCodeStyleSettings>
+    <XML>
+      <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
+    </XML>
+  </code_scheme>
+</component>

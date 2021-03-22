@@ -1,0 +1,50 @@
+@include exports("@path:base\_exts.scss"){/*@path:base\_exts.scss*/
+  %text-btn{
+    &.shown{
+      .wobble-pop{
+        pointer-events:auto;
+      }
+      .w-p-outer{
+        top:25%;
+        opacity:1;
+      }
+      .pulse-btn.start{
+        bottom:15%;
+        opacity:1;
+      }
+    }
+    .wobble-pop{
+      pointer-events:none;
+    }
+    .w-p-outer{
+      margin:0 auto;
+      top:20%;
+      opacity:0;
+      @include trs('all #{$anim*3} ease-in-out');
+    }
+    .w-p-pulse{
+      @include abs($l:5.92%,$t:14.89%);
+      width:24.88%;
+      @include trf(scale(-1,1));
+    }
+    .w-p-cont{
+      color:#fff;
+    }
+    .w-p-text{
+      width:33.56em;
+      height:10.81em;
+    }
+    .pulse-btn{
+      width:11.25%;
+      cursor:pointer;
+      &.start{
+        @include center($b:10%);
+        opacity:0;
+        @include trs('all #{$anim*3} ease-in-out');
+      }
+      img{
+        width:100%;
+      }
+    }
+  }
+}

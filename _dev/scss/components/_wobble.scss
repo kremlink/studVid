@@ -1,0 +1,69 @@
+@include exports("@path:components\_wobble.scss"){/*@path:components\_wobble.scss*/
+  @include kfs(w-rotate){
+    50%{
+      @include trf('rotateY(-20deg)');
+    }
+  };
+  @include kfs(w-move){
+    50%{
+      @include trf(translate(-20px,0));
+    }
+  };
+  @include kfs(w-move-right){
+    50%{
+      @include trf(translate(20px,0));
+    }
+  };
+  @include kfs(w-move-both){
+    25%{
+      @include trf(translate(-20px,0));
+    }
+    75%{
+      @include trf(translate(20px,0));
+    }
+  };
+  @include kfs(w-rotate-both){
+    25%{
+      @include trf('rotateY(-20deg)');
+    }
+    75%{
+      @include trf('rotateY(20deg)');
+    }
+    100%{
+      @include trf('rotateY(0deg)');
+    }
+  };
+  @include kfs(w-rotate-right){
+    50%{
+      @include trf('rotateY(20deg)');
+    }
+  };
+
+  .wobble-pop{
+    @include flx(display,flex);
+    height:100%;
+    perspective:800px;
+  }
+  .w-p-outer{
+    position:relative;
+    @include anim('w-rotate 20s ease-in-out infinite');
+  }
+  .w-p-wrap{
+    position:relative;
+  }
+  .w-p-t-ov{
+    @include abs($l:11.36%,$t:23.84%);
+    a{
+      color:#b6837e;
+    }
+  }
+  .w-p-bg{
+    @include abs($l:0,$t:0);
+    width:100%;
+    height:100%;
+  }
+  .w-p-cont{
+    @include anim('w-move 20s infinite');
+    position:relative;
+  }
+}

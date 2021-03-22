@@ -1,0 +1,152 @@
+@include exports("@path:components\_main.scss"){/*@path:components\_main.scss*/
+  .overlay-block{
+    @include abs($t:0,$b:0,$l:0,$r:0);
+    z-index:1;
+    visibility:hidden;
+    &.shown{
+      visibility:visible;
+      //transition-duration:0s;
+    }
+    &.no-anim{
+      visibility:visible;
+    }
+
+    .ov-wrap{
+      width:100%;
+      height:56.25vw; //h:w=9/16
+      max-height:100vh;
+      max-width:177.7777vh; //16/9=1.778
+      overflow:hidden;
+      margin-top:-5000px;
+      opacity:0;
+      //@include trs('opacity #{$anim} ease-in-out');
+      @include center();
+      &.shown{
+        margin-top:0;
+        opacity:1;
+      }
+    }
+  }
+  //---
+  .ov-video{
+    width:100%;
+    height:100%;
+    position:absolute;
+    background: center/contain no-repeat;
+    //@include trs('opacity #{$anim/2} ease-in-out');
+    &.hidden{
+      opacity:0;
+    }
+  }
+  .the-timer{
+    z-index:1;
+    font-size:0.8em;
+    padding:0 4em 8em*64/330 4em;
+    color:#fff;
+    visibility:hidden;
+    text-align:center;
+    @include abs($t:20px,$r:2px);
+    &.continued{
+
+    }
+    .timer &{
+      visibility:visible;
+    }
+    .the-t-text{
+      @include center();
+      white-space:nowrap;
+    }
+  }
+  //test
+  .special-btns{
+    @include abs($l:30%,$b:0);
+    margin-left:-8.5em;
+    height:3em;
+    background:rgba(#000,0.36);
+    @include flx(display,flex);
+    z-index:1;
+    .paused &{
+      display:none;
+    }
+    div{
+      cursor:pointer;
+      width:4em;
+      background: url(#{$path}icon-30.svg) center/70% 70% no-repeat;
+      &:nth-child(2){
+        background-image:url(#{$path}icon-back.svg);
+      }
+    }
+  }
+  //other
+  .loader-pop{
+    @include abs($l:0,$r:0,$t:0,$b:0);
+    @include trs('opacity #{$anim} ease-in-out');
+    z-index:1;
+    background:#000;
+
+    .loaded &{
+      opacity:0;
+      pointer-events:none;
+    }
+    .l{
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:url(#{$path}loader.gif) center no-repeat;
+    }
+  }
+  .orientation-pop{
+    color:#fff;
+    @include abs($l:0,$r:0,$t:0,$b:0);
+    opacity:0;
+    visibility:hidden;
+    font-size:30px;
+    line-height:30px;
+    z-index:1;
+    @include flx(justify-content,center);
+    @include flx(align-items,center);
+    .too-small &{
+      opacity:1;
+      visibility:visible;
+    }
+    .bg{
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:center/cover;
+    }
+    .text{
+      @include center();
+      width:80%;
+    }
+  }
+  .start-pop{
+    @include abs($l:0,$r:0,$t:0,$b:0);
+    @include flx(display,flex);
+    background:#000;
+    cursor:pointer;
+    z-index:1;
+    @include trs('opacity #{$anim} ease-in-out');
+    .start &{
+      opacity:0;
+      pointer-events:none;
+    }
+    .text{
+      margin:auto;
+      color:#fff;
+    }
+  }
+  .continue{
+    z-index:1;
+    color:#fff;
+    white-space:nowrap;
+    padding:.2em .3em;
+    background:#000;
+    cursor:pointer;
+    display:none;
+    @include center($b:1em);
+    .goOn:not(.start) &{
+      display:block;
+    }
+  }
+}

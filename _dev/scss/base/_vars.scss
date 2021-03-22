@@ -1,0 +1,31 @@
+$path:'../images/';
+
+$miw:360px;
+$pkw:1200px;
+$pd:34px;
+
+$anim:.3s;
+
+$colors:(
+  ref:#f00
+);
+
+@function getc($arg,$c:$colors){
+  $l-i:str-index(inspect($arg),'.');
+
+  @if($l-i==null)
+  {@return map-get($c,$arg);}@else
+  {@return getc(str-slice($arg,$l-i),map-get($c,str-slice($arg,1,$l-i - 2)));}
+}
+
+@function font(){
+  @return 'Montserrat',sans-serif;
+}
+
+@function m-prop($arg,$p:12){
+  @return $arg*1vw/$p;
+}
+
+@include exports("@path:base\_vars.scss"){/*@path:base\_vars.scss*/
+
+}
