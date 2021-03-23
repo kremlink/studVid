@@ -1,6 +1,6 @@
 export const data={
  events:{
-  'click':'.pulse-btn'
+  'click':'.btn-cont'
  },
  view:{
   el:'.ov-wrap.start',

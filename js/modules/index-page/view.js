@@ -5,7 +5,8 @@ import {PlayerView} from '../player/view.js';
 import {data as dat} from './data.js';
 let app,
     data=dat,
-    epIndex;
+    epIndex,
+    lsMgr;
 
 let events={};
 events[`click ${data.events.start}`]='start';
@@ -15,19 +16,21 @@ export let Index=Backbone.View.extend({
  events:events,
  el:data.view.el,
  savedTime:0,
- main:null,
  initialize:function(opts){
   app=opts.app;
   data=app.configure({index:dat}).index;
   //might be needed someday
   app.set({dest:'objects.isMobile',object:matchMedia(data.mobViewport).matches});
 
-  let mob=!matchMedia(data.minViewport).matches;
+  let mob=!matchMedia(data.minViewport).matches,
+      main;
 
   epIndex=app.get('epIndex');
 
   new Metrika({app:app});
-  this.main=new MainView({app:app});
+  main=new MainView({app:app});
+
+  lsMgr=main.getLsMgr();
 
   this.$el.toggleClass(data.view.tooSmallCls,mob);
   $(window).on('resize',_.debounce(()=>{
@@ -93,7 +96,7 @@ export let Index=Backbone.View.extend({
   this.$el.toggleClass(data.view.fsCls,f);
  },*/
  pause:function(timecodeData){
-  if(!timecodeData.checkpoint)
+  if(timecodeData.data.interactive!=='Start'||timecodeData.data.interactive==='Start'&&!lsMgr.getData().user.name)
    this.$el.addClass(data.view.pauseCls);
  },
  play:function(){

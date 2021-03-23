@@ -15,7 +15,7 @@ export let StartView=BaseIntView.extend({
 
   this.opts=opts;
   this.setElement(data.view.el);
-//console.log(opts.timecodeData);
+
   BaseIntView.prototype.initialize.apply(this,[{
    app:app,
    data:data,
@@ -27,13 +27,13 @@ export let StartView=BaseIntView.extend({
   if(f)
   {
    this.$brdName=this.$(data.view.$brdName);
-   setTimeout(()=>this.$brdName.focus(),2000);
+   setTimeout(()=>this.$brdName.focus(),200);
   }
 
   BaseIntView.prototype.toggle.apply(this,arguments);
  },
  click:function(){
-  app.get('aggregator').trigger('board:name',this.$brdName.val().trim());
+  app.get('aggregator').trigger('board:user',{name:this.$brdName.val().trim()});
   this.away();
   //app.get('aggregator').trigger('board:score',{what:'start-two',points:corr?30:-10});
   //this.away(false,corr?{end:'endGood'}:{});

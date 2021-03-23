@@ -14,7 +14,8 @@ let Interactives={
 
 let app,
     data=dat,
-    events={};
+    events={},
+    lsMgr;
 
 export let MainView=Backbone.View.extend({
  events:events,
@@ -25,17 +26,20 @@ export let MainView=Backbone.View.extend({
   app=opts.app;
   data=app.configure({main:dat}).main;
 
-  this.lsMgr=new LsMgr({app:app});
+  lsMgr=new LsMgr({app:app});
 
   this.listenTo(app.get('aggregator'),'interactive:toggle',this.toggle);
   this.listenTo(app.get('aggregator'),'player:interactive',this.step);
 
   new SoundMgr({app:app});
 
-  new TimerView({app:app,lsMgr:this.lsMgr});
-  new BoardMgr({app:app,lsMgr:this.lsMgr});
+  new TimerView({app:app,lsMgr:lsMgr});
+  new BoardMgr({app:app,lsMgr:lsMgr});
 
   /*app.get('aggregator').trigger('board:score',{what:'test',points:5});*/
+ },
+ getLsMgr:function(){
+  return lsMgr;
  },
  toggle:function({show:show,failed:failed,opts:opts}){
   app.get('aggregator').trigger('main:toggle',!show);
@@ -74,10 +78,13 @@ export let MainView=Backbone.View.extend({
    app.get('aggregator').trigger('timer:update',timecodeData);
   }else
   {
-   if(typeof timecodeData.data.interactive==='string')
-    timecodeData.data.interactive=new Interactives[timecodeData.data.interactive]({app:app,timecodeData:timecodeData});else
-    timecodeData.data.interactive.toggle(true);
-   this.toggle({show:true});
+   if(timecodeData.data.interactive!=='Start'||timecodeData.data.interactive==='Start'&&!lsMgr.getData().user.name)
+   {
+    if(typeof timecodeData.data.interactive==='string')
+     timecodeData.data.interactive=new Interactives[timecodeData.data.interactive]({app:app,timecodeData:timecodeData});else
+     timecodeData.data.interactive.toggle(true);
+    this.toggle({show:true});
+   }
   }
  }
 });

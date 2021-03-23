@@ -15,7 +15,6 @@ export let config={
   url:'timer.php?time='
  },
  board:{//rename and redo
-  defName:'Noname',
   url:'php.php?board='
  },
  sound:{
@@ -25,7 +24,7 @@ export let config={
   btnBack:30,
   timecodes:{
    '1':[//noAutoClose:true|repeatable:true|delayedPause:-1|noVidAutoPlay:true|checkpoint:true|iniTimer:true
-    {start:1,invoked:false,iniTimer:true,noAutoClose:true,data:{interactive:'Start',type:'name'}}
+    {start:1,invoked:false,iniTimer:true,noAutoClose:true,data:{interactive:'Start'}}
    ]
   },
   redirect:{//needed?

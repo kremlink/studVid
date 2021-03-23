@@ -1,7 +1,6 @@
 import {data as dat} from './data.js';
 let app,
-    data=dat,
-    epIndex;
+    data=dat;
 
 let s2t=function (t){
  return (new Date(t%86400*1000)).toUTCString().replace(/.*(\d{2}):(\d{2}):(\d{2}).*/,(s,p1,p2,p3)=>{
@@ -24,8 +23,6 @@ export let TimerView=Backbone.View.extend({
 
   this.lsMgr=opts.lsMgr;
 
-  epIndex=app.get('epIndex');
-
   this.$timer=this.$(data.view.txt).text(s2t(this.timer));
 
   this.listenTo(app.get('aggregator'),'player:ended',this.ended);
@@ -36,19 +33,19 @@ export let TimerView=Backbone.View.extend({
  ini:function(goOn=false){
   let ls=this.lsMgr.getData();
 
-  if(!ls[epIndex].timer)
-   ls[epIndex].timer=0;
-  if(!ls[epIndex].savedTime)
-   ls[epIndex].savedTime=0;
+  if(!ls.data.timer)
+   ls.data.timer=0;
+  if(!ls.data.savedTime)
+   ls.data.savedTime=0;
 
-  this.timer=ls[epIndex].timer;
+  this.timer=ls.data.timer;
 
   if(goOn)
   {
    app.get('aggregator').trigger('timer:show');
   }else
   {
-   ls[epIndex].savedTime=0;
+   ls.data.savedTime=0;
    this.lsMgr.setData(ls);
   }
 
@@ -67,14 +64,14 @@ export let TimerView=Backbone.View.extend({
   {
    let ls=this.lsMgr.getData();
 
-   ls[epIndex].savedTime=savedTime;
+   ls.data.savedTime=savedTime;
    this.lsMgr.setData(ls);
   }
  },
  tick:function(t){
   let ls=this.lsMgr.getData();
 
-  ls[epIndex].timer=t;
+  ls.data.timer=t;
   this.lsMgr.setData(ls);
  }
 });
