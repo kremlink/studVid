@@ -67,12 +67,13 @@ export let MainView=Backbone.View.extend({
   if(failed)
    app.get('aggregator').trigger('timer:update',this.timecodeData);
  },
- step:function({phase:phase,timecodeData:timecodeData}){
+ step:function({goOn:goOn,phase:phase,timecodeData:timecodeData}){
   this.timecodeData=timecodeData;
 
   if(timecodeData.iniTimer)
   {
-   app.get('aggregator').trigger('timer:ini');
+   if(!goOn)
+    app.get('aggregator').trigger('timer:ini');
    app.get('aggregator').trigger('timer:show');
   }
 

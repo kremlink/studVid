@@ -7,26 +7,11 @@
     <bookmark url="file://$PROJECT_DIR$/js/modules/boardMgr/view.js" line="43" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="- remove not needed&#10;- fix localstorage logic">
-      <change afterPath="$PROJECT_DIR$/_dev/html/index1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/modules/u-pop/data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/modules/u-pop/view.js" afterDir="false" />
+    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="- misc&#10;- remove svg sprite&#10;- complex cteps logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/scss/components/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/components/_main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/but-click.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon-30.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon-back.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/index-page/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/index-page/view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/lsMgr/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/lsMgr/view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/main/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/main/view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/player/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/player/view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/start/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/start/view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/timer/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/timer/view.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -549,14 +534,7 @@
       <workItem from="1617451232073" duration="57000" />
       <workItem from="1617451333901" duration="120000" />
       <workItem from="1617451475371" duration="118000" />
-      <workItem from="1617451618872" duration="13264000" />
-    </task>
-    <task id="LOCAL-00005" summary="qs logic&#10;qs prototype design">
-      <created>1593770722285</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1593770722285</updated>
+      <workItem from="1617451618872" duration="14180000" />
     </task>
     <task id="LOCAL-00006" summary="catch process">
       <created>1594197825396</created>
@@ -894,7 +872,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616541479800</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="- misc&#10;- remove svg sprite&#10;- complex cteps logic">
+      <created>1617655697227</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1617655697227</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -940,7 +925,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="interactive 1" />
     <MESSAGE value="interactive 4 process" />
     <MESSAGE value="interactive 4" />
     <MESSAGE value="timecodes logic upgrade" />
@@ -965,7 +949,8 @@
     <MESSAGE value="events refactoring" />
     <MESSAGE value="&quot;continue&quot;" />
     <MESSAGE value="- remove not needed&#10;- fix localstorage logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="- remove not needed&#10;- fix localstorage logic" />
+    <MESSAGE value="- misc&#10;- remove svg sprite&#10;- complex cteps logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="- misc&#10;- remove svg sprite&#10;- complex cteps logic" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

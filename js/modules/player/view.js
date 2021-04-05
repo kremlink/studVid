@@ -16,6 +16,7 @@ export let PlayerView=Backbone.View.extend({
  pData:null,
  qual:null,
  pausable:true,
+ goOn:false,
  phase:{index:0,type:'base'},
  initialize:function(opts){
   app=opts.app;
@@ -127,7 +128,7 @@ export let PlayerView=Backbone.View.extend({
     this.pData[this.phase.index][this.phase.type].timecodes.forEach((o)=>{
      if((o.start<0?curr>this.player.duration()+o.start:curr>o.start)&&!o.invoked)
      {
-      app.get('aggregator').trigger('player:interactive',{phase:this.phase,timecodeData:o});
+      app.get('aggregator').trigger('player:interactive',{goOn:this.goOn,phase:this.phase,timecodeData:o});
       o.invoked=true;
      }
     });
@@ -161,6 +162,8 @@ export let PlayerView=Backbone.View.extend({
   }
  },
  play:function({time=-1,clr=null,goOn=false}){
+  if(goOn)
+   this.goOn=true;
   if(~time)
   {
    this.player.currentTime(time);
