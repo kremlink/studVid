@@ -7,36 +7,24 @@
     <bookmark url="file://$PROJECT_DIR$/js/modules/boardMgr/view.js" line="43" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="&quot;continue&quot;">
+    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="- remove not needed&#10;- fix localstorage logic">
+      <change afterPath="$PROJECT_DIR$/_dev/html/index1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/u-pop/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/u-pop/view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TZ.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/TZ.rtf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/html/board.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_dev/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/html/index1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/html/index2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/html/index3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/scss/base/_exts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/base/_exts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/scss/components/_all.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/components/_all.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/scss/components/_ep1.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/scss/components/_ep2.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/scss/components/_ep3.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/scss/components/_ep4.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_dev/scss/components/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/components/_main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/scss/components/_wobble.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/board.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/but-click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon-30.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon-back.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index3.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/boardMgr/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/boardMgr/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/boardMgr/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/boardMgr/view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/index-page/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/index-page/view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/lsMgr/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/lsMgr/view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/main/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/main/view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/start/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/start/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modules/player/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/player/view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/start/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/start/view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/timer/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/timer/view.js" afterDir="false" />
     </list>
@@ -450,11 +438,14 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/js/modules" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
@@ -473,19 +464,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sasha\Desktop\Projects\vid\src\js\modules" />
+      <recent name="C:\Users\Sasha\Desktop\Projects\vid\src\_dev\html" />
+      <recent name="C:\Users\Sasha\Desktop\Projects\la\src\js\modules" />
+      <recent name="C:\Users\Sasha\Desktop\Projects\la\src\_dev\html" />
+      <recent name="C:\Users\Sasha\Desktop\Projects\la\src\_dev\scss\components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Sasha\Desktop\Projects\la\src\js\modules\baseInteractive" />
       <recent name="G:\Sashino\PapkaSasha\z-o-t\template\html5-template\usual-template\www\scss" />
       <recent name="G:\Sashino\PapkaSasha\z-o-t\template\html5-template\usual-template\www\scss\base\sprites" />
       <recent name="G:\Sashino\PapkaSasha\z-o-t\template\html5-template\usual-template\www\css\components" />
       <recent name="G:\Sashino\PapkaSasha\z-o-t\template\html5-template\usual-template\www\css" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Sasha\Desktop\Projects\la\src\js\modules" />
-      <recent name="C:\Users\Sasha\Desktop\Projects\la\src\_dev\html" />
-      <recent name="C:\Users\Sasha\Desktop\Projects\la\src\_dev\scss\components" />
-      <recent name="C:\Users\Sasha\Desktop\Projects\la\src\js\modules\baseInteractive" />
-      <recent name="C:\Users\Sasha\Desktop\Projects\la\src\js\modules\main" />
     </key>
   </component>
   <component name="RunManager">
@@ -551,14 +542,14 @@
       <workItem from="1614767405317" duration="2581000" />
       <workItem from="1615276413116" duration="6286000" />
       <workItem from="1615746344781" duration="35551000" />
-      <workItem from="1616431070545" duration="13180000" />
-    </task>
-    <task id="LOCAL-00004" summary="qs start update">
-      <created>1593693164505</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1593693164505</updated>
+      <workItem from="1616431070545" duration="17789000" />
+      <workItem from="1617267055275" duration="11225000" />
+      <workItem from="1617450947558" duration="87000" />
+      <workItem from="1617451111061" duration="76000" />
+      <workItem from="1617451232073" duration="57000" />
+      <workItem from="1617451333901" duration="120000" />
+      <workItem from="1617451475371" duration="118000" />
+      <workItem from="1617451618872" duration="13264000" />
     </task>
     <task id="LOCAL-00005" summary="qs logic&#10;qs prototype design">
       <created>1593770722285</created>
@@ -896,7 +887,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616432126461</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="- remove not needed&#10;- fix localstorage logic">
+      <created>1616541479800</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1616541479800</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -942,7 +940,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="episode3&#10;&#10;interactive 3" />
     <MESSAGE value="interactive 1" />
     <MESSAGE value="interactive 4 process" />
     <MESSAGE value="interactive 4" />
@@ -967,7 +964,8 @@
     <MESSAGE value="score&#10;bugfixes&#10;&#10;board and app clr upgrade" />
     <MESSAGE value="events refactoring" />
     <MESSAGE value="&quot;continue&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;continue&quot;" />
+    <MESSAGE value="- remove not needed&#10;- fix localstorage logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="- remove not needed&#10;- fix localstorage logic" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

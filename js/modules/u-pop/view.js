@@ -7,7 +7,7 @@ let app,
 
 events[`click ${data.events.click}`]='click';
 
-export let StartView=BaseIntView.extend({
+export let UPopView=BaseIntView.extend({
  events:events,
  el:data.view.el,
  initialize:function(opts){
@@ -33,9 +33,11 @@ export let StartView=BaseIntView.extend({
 
   BaseIntView.prototype.toggle.apply(this,arguments);
  },
- click:function(){
-  app.get('aggregator').trigger('board:user',{name:this.$brdName.val().trim()});
-  this.away();
+ click:function(e){
+  if(this.opts.phase.type==='base')
+   app.get('aggregator').trigger('board:user',{step:this.opts.phase.index,index:$(e.target).index()});else
+   app.get('aggregator').trigger('player:src',{});
+  this.away(this.correct,{});
   //app.get('aggregator').trigger('board:score',{what:'start-two',points:corr?30:-10});
   //this.away(false,corr?{end:'endGood'}:{});
   //app.get('aggregator').trigger('sound',corr?'plus':'minus');

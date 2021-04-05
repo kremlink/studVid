@@ -12,7 +12,7 @@ export let config={
   }
  },
  'timer':{
-  url:'timer.php?time='
+  //url:'timer.php?time='
  },
  board:{//rename and redo
   url:'php.php?board='
@@ -20,35 +20,34 @@ export let config={
  sound:{
   template:'<audio src="../sounds/<%= src %>.mp3" preload="auto"></audio>'
  },
- 'player':{
-  btnBack:30,
-  timecodes:{
-   '1':[//noAutoClose:true|repeatable:true|delayedPause:-1|noVidAutoPlay:true|checkpoint:true|iniTimer:true
-    {start:1,invoked:false,iniTimer:true,noAutoClose:true,data:{interactive:'Start'}}
-   ]
-  },
-  redirect:{//needed?
+ /*redirect:{//needed?
    '1':'end.php'
-  },
-  quality:{
-   '1':[
+  },*/
+ 'player':{
+  //btnBack:30,
+  quality:[
+   {
+    width:'(min-width:1281px)',
+    label:'720P'
+   },
+   {
+    width:'(max-width:1280px)',
+    label:'360P'
+   }
+  ],
+  data:{
+   '1':[//noAutoClose:true|repeatable:true|delayedPause:-1|noVidAutoPlay:true|checkpoint:true|iniTimer:true
     {
-     //speed:[4,1000],
-     width:'(min-width:1281px)',
-     src:'../oceans.mp4',
-     label:'720P'
-    },
-    {
-     //speed:[3,4],
-     width:'(min-width:801px) and (max-width:1280px)',
-     src:'../oceans1.mp4',
-     label:'480P'
-    },
-    {
-     //speed:[0,3],
-     width:'(max-width:800px)',
-     src:'../oceans.mp4',
-     label:'360P'
+     base:{
+      src:['../oceans.mp4','../oceans1.mp4'],
+      timecodes:[{start:1,invoked:false,iniTimer:true,data:{interactive:'Start'}},
+       {start:3,invoked:false,data:{interactive:'Pop',conf:{cls:'choose',text:'choose'}}}]
+     },
+     choose:[
+      {src:['../oceans.mp4','../oceans1.mp4'],data:{Interactive:'Pop',conf:{correct:false,cls:'info',text:'incorrect'}}},
+      {src:['../oceans.mp4','../oceans1.mp4'],data:{Interactive:'Pop',conf:{correct:true,cls:'info',text:'correct'}}}
+     ],
+     rewindTime:5
     }
    ]
   }

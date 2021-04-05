@@ -3,6 +3,7 @@ import {BoardMgr} from '../boardMgr/view.js';
 import {LsMgr} from '../lsMgr/view.js';
 
 import {StartView} from '../start/view.js';
+import {UPopView} from '../u-pop/view.js';
 
 import {TimerView} from '../timer/view.js';
 
@@ -30,6 +31,8 @@ export let MainView=Backbone.View.extend({
 
   this.listenTo(app.get('aggregator'),'interactive:toggle',this.toggle);
   this.listenTo(app.get('aggregator'),'player:interactive',this.step);
+
+  $(window).on('visibilitychange pagehide',()=>app.get('aggregator').trigger('page:state'));
 
   new SoundMgr({app:app});
 
@@ -64,7 +67,7 @@ export let MainView=Backbone.View.extend({
   if(failed)
    app.get('aggregator').trigger('timer:update',this.timecodeData);
  },
- step:function(timecodeData){
+ step:function({phase:phase,timecodeData:timecodeData}){
   this.timecodeData=timecodeData;
 
   if(timecodeData.iniTimer)

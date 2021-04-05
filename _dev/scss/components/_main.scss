@@ -13,6 +13,7 @@
       max-height:100vh;
       max-width:177.7777vh; //16/9=1.778
       opacity:0;
+      visibility:hidden;
       @include trs('opacity #{$anim} ease-in-out');
       @include center();
       &.start{
@@ -22,8 +23,18 @@
           @include center($b:0);
         }
       }
+      &.choose{
+        .btn-cont{
+          width:5em;
+          height:2em;
+        }
+      }
+      &.info{
+
+      }
       &.shown{
         opacity:1;
+        visibility:visible;
       }
     }
     .ov-inner{
@@ -52,6 +63,10 @@
         };
       }
     }
+    .btns{
+      @include abs($l:0,$r:0,$b:0,$t:70%);
+      @include flx(display,flex);
+    }
     .btn-cont{
       cursor:pointer;
       @include med(){
@@ -65,7 +80,7 @@
         }
       }
     }
-    svg{
+    img{
       @include abs($l:0,$t:0);
       width:100%;
       height:100%;
@@ -118,9 +133,9 @@
     div{
       cursor:pointer;
       width:4em;
-      background: url(#{$path}icon-30.svg) center/70% 70% no-repeat;
+      background: url(#{$path}t1.svg) center/70% 70% no-repeat;
       &:nth-child(2){
-        background-image:url(#{$path}icon-back.svg);
+        background-image:url(#{$path}t2.svg);
       }
     }
   }

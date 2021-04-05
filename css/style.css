@@ -465,6 +465,7 @@ body {
   max-height: 100vh;
   max-width: 177.7777vh;
   opacity: 0;
+  visibility: hidden;
   transition: opacity 0.3s ease-in-out;
   position: absolute;
   left: 50%;
@@ -479,8 +480,13 @@ body {
   bottom: 0;
   transform: translate(-50%, 0);
 }
+.overlay-block .ov-wrap.choose .btn-cont {
+  width: 5em;
+  height: 2em;
+}
 .overlay-block .ov-wrap.shown {
   opacity: 1;
+  visibility: visible;
 }
 .overlay-block .ov-inner {
   width: 30em;
@@ -518,6 +524,14 @@ body {
 .overlay-block .form input:-ms-input-placeholder {
   color: #fff;
 }
+.overlay-block .btns {
+  position: absolute;
+  left: 0;
+  top: 70%;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
 .overlay-block .btn-cont {
   cursor: pointer;
 }
@@ -529,7 +543,7 @@ body {
     visibility: visible;
   }
 }
-.overlay-block svg {
+.overlay-block img {
   position: absolute;
   left: 0;
   top: 0;
@@ -588,10 +602,10 @@ body {
 .special-btns div {
   cursor: pointer;
   width: 4em;
-  background: url(../images/icon-30.svg) center/70% 70% no-repeat;
+  background: url(../images/t1.svg) center/70% 70% no-repeat;
 }
 .special-btns div:nth-child(2) {
-  background-image: url(../images/icon-back.svg);
+  background-image: url(../images/t2.svg);
 }
 
 .loader-pop {

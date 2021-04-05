@@ -52,20 +52,23 @@ export let Index=Backbone.View.extend({
   let imgs,
       wait=[];
 
-  for(let [x,y] of Object.entries(data.preload[epIndex]))
+  if(data.preload[epIndex])
   {
-   imgs=[];
-   if(y.imgs){
-    imgs=y.imgs.map(t=>x+t);
-   }
-   if(y.j)
+   for(let [x,y] of Object.entries(data.preload[epIndex]))
    {
-    for(let i=1;i<=y.j.length;i++)
-     for(let j=1;j<=y.j[i-1];j++)
-      for(let k=0;k<y.tmpl.length;k++)
-       imgs.push(x+y.tmpl[k].replace('[i]',i).replace('[j]',j));
+    imgs=[];
+    if(y.imgs){
+     imgs=y.imgs.map(t=>x+t);
+    }
+    if(y.j)
+    {
+     for(let i=1;i<=y.j.length;i++)
+      for(let j=1;j<=y.j[i-1];j++)
+       for(let k=0;k<y.tmpl.length;k++)
+        imgs.push(x+y.tmpl[k].replace('[i]',i).replace('[j]',j));
+    }
+    wait.push(app.get('lib.utils.imgsReady')({src:imgs}));
    }
-   wait.push(app.get('lib.utils.imgsReady')({src:imgs}));
   }
 
   $.when(wait).then(()=>{
@@ -95,7 +98,7 @@ export let Index=Backbone.View.extend({
  /*fs:function(f){
   this.$el.toggleClass(data.view.fsCls,f);
  },*/
- pause:function(timecodeData){
+ pause:function({phase:phase,timecodeData:timecodeData}){
   if(timecodeData.data.interactive!=='Start'||timecodeData.data.interactive==='Start'&&!lsMgr.getData().user.name)
    this.$el.addClass(data.view.pauseCls);
  },

@@ -13,8 +13,10 @@ export let PlayerView=Backbone.View.extend({
  events:events,
  el:data.view.el,
  extTemplate:null,
- timecodes:null,
+ pData:null,
+ qual:null,
  pausable:true,
+ phase:{index:0,type:'base'},
  initialize:function(opts){
   app=opts.app;
   data=app.configure({player:dat}).player;
@@ -24,7 +26,8 @@ export let PlayerView=Backbone.View.extend({
   epIndex=app.get('epIndex');
 
   this.extTemplate=ext.length?_.template($(data.view.extTemplate).html()):()=>{};
-  this.timecodes=[...data.timecodes[epIndex]];
+  this.pData=[...data.data[epIndex]];
+  this.qual=[...data.quality];
   this.player=videojs(this.el,{
    controlBar:{
     children:[
@@ -45,15 +48,22 @@ export let PlayerView=Backbone.View.extend({
   this.listenTo(app.get('aggregator'),'main:toggle',this.setPausable);
   this.listenTo(app.get('aggregator'),'player:play',this.play);
   this.listenTo(app.get('aggregator'),'player:pause',this.pause);
+  this.listenTo(app.get('aggregator'),'page:state',this.freeze);
+
+  //this.player.on('qualitySelected',()=>this.play({}));//TODO:needed?
+ },
+ freeze:function(){
+  if(document.visibilityState==='hidden')
+   this.pause();
  },
  setPausable:function(f){
   this.pausable=f;
- },
+ },/*
  jBack:function(){
   this.play({time:this.player.currentTime()-data.btnBack});
  },
  iBack:function(){
-  let where=this.timecodes.filter(o=>o.repeatable&&o.start<this.player.currentTime()),
+  let where=this.pData.filter(o=>o.repeatable&&o.start<this.player.currentTime()),
   what=where[where.length-1];
 
   if(where.length)
@@ -62,7 +72,19 @@ export let PlayerView=Backbone.View.extend({
  iiBack:function(){
   let index=0;
 
-  this.play({time:this.timecodes[index].start,clr:this.timecodes[index]});
+  this.play({time:this.pData[index].start,clr:this.pData[index]});
+ },*/
+ changeSrc:function(src){
+  let ind=this.qual.findIndex((o)=>matchMedia(o.width).matches);
+
+  for(let i=0;i<this.qual.length;i++)
+  {
+   this.qual[i].src=src[i];
+   if(i===ind)
+    this.qual[i].selected=true;
+  }
+
+  this.player.src(this.qual);
  },
  prepare:function(){
   let touched={},
@@ -71,9 +93,8 @@ export let PlayerView=Backbone.View.extend({
   this.setElement(data.view.el);
   this.$el.append(this.extTemplate());
 
-  data.quality[epIndex].unshift({selected:true,label:'auto',src:data.quality[epIndex][data.quality[epIndex].findIndex((o)=>matchMedia(o.width).matches)].src+'?'+Date.now()});
+  this.changeSrc(this.pData[this.phase.index][this.phase.type].src);
   this.player.controlBar.addChild('QualitySelector');
-  this.player.src(data.quality[epIndex]);
 
   if(app.get('_dev'))
    this.player.muted(true);
@@ -83,9 +104,6 @@ export let PlayerView=Backbone.View.extend({
   this.player.on('play',()=>{
    if(!app.get('_dev')&&!document.fullscreenElement&&document.documentElement.requestFullscreen)
     document.documentElement.requestFullscreen();
-  });
-  this.player.on('ended',()=>{
-   app.get('aggregator').trigger('player:ended',{cb:()=>location.href=data.redirect[epIndex]});
   });
 
   this.player.on('touchstart',e=>{
@@ -104,13 +122,21 @@ export let PlayerView=Backbone.View.extend({
    let curr=this.player.currentTime();
 
    app.get('aggregator').trigger('player:timeupdate',curr);
-   this.timecodes.forEach((o)=>{
-    if((o.start<0?curr>this.player.duration()+o.start:curr>o.start)&&!o.invoked)
-    {
-     app.get('aggregator').trigger('player:interactive',o);
-     o.invoked=true;
-    }
-   });
+   if(this.phase.type==='base')
+   {
+    this.pData[this.phase.index][this.phase.type].timecodes.forEach((o)=>{
+     if((o.start<0?curr>this.player.duration()+o.start:curr>o.start)&&!o.invoked)
+     {
+      app.get('aggregator').trigger('player:interactive',{phase:this.phase,timecodeData:o});
+      o.invoked=true;
+     }
+    });
+   }
+  });
+
+  this.player.on('ended',()=>{
+   app.get('aggregator').trigger('player:interactive',{phase:this.phase});
+   //app.get('aggregator').trigger('player:ended',{phase:this.phase});
   });
 
   this.player.on('loadedmetadata',()=>{
@@ -138,7 +164,7 @@ export let PlayerView=Backbone.View.extend({
   if(~time)
   {
    this.player.currentTime(time);
-   this.timecodes.forEach((o)=>{
+   /*this.pData.forEach((o)=>{
     if(goOn)
     {
      if(time>o.start)
@@ -148,7 +174,7 @@ export let PlayerView=Backbone.View.extend({
      if(time<o.start&&o.repeatable)
       o.invoked=false;
     }
-   });
+   });*/
    if(clr)
     clr.invoked=false;
   }
