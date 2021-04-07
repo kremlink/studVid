@@ -98,9 +98,16 @@ export let Index=Backbone.View.extend({
  /*fs:function(f){
   this.$el.toggleClass(data.view.fsCls,f);
  },*/
- pause:function({phase:phase,timecodeData:timecodeData}){
-  if(timecodeData.data.interactive!=='Start'||timecodeData.data.interactive==='Start'&&!lsMgr.getData().user.name)
-   this.$el.addClass(data.view.pauseCls);
+ pause:function({phase:phase,pData:pData}){
+  if(phase.type==='base')
+  {
+   if(pData[phase.type].timecodes[phase.index].data.interactive!=='Start'||
+       pData[phase.type].timecodes[phase.index].data.interactive==='Start'&&!lsMgr.getData().user.name)
+    this.$el.addClass(data.view.pauseCls);
+  }else
+  {
+
+  }
  },
  play:function(){
   this.$el.removeClass(data.view.pauseCls);

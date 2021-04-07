@@ -30,7 +30,7 @@ export let TimerView=Backbone.View.extend({
   this.$timer=this.$(data.view.txt).text(s2t(this.timer));
 
   this.listenTo(app.get('aggregator'),'player:ended',this.ended);
-  this.listenTo(app.get('aggregator'),'timer:update',this.change);
+  //this.listenTo(app.get('aggregator'),'timer:update',this.change);
   this.listenTo(app.get('aggregator'),'timer:ini',this.ini);
   this.listenTo(app.get('aggregator'),'player:timeupdate',throttle);
   this.listenTo(app.get('aggregator'),'page:state',this.freeze);

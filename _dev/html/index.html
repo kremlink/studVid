@@ -76,18 +76,22 @@
         </script>
     <script type="text/template" id="u-pop-template">
         <div class="ov-inner <%= cls %>">
-            <img src="images/ep<%= ep %>-step<%= step %>-pop-<%= cls %>-bg.svg" alt=""/>
+            <% if(choose){ %>
+            <img src="images/ep<%= ep %>-step<%= step %>-pop-base-bg.svg" alt=""/>
+            <% }else{ %>
+            <img src="images/ep<%= ep %>-step<%= step %>-pop-chosen<%= chosen %>-bg.svg" alt=""/>
+            <% } %>
             <div class="btns">
                 <% if(choose){
-                for(let i=0;i<choose.length;i++){ %>
+                for(let i=0;i<choose;i++){ %>
                 <div class="btn-cont">
-                    <img src="images/ep<%= ep %>-step<%= step %>-choose-<%= i %>.svg" alt="" class="btn"/>
-                    <img src="images/ep<%= ep %>-step<%= step %>-choose-<%= i %>-h.svg" alt="" class="btn-h"/>
+                    <img src="images/ep<%= ep %>-step<%= step %>-choose<%= i %>.svg" alt="" class="btn"/>
+                    <img src="images/ep<%= ep %>-step<%= step %>-choose<%= i %>-h.svg" alt="" class="btn-h"/>
                 </div>
                 <% }}else{ %>
                 <div class="btn-cont">
-                    <img src="images/ep<%= ep %>-step<%= step %>-<%= chosen %>-ok.svg" alt="" class="btn"/>
-                    <img src="images/ep<%= ep %>-step<%= step %>-<%= chosen %>-ok-h.svg" alt="" class="btn-h"/>
+                    <img src="images/ep<%= ep %>-step<%= step %>-chosen<%= chosen %>-ok.svg" alt="" class="btn"/>
+                    <img src="images/ep<%= ep %>-step<%= step %>-chosen<%= chosen %>-ok-h.svg" alt="" class="btn-h"/>
                 </div>
                 <% } %>
             </div>

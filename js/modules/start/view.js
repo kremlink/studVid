@@ -15,12 +15,10 @@ export let StartView=BaseIntView.extend({
   data=app.configure({start:dat}).start;
 
   this.opts=opts;
-  //this.setElement(data.view.el);
 
   BaseIntView.prototype.initialize.apply(this,[{
    app:app,
-   data:data//,
-   //pData:opts.pData
+   data:data
   }]);
  },
 

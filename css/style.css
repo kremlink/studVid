@@ -480,10 +480,6 @@ body {
   bottom: 0;
   transform: translate(-50%, 0);
 }
-.overlay-block .ov-wrap.choose .btn-cont {
-  width: 5em;
-  height: 2em;
-}
 .overlay-block .ov-wrap.shown {
   opacity: 1;
   visibility: visible;
@@ -495,6 +491,10 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.overlay-block .ov-inner.choose .btn-cont {
+  flex: 1 0 0;
+  height: 2em;
 }
 .overlay-block .form {
   padding-top: 2em;
@@ -534,6 +534,7 @@ body {
 }
 .overlay-block .btn-cont {
   cursor: pointer;
+  position: relative;
 }
 @media (min-width: 1200px) {
   .overlay-block .btn-cont:hover .btn {

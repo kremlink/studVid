@@ -10,7 +10,8 @@ import {TimerView} from '../timer/view.js';
 import {data as dat} from './data.js';
 
 let Interactives={
- Start:StartView
+ Start:StartView,
+ UPop:UPopView
 };
 
 let app,
@@ -21,7 +22,8 @@ let app,
 export let MainView=Backbone.View.extend({
  events:events,
  el:data.view.el,
- timecodeData:null,
+ pData:null,
+ phase:null,
  delayedPTimer:null,
  initialize:function(opts){
   app=opts.app;
@@ -49,44 +51,35 @@ export let MainView=Backbone.View.extend({
 
   if(show)
   {
-   if(~this.timecodeData.delayedPause)
-    this.delayedPTimer=setTimeout(()=>app.get('aggregator').trigger('player:pause'),this.timecodeData.delayedPause?this.timecodeData.delayedPause*1000:0);
-
-   /*if(this.timecodeData.delayedPause)
-    this.delayedPTimer=setTimeout(()=>app.get('aggregator').trigger('player:pause'),this.timecodeData.delayedPause*1000);else
-    app.get('aggregator').trigger('player:pause');*/
+   app.get('aggregator').trigger('player:pause');
   }else
   {
-   clearTimeout(this.delayedPTimer);
-   //setTimeout(()=>app.get('aggregator').trigger('player:pause'),data.time);else
-   app.get('aggregator').trigger('player:play',{time:opts.end?this.timecodeData.data[opts.end]:
-     (!('end' in this.timecodeData)?-1:this.timecodeData.end)});
+   app.get('aggregator').trigger('player:play',{time:opts.end?this.pData[this.phase.type].timecodes[this.phase.index].data[opts.end]:
+     (!('end' in this.pData[this.phase.type].timecodes[this.phase.index])?-1:this.pData[this.phase.type].timecodes.end)});
   }
 
-  this.$el.toggleClass(this.timecodeData.noAnim?data.view.noAnimCls:data.view.shownCls,show);
-  if(failed)
-   app.get('aggregator').trigger('timer:update',this.timecodeData);
+  this.$el.toggleClass(this.pData[this.phase.type].timecodes[this.phase.index].noAnim?data.view.noAnimCls:data.view.shownCls,show);
  },
- step:function({goOn:goOn,phase:phase,timecodeData:timecodeData}){
-  this.timecodeData=timecodeData;
+ step:function({goOn:goOn,phase:phase,pData:pData}){
+  this.pData=pData;
+  this.phase=phase;
 
-  if(timecodeData.iniTimer)
+  if(phase.type==='base'&&pData[phase.type].timecodes[phase.index].iniTimer)
   {
    if(!goOn)
     app.get('aggregator').trigger('timer:ini');
    app.get('aggregator').trigger('timer:show');
   }
 
-  if(timecodeData.checkpoint)
+  //app.get('aggregator').trigger('timer:update',timecodeData);//TODO:event to set save checkpoints
+  if(phase.type==='base')
   {
-   app.get('aggregator').trigger('timer:update',timecodeData);
-  }else
-  {
-   if(timecodeData.data.interactive!=='Start'||timecodeData.data.interactive==='Start'&&!lsMgr.getData().user.name)
+   if(pData[phase.type].timecodes[phase.index].data.interactive!=='Start'||pData[phase.type].timecodes[phase.index].data.interactive==='Start'&&!lsMgr.getData().user.name)
    {
-    if(typeof timecodeData.data.interactive==='string')
-     timecodeData.data.interactive=new Interactives[timecodeData.data.interactive]({app:app,timecodeData:timecodeData});else
-     timecodeData.data.interactive.toggle(true);
+    if(typeof pData[phase.type].timecodes[phase.index].data.interactive==='string')
+     pData[phase.type].timecodes[phase.index].data.interactive=new Interactives[pData[phase.type].timecodes[phase.index].data.interactive]
+     ({app:app,pData:pData,phase:phase});else
+     pData[phase.type].timecodes[phase.index].data.interactive.toggle(true);
     this.toggle({show:true});
    }
   }

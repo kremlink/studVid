@@ -23,15 +23,6 @@
           @include center($b:0);
         }
       }
-      &.choose{
-        .btn-cont{
-          width:5em;
-          height:2em;
-        }
-      }
-      &.info{
-
-      }
       &.shown{
         opacity:1;
         visibility:visible;
@@ -41,6 +32,15 @@
       width:30em;
       height:10em;
       @include center();
+      &.choose{
+        .btn-cont{
+          @include flx(flex,'1 0 0');
+          height:2em;
+        }
+      }
+      &.info{
+
+      }
     }
     .form{
       padding-top:2em;
@@ -69,6 +69,7 @@
     }
     .btn-cont{
       cursor:pointer;
+      position:relative;
       @include med(){
         &:hover{
           .btn{

@@ -4,6 +4,7 @@ export const data={
  },
  view:{
   el:'.ov-wrap.u-pop',
+  template:'#u-pop-template',
   shownCls:'shown'
  }
 };

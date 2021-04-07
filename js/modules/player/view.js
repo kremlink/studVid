@@ -17,7 +17,8 @@ export let PlayerView=Backbone.View.extend({
  qual:null,
  pausable:true,
  goOn:false,
- phase:{index:0,type:'base'},
+ firstTime:true,
+ phase:{step:0,type:'base',index:0},
  initialize:function(opts){
   app=opts.app;
   data=app.configure({player:dat}).player;
@@ -27,7 +28,7 @@ export let PlayerView=Backbone.View.extend({
   epIndex=app.get('epIndex');
 
   this.extTemplate=ext.length?_.template($(data.view.extTemplate).html()):()=>{};
-  this.pData=[...data.data[epIndex]];
+  this.pData=$.extend(true,[],data.data[epIndex]);
   this.qual=[...data.quality];
   this.player=videojs(this.el,{
    controlBar:{
@@ -51,7 +52,7 @@ export let PlayerView=Backbone.View.extend({
   this.listenTo(app.get('aggregator'),'player:pause',this.pause);
   this.listenTo(app.get('aggregator'),'page:state',this.freeze);
 
-  //this.player.on('qualitySelected',()=>this.play({}));//TODO:needed?
+  this.player.on('qualitySelected',()=>!this.firstTime?this.play({}):'');
  },
  freeze:function(){
   if(document.visibilityState==='hidden')
@@ -88,13 +89,12 @@ export let PlayerView=Backbone.View.extend({
   this.player.src(this.qual);
  },
  prepare:function(){
-  let touched={},
-      firstTime=true;
+  let touched={};
 
   this.setElement(data.view.el);
   this.$el.append(this.extTemplate());
 
-  this.changeSrc(this.pData[this.phase.index][this.phase.type].src);
+  this.changeSrc(this.pData[this.phase.step][this.phase.type].src);
   this.player.controlBar.addChild('QualitySelector');
 
   if(app.get('_dev'))
@@ -118,17 +118,22 @@ export let PlayerView=Backbone.View.extend({
      this.playPauseByCtrls();
    }
   });
-
+let test=0;
   this.player.on('timeupdate',()=>{
    let curr=this.player.currentTime();
 
    app.get('aggregator').trigger('player:timeupdate',curr);
    if(this.phase.type==='base')
    {
-    this.pData[this.phase.index][this.phase.type].timecodes.forEach((o)=>{
+    this.pData[this.phase.step][this.phase.type].timecodes.forEach((o,i)=>{
      if((o.start<0?curr>this.player.duration()+o.start:curr>o.start)&&!o.invoked)
-     {
-      app.get('aggregator').trigger('player:interactive',{goOn:this.goOn,phase:this.phase,timecodeData:o});
+     {test++;if(test===3)console.log('!');
+      this.phase.index=i;
+      app.get('aggregator').trigger('player:interactive',{
+       goOn:this.goOn,
+       phase:this.phase,
+       pData:this.pData[this.phase.step]
+      });
       o.invoked=true;
      }
     });
@@ -141,9 +146,9 @@ export let PlayerView=Backbone.View.extend({
   });
 
   this.player.on('loadedmetadata',()=>{
-   if(firstTime)
+   if(this.firstTime)
     app.get('aggregator').trigger('player:ready');
-   firstTime=false;
+   this.firstTime=false;
   });
 
   $(document).on('keypress',(e)=>{

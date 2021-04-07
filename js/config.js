@@ -41,11 +41,11 @@ export let config={
      base:{
       src:['../oceans.mp4','../oceans1.mp4'],
       timecodes:[{start:1,invoked:false,iniTimer:true,data:{interactive:'Start'}},
-       {start:3,invoked:false,data:{interactive:'Pop',conf:{cls:'choose',text:'choose'}}}]
+       {start:3,invoked:false,data:{interactive:'UPop',conf:{cls:'choose'}}}]
      },
      choose:[
-      {src:['../oceans.mp4','../oceans1.mp4'],data:{Interactive:'Pop',conf:{correct:false,cls:'info',text:'incorrect'}}},
-      {src:['../oceans.mp4','../oceans1.mp4'],data:{Interactive:'Pop',conf:{correct:true,cls:'info',text:'correct'}}}
+      {src:['../oceans.mp4','../oceans1.mp4'],data:{Interactive:'UPop',conf:{correct:false,cls:'info'}}},
+      {src:['../oceans.mp4','../oceans1.mp4'],data:{Interactive:'UPop',conf:{correct:true,cls:'info'}}}
      ],
      rewindTime:5
     }
