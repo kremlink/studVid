@@ -22,9 +22,7 @@ let app,
 export let MainView=Backbone.View.extend({
  events:events,
  el:data.view.el,
- pData:null,
- phase:null,
- delayedPTimer:null,
+ interactives:{},
  initialize:function(opts){
   app=opts.app;
   data=app.configure({main:dat}).main;
@@ -46,7 +44,10 @@ export let MainView=Backbone.View.extend({
  getLsMgr:function(){
   return lsMgr;
  },
- toggle:function({show:show,failed:failed,opts:opts}){
+ toggle:function({show:show,correct:correct,opts}){
+  let d=this.player.getData(),
+      int;
+
   app.get('aggregator').trigger('main:toggle',!show);
 
   if(show)
@@ -54,34 +55,60 @@ export let MainView=Backbone.View.extend({
    app.get('aggregator').trigger('player:pause');
   }else
   {
-   app.get('aggregator').trigger('player:play',{time:opts.end?this.pData[this.phase.type].timecodes[this.phase.index].data[opts.end]:
-     (!('end' in this.pData[this.phase.type].timecodes[this.phase.index])?-1:this.pData[this.phase.type].timecodes.end)});
+   if(d.phase.type==='base')
+   {
+    int=d.pData[d.phase.step][d.phase.type].timecodes[d.phase.index].data.interactive;
+    if(int==='Start')
+    {
+     app.get('aggregator').trigger('player:play',{});
+    }else//choose pop
+    {
+     app.get('aggregator').trigger('player:changeData',{index:opts.index,type:'choose',correct:correct});
+     this.player.changeSrc(d.pData[d.phase.step][d.phase.type][d.phase.index].src);
+     app.get('aggregator').trigger('player:play',{time:44});//TODO:tmp, remove after
+    }
+   }else
+   {
+    if(!d.phase.correct)
+    {
+     app.get('aggregator').trigger('player:changeData',{type:'base'});
+     this.player.changeSrc(d.pData[d.phase.step][d.phase.type].src);
+     app.get('aggregator').trigger('player:play',{time:d.pData[d.phase.step][d.phase.type].rewindTime});
+    }
+   }
   }
 
-  this.$el.toggleClass(this.pData[this.phase.type].timecodes[this.phase.index].noAnim?data.view.noAnimCls:data.view.shownCls,show);
+  this.$el.toggleClass(data.view.shownCls,show);
  },
- step:function({goOn:goOn,phase:phase,pData:pData}){
-  this.pData=pData;
-  this.phase=phase;
+ step:function({goOn:goOn}){
+  let d=this.player.getData(),
+      tItem,
+      int;
 
-  if(phase.type==='base'&&pData[phase.type].timecodes[phase.index].iniTimer)
+  if(d.phase.type==='base')
   {
-   if(!goOn)
-    app.get('aggregator').trigger('timer:ini');
-   app.get('aggregator').trigger('timer:show');
+   tItem=d.pData[d.phase.step][d.phase.type].timecodes[d.phase.index];
+
+   if(tItem.iniTimer)
+   {
+    if(!goOn)
+     app.get('aggregator').trigger('timer:ini');
+    app.get('aggregator').trigger('timer:show');
+   }
+
+   int=tItem.data.interactive;
+   if(int!=='Start'||int==='Start'&&!lsMgr.getData().user.name)
+   {
+    if(!this.interactives[int])
+     this.interactives[int]=new Interactives[int]({app:app,data:d});else
+     this.interactives[int].toggle(true);
+    this.toggle({show:true});
+   }
+  }else
+  {
+   this.interactives[d.pData[d.phase.step][d.phase.type][d.phase.index].data.interactive].toggle(true);
   }
 
   //app.get('aggregator').trigger('timer:update',timecodeData);//TODO:event to set save checkpoints
-  if(phase.type==='base')
-  {
-   if(pData[phase.type].timecodes[phase.index].data.interactive!=='Start'||pData[phase.type].timecodes[phase.index].data.interactive==='Start'&&!lsMgr.getData().user.name)
-   {
-    if(typeof pData[phase.type].timecodes[phase.index].data.interactive==='string')
-     pData[phase.type].timecodes[phase.index].data.interactive=new Interactives[pData[phase.type].timecodes[phase.index].data.interactive]
-     ({app:app,pData:pData,phase:phase});else
-     pData[phase.type].timecodes[phase.index].data.interactive.toggle(true);
-    this.toggle({show:true});
-   }
-  }
  }
 });

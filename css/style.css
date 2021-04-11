@@ -496,6 +496,14 @@ body {
   flex: 1 0 0;
   height: 2em;
 }
+.overlay-block .ov-inner.info .btn-cont {
+  width: 5em;
+  height: 2em;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+}
 .overlay-block .form {
   padding-top: 2em;
   position: relative;

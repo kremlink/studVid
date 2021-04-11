@@ -18,7 +18,7 @@ export let PlayerView=Backbone.View.extend({
  pausable:true,
  goOn:false,
  firstTime:true,
- phase:{step:0,type:'base',index:0},
+ phase:{step:0,type:'base',index:0,correct:false},
  initialize:function(opts){
   app=opts.app;
   data=app.configure({player:dat}).player;
@@ -51,6 +51,7 @@ export let PlayerView=Backbone.View.extend({
   this.listenTo(app.get('aggregator'),'player:play',this.play);
   this.listenTo(app.get('aggregator'),'player:pause',this.pause);
   this.listenTo(app.get('aggregator'),'page:state',this.freeze);
+  this.listenTo(app.get('aggregator'),'player:changeData',this.changeData);
 
   this.player.on('qualitySelected',()=>!this.firstTime?this.play({}):'');
  },
@@ -88,6 +89,20 @@ export let PlayerView=Backbone.View.extend({
 
   this.player.src(this.qual);
  },
+ getData:function(){
+  return {
+   phase:this.phase,
+   pData:this.pData
+  };
+ },
+ changeData:function({index=null,type=null,correct=null}){
+  if(index!==null)
+   this.phase.index=index;
+  if(type!==null)
+   this.phase.type=type;
+  if(correct!==null)
+   this.phase.correct=correct;
+ },
  prepare:function(){
   let touched={};
 
@@ -118,31 +133,37 @@ export let PlayerView=Backbone.View.extend({
      this.playPauseByCtrls();
    }
   });
-let test=0;
+
   this.player.on('timeupdate',()=>{
    let curr=this.player.currentTime();
 
-   app.get('aggregator').trigger('player:timeupdate',curr);
    if(this.phase.type==='base')
    {
     this.pData[this.phase.step][this.phase.type].timecodes.forEach((o,i)=>{
      if((o.start<0?curr>this.player.duration()+o.start:curr>o.start)&&!o.invoked)
-     {test++;if(test===3)console.log('!');
-      this.phase.index=i;
-      app.get('aggregator').trigger('player:interactive',{
-       goOn:this.goOn,
-       phase:this.phase,
-       pData:this.pData[this.phase.step]
-      });
+     {
+      this.changeData({index:i});
+
+      app.get('aggregator').trigger('player:interactive',{goOn:this.goOn});
       o.invoked=true;
      }
     });
    }
+
+   app.get('aggregator').trigger('player:timeupdate',{currTime:curr,phase:this.phase});
   });
 
   this.player.on('ended',()=>{
-   app.get('aggregator').trigger('player:interactive',{phase:this.phase});
-   //app.get('aggregator').trigger('player:ended',{phase:this.phase});
+   let timecodes;
+
+   if(this.phase.type==='choose')
+    app.get('aggregator').trigger('player:interactive',{});
+   if(this.phase.type==='base')
+   {
+    timecodes=this.pData[this.phase.step][this.phase.type].timecodes;
+    timecodes[timecodes.length-1].invoked=false;
+    this.play({time:timecodes[timecodes.length-1].start});
+   }
   });
 
   this.player.on('loadedmetadata',()=>{
@@ -172,17 +193,6 @@ let test=0;
   if(~time)
   {
    this.player.currentTime(time);
-   /*this.pData.forEach((o)=>{
-    if(goOn)
-    {
-     if(time>o.start)
-      o.invoked=true;
-    }else
-    {
-     if(time<o.start&&o.repeatable)
-      o.invoked=false;
-    }
-   });*/
    if(clr)
     clr.invoked=false;
   }

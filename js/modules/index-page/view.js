@@ -16,21 +16,21 @@ export let Index=Backbone.View.extend({
  events:events,
  el:data.view.el,
  savedTime:0,
+ main:null,
  initialize:function(opts){
   app=opts.app;
   data=app.configure({index:dat}).index;
   //might be needed someday
   app.set({dest:'objects.isMobile',object:matchMedia(data.mobViewport).matches});
 
-  let mob=!matchMedia(data.minViewport).matches,
-      main;
+  let mob=!matchMedia(data.minViewport).matches;
 
   epIndex=app.get('epIndex');
 
   new Metrika({app:app});
-  main=new MainView({app:app});
+  this.main=new MainView({app:app});
 
-  lsMgr=main.getLsMgr();
+  lsMgr=this.main.getLsMgr();
 
   this.$el.toggleClass(data.view.tooSmallCls,mob);
   $(window).on('resize',_.debounce(()=>{
@@ -72,7 +72,7 @@ export let Index=Backbone.View.extend({
   }
 
   $.when(wait).then(()=>{
-   new PlayerView({app:app});
+   this.main.player=new PlayerView({app:app});
   });
  },
  showGoOnBtn:function(savedTime){
@@ -98,15 +98,18 @@ export let Index=Backbone.View.extend({
  /*fs:function(f){
   this.$el.toggleClass(data.view.fsCls,f);
  },*/
- pause:function({phase:phase,pData:pData}){
-  if(phase.type==='base')
+ pause:function(){
+  let d=this.main.player.getData(),
+      int;
+
+  if(d.phase.type==='base')
   {
-   if(pData[phase.type].timecodes[phase.index].data.interactive!=='Start'||
-       pData[phase.type].timecodes[phase.index].data.interactive==='Start'&&!lsMgr.getData().user.name)
+   int=d.pData[d.phase.step][d.phase.type].timecodes[d.phase.index].data.interactive;
+   if(int!=='Start'||int==='Start'&&!lsMgr.getData().user.name)
     this.$el.addClass(data.view.pauseCls);
   }else
   {
-
+   this.$el.addClass(data.view.pauseCls);
   }
  },
  play:function(){

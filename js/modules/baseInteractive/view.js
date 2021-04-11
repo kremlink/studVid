@@ -7,7 +7,7 @@ export let BaseIntView=Backbone.View.extend({
  data:null,
  initialize:function(opts){
   app=opts.app;
-  this.data=opts.data;
+  this.dat=opts.data;
 
   this.toggle(true);
 
@@ -15,11 +15,11 @@ export let BaseIntView=Backbone.View.extend({
    app.get('aggregator').trigger('sound','btn');
   });
  },
- away:function(failed=false,opts={}){
-  app.get('aggregator').trigger('interactive:toggle',{show:false,failed:failed,opts:opts});
+ away:function(correct=false,opts){
+  app.get('aggregator').trigger('interactive:toggle',{show:false,correct:correct,opts:opts});
   this.toggle(false);
  },
  toggle:function(f){
-  this.$el.toggleClass(this.data.view.shownCls,f);
+  this.$el.toggleClass(this.dat.view.shownCls,f);
  }
 });

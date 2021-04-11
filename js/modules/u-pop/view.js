@@ -17,7 +17,7 @@ export let UPopView=BaseIntView.extend({
   data=app.configure({start:dat}).start;
   epIndex=app.get('epIndex');
 
-  this.opts=opts;
+  this.data=opts.data;
 
   BaseIntView.prototype.initialize.apply(this,[{
    app:app,
@@ -26,24 +26,38 @@ export let UPopView=BaseIntView.extend({
  },
 
  toggle:function(f){
+  let pData=this.data.pData,
+      phase=this.data.phase,
+      what;
+
   if(f)
   {
+   what=pData[phase.step][phase.type];
    this.$el.html(this.template({
-    cls:this.opts.pData[this.opts.phase.type].timecodes[this.opts.phase.index].data.conf.cls,
+    cls:phase.type==='base'?what.timecodes[phase.index].data.conf.cls:what[phase.index].data.conf.cls,
     ep:epIndex,
-    step:this.opts.phase.step,
-    choose:this.opts.phase.type==='base'?this.opts.pData['choose'].length:0,
-    chosen:this.opts.phase.type==='choose'?this.opts.phase.index:0,
+    step:phase.step,
+    choose:phase.type==='base'?pData[phase.step]['choose'].length:0,
+    chosen:phase.type==='choose'?phase.index:0,
    }));
   }
 
   BaseIntView.prototype.toggle.apply(this,arguments);
  },
  click:function(e){
-  if(this.opts.phase.type==='base')
+  let corr=false,
+      ind=$(e.currentTarget).index();
+  /*if(this.opts.phase.type==='base')
    app.get('aggregator').trigger('board:user',{step:this.opts.phase.index,index:$(e.target).index()});else
-   app.get('aggregator').trigger('player:src',{});
-  this.away(this.correct,{});
+   app.get('aggregator').trigger('player:src',{});*/
+
+  if(this.data.phase.type==='base')
+  {
+   if(this.data.pData[this.data.phase.step]['choose'][ind].data.conf.correct)
+    corr=true;
+  }
+
+  this.away(corr,{index:ind});
   //app.get('aggregator').trigger('board:score',{what:'start-two',points:corr?30:-10});
   //this.away(false,corr?{end:'endGood'}:{});
   //app.get('aggregator').trigger('sound',corr?'plus':'minus');

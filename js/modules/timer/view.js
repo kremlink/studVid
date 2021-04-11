@@ -16,12 +16,11 @@ export let TimerView=Backbone.View.extend({
  timerInt:null,
  timer:null,
  ctr:0,
- endFlag:false,
  initialize:function(opts){
   app=opts.app;
   data=app.configure({timer:dat}).timer;
 
-  let throttle=_.throttle((curr)=>this.saveCurTime(curr),data.throttle,{leading:false})
+  let throttle=_.throttle((opts)=>this.saveCurTime(opts),data.throttle,{leading:false})
 
   lsMgr=opts.lsMgr;
 
@@ -76,15 +75,12 @@ export let TimerView=Backbone.View.extend({
    this.tick(t);
   },1000);
  },
- saveCurTime:function(savedTime){
-  //ignore calls afted flag is set
-  if(!this.endFlag)
-  {
-   let ls=lsMgr.getData();
+ saveCurTime:function(opts){
+  let ls=lsMgr.getData();
 
-   ls.data[epIndex].savedTime=savedTime;
-   lsMgr.setData(ls);
-  }
+  ls.data[epIndex].savedTime=opts.currTime;
+  ls.data[epIndex].phase=opts.phase;
+  lsMgr.setData(ls);
  },
  tick:function(t){
   let ls=lsMgr.getData();

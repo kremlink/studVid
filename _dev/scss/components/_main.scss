@@ -39,7 +39,11 @@
         }
       }
       &.info{
-
+        .btn-cont{
+          width:5em;
+          height:2em;
+          @include center($b:0);
+        }
       }
     }
     .form{
