@@ -82,7 +82,7 @@ export let Index=Backbone.View.extend({
  },
  goOn:function(){
   this.$el.addClass(data.view.startCls);
-  app.get('aggregator').trigger('player:play',{time:this.savedTime,goOn:true});
+  this.main.player.play({time:this.savedTime,goOn:true});
   app.get('aggregator').trigger('timer:ini',true);
  },
  loaded:function(){
@@ -93,7 +93,7 @@ export let Index=Backbone.View.extend({
  },
  start:function(){
   this.$el.addClass(data.view.startCls);
-  app.get('aggregator').trigger('player:play',{});
+  this.main.player.play();
  },
  /*fs:function(f){
   this.$el.toggleClass(data.view.fsCls,f);

@@ -52,7 +52,7 @@ export let MainView=Backbone.View.extend({
 
   if(show)
   {
-   app.get('aggregator').trigger('player:pause');
+   this.player.pause();
   }else
   {
    if(d.phase.type==='base')
@@ -60,20 +60,31 @@ export let MainView=Backbone.View.extend({
     int=d.pData[d.phase.step][d.phase.type].timecodes[d.phase.index].data.interactive;
     if(int==='Start')
     {
-     app.get('aggregator').trigger('player:play',{});
+     this.player.play();
     }else//choose pop
     {
-     app.get('aggregator').trigger('player:changeData',{index:opts.index,type:'choose',correct:correct});
+     this.player.changeData({index:opts.index,type:'choose',correct:correct});
      this.player.changeSrc(d.pData[d.phase.step][d.phase.type][d.phase.index].src);
-     app.get('aggregator').trigger('player:play',{time:44});//TODO:tmp, remove after
+     this.player.play({time:correct?0:44});//TODO: remove param after
     }
    }else
    {
-    if(!d.phase.correct)
+    if(d.phase.correct)
     {
-     app.get('aggregator').trigger('player:changeData',{type:'base'});
+     if(d.phase.step===d.pData.length-1)
+     {
+      console.log('last segment');//TODO: end screen instead of log
+     }else
+     {
+      this.player.changeData({step:d.phase.step+1,type:'base'});
+      this.player.changeSrc(d.pData[d.phase.step][d.phase.type].src);
+      this.player.play();
+     }
+    }else
+    {
+     this.player.changeData({type:'base'});
      this.player.changeSrc(d.pData[d.phase.step][d.phase.type].src);
-     app.get('aggregator').trigger('player:play',{time:d.pData[d.phase.step][d.phase.type].rewindTime});
+     this.player.play({time:d.pData[d.phase.step][d.phase.type].rewindTime});
     }
    }
   }

@@ -48,10 +48,7 @@ export let PlayerView=Backbone.View.extend({
    this.prepare();
   });
   this.listenTo(app.get('aggregator'),'main:toggle',this.setPausable);
-  this.listenTo(app.get('aggregator'),'player:play',this.play);
-  this.listenTo(app.get('aggregator'),'player:pause',this.pause);
   this.listenTo(app.get('aggregator'),'page:state',this.freeze);
-  this.listenTo(app.get('aggregator'),'player:changeData',this.changeData);
 
   this.player.on('qualitySelected',()=>!this.firstTime?this.play({}):'');
  },
@@ -95,11 +92,13 @@ export let PlayerView=Backbone.View.extend({
    pData:this.pData
   };
  },
- changeData:function({index=null,type=null,correct=null}){
-  if(index!==null)
-   this.phase.index=index;
+ changeData:function({step=null,type=null,index=null,correct=null}){
+  if(step!==null)
+   this.phase.step=step;
   if(type!==null)
    this.phase.type=type;
+  if(index!==null)
+   this.phase.index=index;
   if(correct!==null)
    this.phase.correct=correct;
  },
@@ -187,7 +186,7 @@ export let PlayerView=Backbone.View.extend({
     this.player.pause();
   }
  },
- play:function({time=-1,clr=null,goOn=false}){
+ play:function({time=-1,clr=null,goOn=false}={}){
   if(goOn)
    this.goOn=true;
   if(~time)
@@ -197,7 +196,10 @@ export let PlayerView=Backbone.View.extend({
     clr.invoked=false;
   }
   if(this.player.paused())
+  {
    this.player.play();
+   app.get('aggregator').trigger('player:play');
+  }
  },
  pause:function(){
   if(!this.player.seeking())

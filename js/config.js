@@ -36,7 +36,7 @@ export let config={
    }
   ],
   data:{
-   '1':[//noAutoClose:true|repeatable:true|delayedPause:-1|noVidAutoPlay:true|checkpoint:true|iniTimer:true
+   '1':[//[noAutoClose:true|repeatable:true|delayedPause:-1|noVidAutoPlay:true|]checkpoint:true|iniTimer:true
     {
      base:{
       src:['../oceans.mp4','../oceans1.mp4'],
@@ -46,17 +46,17 @@ export let config={
      },
      choose:[
       {src:['../oceans.mp4','../oceans1.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
-      {src:['../oceans.mp4','../oceans1.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}}
+      {src:['../night.mp4','../night1.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}}
      ]
     },
     {
      base:{
-      src:['../night.mp4','../night.mp4'],
+      src:['../oceans.mp4','../oceans.mp4'],
       timecodes:[{start:3,invoked:false,data:{interactive:'UPop',conf:{cls:'choose'}}}],
-      rewindTime:5
+      rewindTime:40
      },
      choose:[
-      {src:['../oceans.mp4','../oceans1.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
+      {src:['../night.mp4','../night1.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../oceans.mp4','../oceans1.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
      ]
     }
