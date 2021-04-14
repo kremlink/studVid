@@ -22,7 +22,7 @@ export let BoardMgr=Backbone.View.extend({
  setUserData:function(dat){
   let ls=lsMgr.getData();
 
-  ls.user={name:dat.name};
+  ls.user=dat;
   lsMgr.setData(ls);
  },
  setData:function({name,val}){

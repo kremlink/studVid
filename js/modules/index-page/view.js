@@ -76,6 +76,7 @@ export let Index=Backbone.View.extend({
   });
  },
  showGoOnBtn:function(savedTime){
+  //TODO: start from correct step, phase and time
   this.savedTime=savedTime;
   if(savedTime>0)
    this.$el.addClass(data.view.goOnCls);
@@ -95,9 +96,6 @@ export let Index=Backbone.View.extend({
   this.$el.addClass(data.view.startCls);
   this.main.player.play();
  },
- /*fs:function(f){
-  this.$el.toggleClass(data.view.fsCls,f);
- },*/
  pause:function(){
   let d=this.main.player.getData(),
       int;
@@ -105,7 +103,7 @@ export let Index=Backbone.View.extend({
   if(d.phase.type==='base')
   {
    int=d.pData[d.phase.step][d.phase.type].timecodes[d.phase.index].data.interactive;
-   if(int!=='Start'||int==='Start'&&!lsMgr.getData().user.name)
+   if(int!=='Start'||int==='Start'&&!lsMgr.getData().user)
     this.$el.addClass(data.view.pauseCls);
   }else
   {

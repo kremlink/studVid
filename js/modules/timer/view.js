@@ -47,7 +47,7 @@ export let TimerView=Backbone.View.extend({
  ini:function(goOn=false){
   let ls=lsMgr.getData();
 
-  if(!ls.data[epIndex].timer)
+  if(!ls.data[epIndex].timer||!goOn)
    ls.data[epIndex].timer=0;
   if(!ls.data[epIndex].savedTime)
    ls.data[epIndex].savedTime=0;

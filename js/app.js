@@ -2,7 +2,7 @@ import {app} from './bf/base.js';
 
 import {Index} from './modules/index-page/view.js';
 
-//import {utils} from './bf/lib/utils.js';
+import {utils} from './bf/lib/utils.js';
 //import {Toggle} from './bf/lib/toggle.js';
 //------------------------
 const dataApp=app.get('helpers.html').data('app'),
@@ -15,8 +15,7 @@ if(~modules.indexOf('index'))
 {
  app.init({
   //plugins:[Toggle],
-  //plugins:[{object:utils,name:'utils'}],
-  plugins:[],
+  plugins:[{object:utils,name:'utils'}],
   settings:{}
  });
 

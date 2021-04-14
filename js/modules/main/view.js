@@ -94,7 +94,8 @@ export let MainView=Backbone.View.extend({
  step:function({goOn:goOn}){
   let d=this.player.getData(),
       tItem,
-      int;
+      int,
+      ls;
 
   if(d.phase.type==='base')
   {
@@ -103,12 +104,18 @@ export let MainView=Backbone.View.extend({
    if(tItem.iniTimer)
    {
     if(!goOn)
+    {
      app.get('aggregator').trigger('timer:ini');
+     ls=lsMgr.getData();
+
+     delete ls.user;
+     lsMgr.setData(ls);
+    }
     app.get('aggregator').trigger('timer:show');
    }
 
    int=tItem.data.interactive;
-   if(int!=='Start'||int==='Start'&&!lsMgr.getData().user.name)
+   if(int!=='Start'||int==='Start'&&!lsMgr.getData().user)
    {
     if(!this.interactives[int])
      this.interactives[int]=new Interactives[int]({app:app,data:d});else

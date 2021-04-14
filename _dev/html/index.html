@@ -37,8 +37,8 @@
                     <div class="ov-inner">
                         <img src="images/bg.svg" alt=""/>
                         <div class="form">
-                            Введи свое имя<br/>
-                            <input placeholder="Введи свое имя" type="text"/>
+                            <input data-valid="\S+" placeholder="Введи свое имя" type="text" name="name"/>
+                            <input data-valid="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" placeholder="Введи свой email" type="text" name="email"/>
                         </div>
                         <div class="btn-cont">
                             <img src="images/t1.svg" alt="" class="btn"/>

@@ -4,7 +4,8 @@ export const data={
  },
  view:{
   el:'.ov-wrap.start',
-  $brdName:'input',
-  shownCls:'shown'
+  $inp:'input',
+  shownCls:'shown',
+  errCls:'err'
  }
 };

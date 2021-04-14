@@ -532,6 +532,9 @@ body {
 .overlay-block .form input:-ms-input-placeholder {
   color: #fff;
 }
+.overlay-block .form input.err {
+  background: #f00;
+}
 .overlay-block .btns {
   position: absolute;
   left: 0;

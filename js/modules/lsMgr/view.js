@@ -5,7 +5,6 @@ let app,
     epIndex;
 
 export let LsMgr=Backbone.View.extend({
- //ini:{name:'',chosen:[],timer:0,savedTime:0},
  initialize:function(opts){
   app=opts.app;
   data=app.configure({ls:dat}).ls;

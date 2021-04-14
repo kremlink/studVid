@@ -65,6 +65,9 @@
         @include plh(){
           color:#fff;
         };
+        &.err{
+          background:#f00;
+        }
       }
     }
     .btns{
