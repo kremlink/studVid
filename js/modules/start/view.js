@@ -32,13 +32,10 @@ export let StartView=BaseIntView.extend({
   BaseIntView.prototype.toggle.apply(this,arguments);
  },
  click:function(){
-  if(app.get('lib.utils.form.validate')({check:this.$inp,error:(obj)=>obj.addClass(data.view.errCls)}))
+  if(app.get('lib.utils.form.validate')({check:this.$inp,data:data.view.vData,error:(obj)=>obj.addClass(data.view.errCls)}))
   {
    app.get('aggregator').trigger('board:user',Object.fromEntries(this.$inp.serializeArray().map(({name,value})=>[name,value])));
    this.away();
-  }else
-  {
-   console.log('err');
   }
   //app.get('aggregator').trigger('board:score',{what:'start-two',points:corr?30:-10});
   //this.away(false,corr?{end:'endGood'}:{});

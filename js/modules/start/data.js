@@ -6,6 +6,7 @@ export const data={
   el:'.ov-wrap.start',
   $inp:'input',
   shownCls:'shown',
-  errCls:'err'
+  errCls:'err',
+  vData:'valid'
  }
 };

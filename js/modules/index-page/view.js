@@ -72,7 +72,7 @@ export let Index=Backbone.View.extend({
   }
 
   $.when(wait).then(()=>{
-   this.main.player=new PlayerView({app:app});
+   this.main.player=new PlayerView({app:app,lsMgr:lsMgr});
   });
  },
  showGoOnBtn:function(savedTime){
@@ -94,7 +94,7 @@ export let Index=Backbone.View.extend({
  },
  start:function(){
   this.$el.addClass(data.view.startCls);
-  this.main.player.play();
+  this.main.player.play({clr:true});
  },
  pause:function(){
   let d=this.main.player.getData(),

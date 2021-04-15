@@ -3,7 +3,8 @@ import {data as dat} from './data.js';
 let app,
     data=dat,
     epIndex,
-    events={};
+    events={},
+    lsMgr;
 
 events[`click ${data.events.jBack}`]='jBack';
 events[`click ${data.events.iBack}`]='iBack';
@@ -18,7 +19,7 @@ export let PlayerView=Backbone.View.extend({
  pausable:true,
  goOn:false,
  firstTime:true,
- phase:{step:0,type:'base',index:0,correct:false},
+ phase:{step:0,type:'base',index:0,correct:false,rewind:false},
  initialize:function(opts){
   app=opts.app;
   data=app.configure({player:dat}).player;
@@ -26,6 +27,7 @@ export let PlayerView=Backbone.View.extend({
   let ext=$(data.view.extTemplate);
 
   epIndex=app.get('epIndex');
+  lsMgr=opts.lsMgr;
 
   this.extTemplate=ext.length?_.template($(data.view.extTemplate).html()):()=>{};
   this.pData=$.extend(true,[],data.data[epIndex]);
@@ -92,15 +94,9 @@ export let PlayerView=Backbone.View.extend({
    pData:this.pData
   };
  },
- changeData:function({step=null,type=null,index=null,correct=null}){
-  if(step!==null)
-   this.phase.step=step;
-  if(type!==null)
-   this.phase.type=type;
-  if(index!==null)
-   this.phase.index=index;
-  if(correct!==null)
-   this.phase.correct=correct;
+ changeData:function(opts){
+  for(let [x,y] of Object.entries(opts))
+   this.phase[x]=y;
  },
  prepare:function(){
   let touched={};
@@ -109,6 +105,7 @@ export let PlayerView=Backbone.View.extend({
   this.$el.append(this.extTemplate());
 
   this.changeSrc(this.pData[this.phase.step][this.phase.type].src);
+
   this.player.controlBar.addChild('QualitySelector');
 
   if(app.get('_dev'))
@@ -126,7 +123,8 @@ export let PlayerView=Backbone.View.extend({
    touched.y=e.touches[0].pageY;
   });
   this.player.on('touchend',e=>{
-   if(Math.sqrt((touched.x-e.changedTouches[0].pageX)*(touched.x-e.changedTouches[0].pageX)+(touched.y-e.changedTouches[0].pageY)*(touched.y-e.changedTouches[0].pageY))<data.touchPlayRadius)
+   if(Math.sqrt((touched.x-e.changedTouches[0].pageX)*(touched.x-e.changedTouches[0].pageX)+
+       (touched.y-e.changedTouches[0].pageY)*(touched.y-e.changedTouches[0].pageY))<data.touchPlayRadius)
    {
     if(e.target.nodeName==='VIDEO')
      this.playPauseByCtrls();
@@ -153,13 +151,15 @@ export let PlayerView=Backbone.View.extend({
   });
 
   this.player.on('ended',()=>{
-   let timecodes;
+   let timecodes=this.pData[this.phase.step]['base'].timecodes;
 
    if(this.phase.type==='choose')
+   {
     app.get('aggregator').trigger('player:interactive',{});
+    timecodes[timecodes.length-1].invoked=true;
+   }
    if(this.phase.type==='base')
    {
-    timecodes=this.pData[this.phase.step][this.phase.type].timecodes;
     timecodes[timecodes.length-1].invoked=false;
     this.play({time:timecodes[timecodes.length-1].start});
    }
@@ -187,14 +187,29 @@ export let PlayerView=Backbone.View.extend({
   }
  },
  play:function({time=-1,clr=null,goOn=false}={}){
-  if(goOn)
-   this.goOn=true;
-  if(~time)
+  if(clr)
   {
-   this.player.currentTime(time);
-   if(clr)
-    clr.invoked=false;
+   let ls=lsMgr.getData();
+
+   delete ls.data[epIndex].phase;
+   delete ls.user;
+   lsMgr.setData(ls);
   }
+  if(goOn)
+  {
+   let timecodes=this.pData[this.phase.step]['base'].timecodes;
+
+   this.goOn=true;
+   this.phase=lsMgr.getData().data[epIndex].phase;
+   if(this.phase.type==='base')
+    this.changeSrc(this.pData[this.phase.step][this.phase.type].src);else
+    this.changeSrc(this.pData[this.phase.step][this.phase.type][this.phase.index].src);
+
+    if(this.phase.rewind)
+     timecodes[timecodes.length-1].invoked=true;
+  }
+  if(~time)
+   this.player.currentTime(time);
   if(this.player.paused())
   {
    this.player.play();

@@ -76,13 +76,13 @@ export let MainView=Backbone.View.extend({
       console.log('last segment');//TODO: end screen instead of log
      }else
      {
-      this.player.changeData({step:d.phase.step+1,type:'base'});
+      this.player.changeData({step:d.phase.step+1,index:0,type:'base'});
       this.player.changeSrc(d.pData[d.phase.step][d.phase.type].src);
       this.player.play();
      }
     }else
     {
-     this.player.changeData({type:'base'});
+     this.player.changeData({type:'base',rewind:true});
      this.player.changeSrc(d.pData[d.phase.step][d.phase.type].src);
      this.player.play({time:d.pData[d.phase.step][d.phase.type].rewindTime});
     }
@@ -94,8 +94,7 @@ export let MainView=Backbone.View.extend({
  step:function({goOn:goOn}){
   let d=this.player.getData(),
       tItem,
-      int,
-      ls;
+      int;
 
   if(d.phase.type==='base')
   {
@@ -104,13 +103,8 @@ export let MainView=Backbone.View.extend({
    if(tItem.iniTimer)
    {
     if(!goOn)
-    {
      app.get('aggregator').trigger('timer:ini');
-     ls=lsMgr.getData();
 
-     delete ls.user;
-     lsMgr.setData(ls);
-    }
     app.get('aggregator').trigger('timer:show');
    }
 
@@ -122,9 +116,14 @@ export let MainView=Backbone.View.extend({
      this.interactives[int].toggle(true);
     this.toggle({show:true});
    }
+
+   this.player.changeData({rewind:false});
   }else
   {
-   this.interactives[d.pData[d.phase.step][d.phase.type][d.phase.index].data.interactive].toggle(true);
+   int=d.pData[d.phase.step][d.phase.type][d.phase.index].data.interactive;
+   if(!this.interactives[int])
+    this.interactives[int]=new Interactives[int]({app:app,data:d});else
+    this.interactives[int].toggle(true);
   }
 
   //app.get('aggregator').trigger('timer:update',timecodeData);//TODO:event to set save checkpoints

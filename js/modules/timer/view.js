@@ -20,7 +20,7 @@ export let TimerView=Backbone.View.extend({
   app=opts.app;
   data=app.configure({timer:dat}).timer;
 
-  let throttle=_.throttle((opts)=>this.saveCurTime(opts),data.throttle,{leading:false})
+  let throttle=_.throttle((opts)=>this.saveData(opts),data.throttle,{leading:false})
 
   lsMgr=opts.lsMgr;
 
@@ -75,7 +75,7 @@ export let TimerView=Backbone.View.extend({
    this.tick(t);
   },1000);
  },
- saveCurTime:function(opts){
+ saveData:function(opts){
   let ls=lsMgr.getData();
 
   ls.data[epIndex].savedTime=opts.currTime;
