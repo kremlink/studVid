@@ -15,7 +15,6 @@ events[`click ${data.events.goOn}`]='goOn';
 export let Index=Backbone.View.extend({
  events:events,
  el:data.view.el,
- savedTime:0,
  main:null,
  initialize:function(opts){
   app=opts.app;
@@ -30,9 +29,10 @@ export let Index=Backbone.View.extend({
   new Metrika({app:app});
   this.main=new MainView({app:app});
 
-  lsMgr=this.main.getLsMgr();
+  lsMgr=this.main.lsMgr;
 
-  let t=lsMgr.getData().data[epIndex].savedTime;
+  if(lsMgr.getData().data[epIndex].savedTime)
+   this.$el.addClass(data.view.goOnCls);
 
   this.$el.toggleClass(data.view.tooSmallCls,mob);
   $(window).on('resize',_.debounce(()=>{
@@ -47,12 +47,6 @@ export let Index=Backbone.View.extend({
   this.listenTo(app.get('aggregator'),'player:interactive',this.pause);
   this.listenTo(app.get('aggregator'),'player:play',this.play);
   this.listenTo(app.get('aggregator'),'player:rewind',this.disable);
-
-  if(t)
-  {
-   this.savedTime=t;
-   this.$el.addClass(data.view.goOnCls);
-  }
 
   this.prepare();
  },
@@ -84,9 +78,12 @@ export let Index=Backbone.View.extend({
   });
  },
  goOn:function(){
+  let ls=lsMgr.getData();
+
   this.$el.addClass(data.view.startCls);
-  this.main.player.play({time:this.savedTime||0,goOn:true});
-  app.get('aggregator').trigger('timer:ini',true);
+  this.main.player.play({time:ls.data[epIndex].savedTime,phase:ls.data[epIndex].phase});
+  if(ls.user.name)
+   app.get('aggregator').trigger('timer:ini',true);
  },
  loaded:function(){
   this.$el.addClass(data.view.loadedCls);
@@ -99,7 +96,8 @@ export let Index=Backbone.View.extend({
  },
  start:function(){
   this.$el.addClass(data.view.startCls);
-  this.main.player.play({clr:true});
+  lsMgr.resetData(true);
+  this.main.player.play();
  },
  pause:function(){
   let d=this.main.player.getData(),

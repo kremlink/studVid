@@ -17,7 +17,7 @@ let Interactives={
 let app,
     data=dat,
     events={},
-    lsMgr;
+    epIndex;
 
 export let MainView=Backbone.View.extend({
  events:events,
@@ -27,7 +27,9 @@ export let MainView=Backbone.View.extend({
   app=opts.app;
   data=app.configure({main:dat}).main;
 
-  lsMgr=new LsMgr({app:app});
+  epIndex=app.get('epIndex');
+
+  this.lsMgr=new LsMgr({app:app});
 
   this.listenTo(app.get('aggregator'),'interactive:toggle',this.toggle);
   this.listenTo(app.get('aggregator'),'player:interactive',this.step);
@@ -36,13 +38,10 @@ export let MainView=Backbone.View.extend({
 
   new SoundMgr({app:app});
 
-  new TimerView({app:app,lsMgr:lsMgr});
-  new BoardMgr({app:app,lsMgr:lsMgr});
+  new TimerView({app:app,lsMgr:this.lsMgr});
+  new BoardMgr({app:app,lsMgr:this.lsMgr});
 
   /*app.get('aggregator').trigger('board:score',{what:'test',points:5});*/
- },
- getLsMgr:function(){
-  return lsMgr;
  },
  toggle:function({show:show,correct:correct,opts}){
   let d=this.player.getData(),
@@ -82,6 +81,7 @@ export let MainView=Backbone.View.extend({
      }
     }else
     {
+     console.log('rewind');
      this.player.changeData({type:'base',rewind:true});
      this.player.changeSrc(d.pData[d.phase.step][d.phase.type].src);
      this.player.play({time:d.pData[d.phase.step][d.phase.type].rewindTime});
@@ -92,7 +92,7 @@ export let MainView=Backbone.View.extend({
 
   this.$el.toggleClass(data.view.shownCls,show);
  },
- step:function({goOn:goOn}){
+ step:function(){
   let d=this.player.getData(),
       tItem,
       int;
@@ -101,17 +101,14 @@ export let MainView=Backbone.View.extend({
   {
    tItem=d.pData[d.phase.step][d.phase.type].timecodes[d.phase.index];
 
-   if(tItem.iniTimer)
-   {
-    if(!goOn)
-     app.get('aggregator').trigger('timer:ini');
-
-    app.get('aggregator').trigger('timer:show');
-   }
-
    int=tItem.data.interactive;
-   if(int!=='Start'||int==='Start'&&!lsMgr.getData().user)
+
+   let ls=this.lsMgr.getData();
+
+   if(int!=='Start'||int==='Start'&&!ls.user.name)
    {
+    if(int==='Start')
+     app.get('aggregator').trigger('timer:ini');
     if(!this.interactives[int])
      this.interactives[int]=new Interactives[int]({app:app,data:d});else
      this.interactives[int].toggle(true);

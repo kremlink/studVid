@@ -54,14 +54,13 @@ export let TimerView=Backbone.View.extend({
 
   this.timer=ls.data[epIndex].timer;
 
-  if(goOn)
-  {
-   app.get('aggregator').trigger('timer:show');
-  }else
+  if(!goOn)
   {
    ls.data[epIndex].savedTime=0;
    lsMgr.setData(ls);
   }
+
+  app.get('aggregator').trigger('timer:show');
 
   this.start();
 

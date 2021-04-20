@@ -17,7 +17,6 @@ export let PlayerView=Backbone.View.extend({
  pData:null,
  qual:null,
  pausable:true,
- goOn:false,
  firstTime:true,
  phase:{step:0,type:'base',index:0,correct:false,rewind:false},
  initialize:function(opts){
@@ -149,7 +148,7 @@ export let PlayerView=Backbone.View.extend({
      {
       this.changeData({index:i});
 
-      app.get('aggregator').trigger('player:interactive',{goOn:this.goOn});
+      app.get('aggregator').trigger('player:interactive');
       o.invoked=true;
      }
     });
@@ -194,28 +193,20 @@ export let PlayerView=Backbone.View.extend({
     this.player.pause();
   }
  },
- play:function({time=-1,clr=null,goOn=false}={}){
-  if(clr)
+ play:function({time=-1,phase=null}={}){
+  if(phase)
   {
-   let ls=lsMgr.getData();
-
-   delete ls.data[epIndex].phase;
-   delete ls.user;
-   lsMgr.setData(ls);
-  }
-
-  if(goOn)
-  {
-   let timecodes=this.pData[this.phase.step]['base'].timecodes;
-
-   this.goOn=true;
-   this.phase=lsMgr.getData().data[epIndex].phase;
+   this.phase=phase;
    if(this.phase.type==='base')
     this.changeSrc(this.pData[this.phase.step][this.phase.type].src);else
     this.changeSrc(this.pData[this.phase.step][this.phase.type][this.phase.index].src);
 
     if(this.phase.rewind)
-     timecodes[timecodes.length-1].invoked=true;
+    {
+     let timecodes=this.pData[this.phase.step]['base'].timecodes;
+
+     time=timecodes[timecodes.length-1].start;
+    }
   }
 
   if(~time)

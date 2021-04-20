@@ -40,7 +40,7 @@ export let config={
     {
      base:{
       src:['../night.mp4','../oceans1.mp4'],
-      timecodes:[{start:1,invoked:false,iniTimer:true,data:{interactive:'Start'}},
+      timecodes:[{start:1,invoked:false,data:{interactive:'Start'}},
        {start:2,invoked:false,data:{interactive:'UPop',conf:{cls:'choose'}}}],
       rewindTime:3
      },
