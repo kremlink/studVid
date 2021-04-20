@@ -28,6 +28,8 @@ export let PlayerView=Backbone.View.extend({
   epIndex=app.get('epIndex');
   lsMgr=opts.lsMgr;
 
+  this.$btns=$(data.view.$btns);
+
   this.extTemplate=ext.length?_.template($(data.view.extTemplate).html()):()=>{};
   this.pData=$.extend(true,[],data.data[epIndex]);
   this.qual=[...data.quality];
@@ -69,12 +71,21 @@ export let PlayerView=Backbone.View.extend({
 
   if(where.length)
    this.play({time:what.start,clr:what});
- },
- iiBack:function(){
-  let index=0;
-
-  this.play({time:this.pData[index].start,clr:this.pData[index]});
  },*/
+ iiBack:function(e){
+  let index=$(e.currentTarget).index();
+
+  for(let i=index;i<this.pData.length;i++)
+  {
+   this.pData[i]['base'].timecodes.forEach((o)=>{
+    o.invoked=false;
+   });
+  }
+  //TODO:toggle(false) popups
+  this.changeData({step:index,index:0,type:'base'});
+  this.changeSrc(this.pData[this.phase.step][this.phase.type].src);
+  this.play();
+ },
  changeSrc:function(src){
   let ind=this.qual.findIndex((o)=>matchMedia(o.width).matches);
 
@@ -97,9 +108,8 @@ export let PlayerView=Backbone.View.extend({
   for(let [x,y] of Object.entries(opts))
    this.phase[x]=y;
  },
- prepare:function(){
-  let touched={},
-      ls=lsMgr.getData(),
+ setStepsChoose:function(){
+  let ls=lsMgr.getData(),
       choose=(()=>{
        let arr=[];
 
@@ -109,8 +119,15 @@ export let PlayerView=Backbone.View.extend({
        return arr;
       })();
 
+  this.$btns.html(this.extTemplate({choose:choose}));
+ },
+ prepare:function(){
+  let touched={};
+
   this.setElement(data.view.el);
-  this.$el.append(this.extTemplate({choose:choose}));
+  this.$el.append(this.$btns);
+  this.setStepsChoose();
+
   this.changeSrc(this.pData[this.phase.step][this.phase.type].src);
 
   this.player.controlBar.addChild('QualitySelector');
@@ -201,12 +218,12 @@ export let PlayerView=Backbone.View.extend({
     this.changeSrc(this.pData[this.phase.step][this.phase.type].src);else
     this.changeSrc(this.pData[this.phase.step][this.phase.type][this.phase.index].src);
 
-    if(this.phase.rewind)
-    {
-     let timecodes=this.pData[this.phase.step]['base'].timecodes;
+   if(this.phase.rewind)
+   {
+    let timecodes=this.pData[this.phase.step]['base'].timecodes;
 
-     time=timecodes[timecodes.length-1].start;
-    }
+    time=timecodes[timecodes.length-1].start;
+   }
   }
 
   if(~time)

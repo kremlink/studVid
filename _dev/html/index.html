@@ -66,13 +66,12 @@
                     Возможно, вам поможет поворот девайса.
                 </div>
             </div>
+            <div class="special-btns"></div>
 		</div>
         <script type="text/template" id="ext-player-template">
-            <div class="special-btns">
-                <% for(let i=0;i<choose.length;i++){ %>
-                <div class="int-ind-back<%= choose[i]?' enabled':' ' %>"></div>
-                <% } %>
-            </div>
+            <% for(let i=0;i<choose.length;i++){ %>
+            <div class="int-ind-back<%= choose[i]?' enabled':' ' %>"></div>
+            <% } %>
         </script>
     <script type="text/template" id="u-pop-template">
         <div class="ov-inner <%= cls %>">

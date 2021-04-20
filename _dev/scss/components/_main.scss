@@ -132,7 +132,11 @@
     @include abs($l:0,$t:0,$b:0);
     width:4em;
     background:rgba(#000,0.36);
-    z-index:1;
+    z-index:2;
+    display:none;
+    .start &{
+      display:block;
+    }
     .paused &{
       display:none;
     }
@@ -144,8 +148,10 @@
       background: url(#{$path}t1.svg) center/70% 70% no-repeat;
       height:4em;
       opacity:0.3;
+      pointer-events:none;
       &.enabled{
         opacity:1;
+        pointer-events:auto;
       }
     }
   }

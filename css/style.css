@@ -605,7 +605,11 @@ body {
   bottom: 0;
   width: 4em;
   background: rgba(0, 0, 0, 0.36);
-  z-index: 1;
+  z-index: 2;
+  display: none;
+}
+.start .special-btns {
+  display: block;
 }
 .paused .special-btns {
   display: none;
@@ -618,9 +622,11 @@ body {
   background: url(../images/t1.svg) center/70% 70% no-repeat;
   height: 4em;
   opacity: 0.3;
+  pointer-events: none;
 }
 .special-btns div.enabled {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .loader-pop {

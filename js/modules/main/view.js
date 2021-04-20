@@ -81,7 +81,6 @@ export let MainView=Backbone.View.extend({
      }
     }else
     {
-     console.log('rewind');
      this.player.changeData({type:'base',rewind:true});
      this.player.changeSrc(d.pData[d.phase.step][d.phase.type].src);
      this.player.play({time:d.pData[d.phase.step][d.phase.type].rewindTime});
@@ -115,8 +114,11 @@ export let MainView=Backbone.View.extend({
     this.toggle({show:true});
    }
 
-   app.get('aggregator').trigger('player:rewind',false);
-   this.player.changeData({rewind:false});
+   if(int!=='Start')
+   {
+    app.get('aggregator').trigger('player:rewind',false);
+    this.player.changeData({rewind:false});
+   }
   }else
   {
    int=d.pData[d.phase.step][d.phase.type][d.phase.index].data.interactive;
