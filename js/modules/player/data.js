@@ -7,8 +7,6 @@ export const data={
  _production:false,
  quality:{},
  events:{
-  'jBack':'.just-back',
-  'iBack':'.int-back',
   'iiBack':'.int-ind-back'
  },
  view:{

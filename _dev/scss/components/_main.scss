@@ -129,21 +129,23 @@
   }
   //test
   .special-btns{
-    @include abs($l:30%,$b:0);
-    margin-left:-8.5em;
-    height:3em;
+    @include abs($l:0,$t:0,$b:0);
+    width:4em;
     background:rgba(#000,0.36);
-    @include flx(display,flex);
     z-index:1;
     .paused &{
       display:none;
     }
+    .nope &{
+      display:none;
+    }
     div{
       cursor:pointer;
-      width:4em;
       background: url(#{$path}t1.svg) center/70% 70% no-repeat;
-      &:nth-child(2){
-        background-image:url(#{$path}t2.svg);
+      height:4em;
+      opacity:0.3;
+      &.enabled{
+        opacity:1;
       }
     }
   }

@@ -23,13 +23,6 @@ export let LsMgr=Backbone.View.extend({
 
    this.setData(ls);
   }
-
-  this.listenTo(app.get('aggregator'),'player:ready',this.loaded);
- },
- loaded:function(){
-  let ls=this.getData();
-
-  app.get('aggregator').trigger('ls:current',ls.data[epIndex].savedTime||0);
  },
  resetData:function(resetUser=false){
   if(resetUser)

@@ -99,11 +99,19 @@ export let PlayerView=Backbone.View.extend({
    this.phase[x]=y;
  },
  prepare:function(){
-  let touched={};
+  let touched={},
+      ls=lsMgr.getData(),
+      choose=(()=>{
+       let arr=[];
+
+       for (let i=0;i<this.pData.length;i++)
+        arr[i]=ls.data[epIndex].phase?ls.data[epIndex].phase.step>=i:false;
+
+       return arr;
+      })();
 
   this.setElement(data.view.el);
-  this.$el.append(this.extTemplate());
-
+  this.$el.append(this.extTemplate({choose:choose}));
   this.changeSrc(this.pData[this.phase.step][this.phase.type].src);
 
   this.player.controlBar.addChild('QualitySelector');
@@ -195,6 +203,7 @@ export let PlayerView=Backbone.View.extend({
    delete ls.user;
    lsMgr.setData(ls);
   }
+
   if(goOn)
   {
    let timecodes=this.pData[this.phase.step]['base'].timecodes;
@@ -208,6 +217,7 @@ export let PlayerView=Backbone.View.extend({
     if(this.phase.rewind)
      timecodes[timecodes.length-1].invoked=true;
   }
+
   if(~time)
    this.player.currentTime(time);
   if(this.player.paused())

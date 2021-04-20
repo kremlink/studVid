@@ -13,6 +13,7 @@ export const data={
   //fsCls:'fs',
   timerCls:'timer',
   pauseCls:'paused',
+  nopeCls:'nope',
   goOnCls:'goOn'
  },
  minViewport:'(min-width:600px)',

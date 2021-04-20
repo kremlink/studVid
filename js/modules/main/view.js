@@ -65,7 +65,7 @@ export let MainView=Backbone.View.extend({
     {
      this.player.changeData({index:opts.index,type:'choose',correct:correct});
      this.player.changeSrc(d.pData[d.phase.step][d.phase.type][d.phase.index].src);
-     this.player.play({time:correct?0:44});//TODO: remove param after
+     this.player.play({time:correct?0:5});//TODO: remove param after
     }
    }else
    {
@@ -85,6 +85,7 @@ export let MainView=Backbone.View.extend({
      this.player.changeData({type:'base',rewind:true});
      this.player.changeSrc(d.pData[d.phase.step][d.phase.type].src);
      this.player.play({time:d.pData[d.phase.step][d.phase.type].rewindTime});
+     app.get('aggregator').trigger('player:rewind',true);
     }
    }
   }
@@ -117,6 +118,7 @@ export let MainView=Backbone.View.extend({
     this.toggle({show:true});
    }
 
+   app.get('aggregator').trigger('player:rewind',false);
    this.player.changeData({rewind:false});
   }else
   {
@@ -125,7 +127,5 @@ export let MainView=Backbone.View.extend({
     this.interactives[int]=new Interactives[int]({app:app,data:d});else
     this.interactives[int].toggle(true);
   }
-
-  //app.get('aggregator').trigger('timer:update',timecodeData);//TODO:event to set save checkpoints
  }
 });

@@ -600,24 +600,27 @@ body {
 
 .special-btns {
   position: absolute;
-  left: 30%;
+  left: 0;
+  top: 0;
   bottom: 0;
-  margin-left: -8.5em;
-  height: 3em;
+  width: 4em;
   background: rgba(0, 0, 0, 0.36);
-  display: flex;
   z-index: 1;
 }
 .paused .special-btns {
   display: none;
 }
+.nope .special-btns {
+  display: none;
+}
 .special-btns div {
   cursor: pointer;
-  width: 4em;
   background: url(../images/t1.svg) center/70% 70% no-repeat;
+  height: 4em;
+  opacity: 0.3;
 }
-.special-btns div:nth-child(2) {
-  background-image: url(../images/t2.svg);
+.special-btns div.enabled {
+  opacity: 1;
 }
 
 .loader-pop {
@@ -720,6 +723,9 @@ body {
   height: 100%;
   font-family: "Montserrat", sans-serif;
 }
+.nope .video-js {
+  pointer-events: none;
+}
 .video-js .vjs-big-play-button {
   display: none;
   position: absolute;
@@ -741,7 +747,7 @@ body {
   width: auto;
   background: rgba(0, 0, 0, 0.36);
 }
-.paused .video-js .vjs-control-bar {
+.paused .video-js .vjs-control-bar, .nope .video-js .vjs-control-bar {
   display: none;
 }
 .video-js .vjs-progress-control {

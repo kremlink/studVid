@@ -32,6 +32,8 @@ export let Index=Backbone.View.extend({
 
   lsMgr=this.main.getLsMgr();
 
+  let t=lsMgr.getData().data[epIndex].savedTime;
+
   this.$el.toggleClass(data.view.tooSmallCls,mob);
   $(window).on('resize',_.debounce(()=>{
    mob=!matchMedia(data.minViewport).matches;
@@ -44,7 +46,13 @@ export let Index=Backbone.View.extend({
   this.listenTo(app.get('aggregator'),'timer:show',this.timer);
   this.listenTo(app.get('aggregator'),'player:interactive',this.pause);
   this.listenTo(app.get('aggregator'),'player:play',this.play);
-  this.listenTo(app.get('aggregator'),'ls:current',this.showGoOnBtn);
+  this.listenTo(app.get('aggregator'),'player:rewind',this.disable);
+
+  if(t)
+  {
+   this.savedTime=t;
+   this.$el.addClass(data.view.goOnCls);
+  }
 
   this.prepare();
  },
@@ -75,19 +83,16 @@ export let Index=Backbone.View.extend({
    this.main.player=new PlayerView({app:app,lsMgr:lsMgr});
   });
  },
- showGoOnBtn:function(savedTime){
-  //TODO: start from correct step, phase and time
-  this.savedTime=savedTime;
-  if(savedTime>0)
-   this.$el.addClass(data.view.goOnCls);
- },
  goOn:function(){
   this.$el.addClass(data.view.startCls);
-  this.main.player.play({time:this.savedTime,goOn:true});
+  this.main.player.play({time:this.savedTime||0,goOn:true});
   app.get('aggregator').trigger('timer:ini',true);
  },
  loaded:function(){
   this.$el.addClass(data.view.loadedCls);
+ },
+ disable:function(f){
+  this.$el.toggleClass(data.view.nopeCls,f);
  },
  timer:function(){
   this.$el.addClass(data.view.timerCls);
