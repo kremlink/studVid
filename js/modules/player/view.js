@@ -81,10 +81,10 @@ export let PlayerView=Backbone.View.extend({
     o.invoked=false;
    });
   }
-  //TODO:toggle(false) popups
+  app.get('aggregator').trigger('player:back');
   this.changeData({step:index,index:0,type:'base'});
   this.changeSrc(this.pData[this.phase.step][this.phase.type].src);
-  this.play();
+  this.player.play();
  },
  changeSrc:function(src){
   let ind=this.qual.findIndex((o)=>matchMedia(o.width).matches);
@@ -109,12 +109,11 @@ export let PlayerView=Backbone.View.extend({
    this.phase[x]=y;
  },
  setStepsChoose:function(){
-  let ls=lsMgr.getData(),
-      choose=(()=>{
+  let choose=(()=>{
        let arr=[];
 
        for (let i=0;i<this.pData.length;i++)
-        arr[i]=ls.data[epIndex].phase?ls.data[epIndex].phase.step>=i:false;
+        arr[i]=this.phase.step>=i;
 
        return arr;
       })();
@@ -126,7 +125,6 @@ export let PlayerView=Backbone.View.extend({
 
   this.setElement(data.view.el);
   this.$el.append(this.$btns);
-  this.setStepsChoose();
 
   this.changeSrc(this.pData[this.phase.step][this.phase.type].src);
 

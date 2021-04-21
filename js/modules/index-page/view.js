@@ -82,6 +82,7 @@ export let Index=Backbone.View.extend({
 
   this.$el.addClass(data.view.startCls);
   this.main.player.play({time:ls.data[epIndex].savedTime,phase:ls.data[epIndex].phase});
+  this.main.player.setStepsChoose();
   if(ls.user.name)
    app.get('aggregator').trigger('timer:ini',true);
  },
@@ -97,6 +98,7 @@ export let Index=Backbone.View.extend({
  start:function(){
   this.$el.addClass(data.view.startCls);
   lsMgr.resetData(true);
+  this.main.player.setStepsChoose();
   this.main.player.play();
  },
  pause:function(){

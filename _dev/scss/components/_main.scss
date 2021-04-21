@@ -13,7 +13,7 @@
       max-height:100vh;
       max-width:177.7777vh; //16/9=1.778
       opacity:0;
-      visibility:hidden;
+      pointer-events:none;
       @include trs('opacity #{$anim} ease-in-out');
       @include center();
       &.start{
@@ -25,7 +25,7 @@
       }
       &.shown{
         opacity:1;
-        visibility:visible;
+        pointer-events:auto;
       }
     }
     .ov-inner{
@@ -136,12 +136,6 @@
     display:none;
     .start &{
       display:block;
-    }
-    .paused &{
-      display:none;
-    }
-    .nope &{
-      display:none;
     }
     div{
       cursor:pointer;

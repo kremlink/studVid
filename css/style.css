@@ -465,7 +465,7 @@ body {
   max-height: 100vh;
   max-width: 177.7777vh;
   opacity: 0;
-  visibility: hidden;
+  pointer-events: none;
   transition: opacity 0.3s ease-in-out;
   position: absolute;
   left: 50%;
@@ -482,7 +482,7 @@ body {
 }
 .overlay-block .ov-wrap.shown {
   opacity: 1;
-  visibility: visible;
+  pointer-events: auto;
 }
 .overlay-block .ov-inner {
   width: 30em;
@@ -610,12 +610,6 @@ body {
 }
 .start .special-btns {
   display: block;
-}
-.paused .special-btns {
-  display: none;
-}
-.nope .special-btns {
-  display: none;
 }
 .special-btns div {
   cursor: pointer;

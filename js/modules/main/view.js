@@ -32,6 +32,7 @@ export let MainView=Backbone.View.extend({
   this.lsMgr=new LsMgr({app:app});
 
   this.listenTo(app.get('aggregator'),'interactive:toggle',this.toggle);
+  this.listenTo(app.get('aggregator'),'player:back',this.hide);
   this.listenTo(app.get('aggregator'),'player:interactive',this.step);
 
   $(window).on('visibilitychange pagehide',()=>app.get('aggregator').trigger('page:state'));
@@ -42,6 +43,12 @@ export let MainView=Backbone.View.extend({
   new BoardMgr({app:app,lsMgr:this.lsMgr});
 
   /*app.get('aggregator').trigger('board:score',{what:'test',points:5});*/
+ },
+ hide:function(){
+  this.$el.removeClass(data.view.shownCls);
+  app.get('aggregator').trigger('player:rewind',false);
+  for(let x of Object.values(this.interactives))
+   x.toggle(false);
  },
  toggle:function({show:show,correct:correct,opts}){
   let d=this.player.getData(),
@@ -75,9 +82,10 @@ export let MainView=Backbone.View.extend({
       console.log('last segment');//TODO: end screen instead of log
      }else
      {
-      this.player.changeData({step:d.phase.step+1,index:0,type:'base'});
+      this.player.changeData({step:d.phase.step+1,index:0,type:'base',correct:false});
       this.player.changeSrc(d.pData[d.phase.step][d.phase.type].src);
       this.player.play();
+      this.player.setStepsChoose();
      }
     }else
     {
@@ -121,6 +129,8 @@ export let MainView=Backbone.View.extend({
    }
   }else
   {
+   this.toggle({show:true});
+
    int=d.pData[d.phase.step][d.phase.type][d.phase.index].data.interactive;
    if(!this.interactives[int])
     this.interactives[int]=new Interactives[int]({app:app,data:d});else
