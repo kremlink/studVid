@@ -75,6 +75,9 @@
         </script>
     <script type="text/template" id="u-pop-template">
         <div class="ov-inner <%= cls %>">
+            <div class="tmp" style="position:absolute;left: 0;top: 3em;right: 0;text-align:center;color: #fff;">
+                Тестинг. Эпизод: <%= ep %>, развилка: <%= step %> <%= choose?'':', конечное окно при выборе '+chosen+'-й кнопки' %>
+            </div>
             <% if(choose){ %>
             <img src="images/ep<%= ep %>-step<%= step %>-pop-base-bg.svg" alt=""/>
             <% }else{ %>

@@ -46,7 +46,8 @@ export let config={
      },
      choose:[
       {src:['../night.mp4','../oceans1.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
-      {src:['../night.mp4','../night1.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}}
+      {src:['../night.mp4','../night1.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
+      {src:['../night.mp4','../night1.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
      ]
     },
     {
