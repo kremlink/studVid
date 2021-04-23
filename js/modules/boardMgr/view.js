@@ -2,6 +2,7 @@ import {data as dat} from './data.js';
 
 let app,
     data=dat,
+    epIndex,
     lsMgr;
 
 export let BoardMgr=Backbone.View.extend({
@@ -9,13 +10,16 @@ export let BoardMgr=Backbone.View.extend({
   app=opts.app;
   data=app.configure({board:dat}).board;
 
+  epIndex=app.get('epIndex');
+
   lsMgr=opts.lsMgr;
 
   this.listenTo(app.get('aggregator'),'board:user',this.setUserData);
-  this.listenTo(app.get('aggregator'),'board:score',this.setData);
+  this.listenTo(app.get('aggregator'),'board:choose',this.setData);
+  this.listenTo(app.get('aggregator'),'board:save',this.sendData);
  },
- saveAndClr:function(){
-  fetch(data.url+JSON.stringify($.extend({episode:app.get('epIndex')},lsMgr.getData()))).then(()=>{
+ sendData:function(){
+  fetch(data.url+JSON.stringify({episode:epIndex,chosen:lsMgr.getData().data[epIndex].chosen})).then(()=>{
    lsMgr.resetData(data.resetUser);
   });
  },
@@ -25,11 +29,12 @@ export let BoardMgr=Backbone.View.extend({
   ls.user=dat;
   lsMgr.setData(ls);
  },
- setData:function({name,val}){
+ setData:function({step,index}){
   let ls=lsMgr.getData();
 
-  //...
-  //...
+  if(!ls.data[epIndex].chosen)
+   ls.data[epIndex].chosen=[];
+  ls.data[epIndex].chosen.push({step:step,index:index});
   lsMgr.setData(ls);
  }
 });

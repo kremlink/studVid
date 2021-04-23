@@ -79,7 +79,7 @@ export let MainView=Backbone.View.extend({
     {
      if(d.phase.step===d.pData.length-1)
      {
-      console.log('last segment');//TODO: end screen instead of log
+      console.log('redirect to clr page');
      }else
      {
       this.player.changeData({step:d.phase.step+1,index:0,type:'base',correct:false});
@@ -135,6 +135,9 @@ export let MainView=Backbone.View.extend({
    if(!this.interactives[int])
     this.interactives[int]=new Interactives[int]({app:app,data:d});else
     this.interactives[int].toggle(true);
+
+    if(d.phase.step===d.pData.length-1&&d.phase.correct)
+     app.get('aggregator').trigger('board:save');
   }
  }
 });

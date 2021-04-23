@@ -97,7 +97,7 @@ export let Index=Backbone.View.extend({
  },
  start:function(){
   this.$el.addClass(data.view.startCls);
-  lsMgr.resetData(true);
+  lsMgr.resetData();
   this.main.player.setStepsChoose();
   this.main.player.play();
  },

@@ -55,11 +55,10 @@ export let UPopView=BaseIntView.extend({
   {
    if(this.data.pData[this.data.phase.step]['choose'][ind].data.conf.correct)
     corr=true;
+   app.get('aggregator').trigger('board:choose',{step:this.data.phase.step,index:ind});
   }
 
   this.away(corr,{index:ind});
-  //app.get('aggregator').trigger('board:score',{what:'start-two',points:corr?30:-10});
-  //this.away(false,corr?{end:'endGood'}:{});
   //app.get('aggregator').trigger('sound',corr?'plus':'minus');
  }
 });

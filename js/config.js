@@ -41,8 +41,8 @@ export let config={
      base:{
       src:['../night.mp4','../oceans1.mp4'],
       timecodes:[{start:1,invoked:false,data:{interactive:'Start'}},
-       {start:2,invoked:false,data:{interactive:'UPop',conf:{cls:'choose'}}}],
-      rewindTime:3
+       {start:2.5,invoked:false,data:{interactive:'UPop',conf:{cls:'choose'}}}],
+      rewindTime:4
      },
      choose:[
       {src:['../night.mp4','../oceans1.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
@@ -60,7 +60,7 @@ export let config={
       {src:['../night.mp4','../night1.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../oceans.mp4','../oceans1.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
      ]
-    },
+    }/*,
     {
      base:{
       src:['../oceans.mp4','../oceans.mp4'],
@@ -71,7 +71,7 @@ export let config={
       {src:['../night.mp4','../night1.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../oceans.mp4','../oceans1.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
      ]
-    }
+    }*/
    ]
   }
  },
