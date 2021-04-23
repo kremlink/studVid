@@ -686,7 +686,6 @@ body {
   bottom: 0;
   display: flex;
   background: #000;
-  cursor: pointer;
   z-index: 1;
   transition: opacity 0.3s ease-in-out;
 }
@@ -697,6 +696,24 @@ body {
 .start-pop .text {
   margin: auto;
   color: #fff;
+  cursor: pointer;
+}
+
+.clr {
+  z-index: 1;
+  color: #fff;
+  white-space: nowrap;
+  padding: 2em 3em;
+  background: #000;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 1em;
+  transform: translate(-50%, 0);
+  display: none;
+}
+#wrap:not(.start) .clr {
+  display: block;
 }
 
 .continue {

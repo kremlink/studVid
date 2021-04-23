@@ -11,6 +11,7 @@ let app,
 let events={};
 events[`click ${data.events.start}`]='start';
 events[`click ${data.events.goOn}`]='goOn';
+events[`click ${data.events.clr}`]='clr';
 
 export let Index=Backbone.View.extend({
  events:events,
@@ -84,6 +85,9 @@ export let Index=Backbone.View.extend({
   this.$el.addClass(data.view.startCls);
   this.main.player.play({time:ls.data[epIndex].savedTime,phase:ls.data[epIndex].phase});
   this.main.player.setStepsChoose();
+ },
+ clr:function(){
+  lsMgr.resetData(true);
  },
  loaded:function(){
   this.$el.addClass(data.view.loadedCls);

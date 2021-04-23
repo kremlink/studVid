@@ -197,7 +197,6 @@
     @include abs($l:0,$r:0,$t:0,$b:0);
     @include flx(display,flex);
     background:#000;
-    cursor:pointer;
     z-index:1;
     @include trs('opacity #{$anim} ease-in-out');
     .start &{
@@ -207,6 +206,20 @@
     .text{
       margin:auto;
       color:#fff;
+      cursor:pointer;
+    }
+  }
+  .clr{
+    z-index:1;
+    color:#fff;
+    white-space:nowrap;
+    padding:2em 3em;
+    background:#000;
+    cursor:pointer;
+    @include center($t:1em);
+    display:none;
+    #wrap:not(.start) &{
+      display:block;
     }
   }
   .continue{

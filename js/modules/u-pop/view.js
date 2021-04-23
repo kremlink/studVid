@@ -27,7 +27,7 @@ export let UPopView=BaseIntView.extend({
   }]);
  },
 
- toggle:function(f){
+ toggle:function(f,corr){
   let pData=this.data.pData,
       phase=this.data.phase,
       what;
@@ -39,6 +39,8 @@ export let UPopView=BaseIntView.extend({
     cls:phase.type==='base'?what.timecodes[phase.index].data.conf.cls:what[phase.index].data.conf.cls,
     ep:epIndex,
     step:phase.step,
+    last:phase.step===pData.length-1,
+    correct:corr,
     choose:phase.type==='base'?pData[phase.step]['choose'].length:0,
     chosen:phase.type==='choose'?phase.index:0,
    }));

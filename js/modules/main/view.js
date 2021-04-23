@@ -159,7 +159,7 @@ export let MainView=Backbone.View.extend({
    int=d.pData[d.phase.step][d.phase.type][d.phase.index].data.interactive;
    if(!this.interactives[int])
     this.interactives[int]=new Interactives[int]({app:app,data:d});else
-    this.interactives[int].toggle(true);
+    this.interactives[int].toggle(true,ls.data[epIndex].correct);
 
     if(d.phase.step===d.pData.length-1&&ls.data[epIndex].correct&&!ls.data[epIndex].saved)
     {
