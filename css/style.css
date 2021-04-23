@@ -549,10 +549,10 @@ body {
 }
 @media (min-width: 1200px) {
   .overlay-block .btn-cont:hover .btn {
-    visibility: hidden;
+    opacity: 1;
   }
   .overlay-block .btn-cont:hover .btn-h {
-    visibility: visible;
+    opacity: 1;
   }
 }
 .overlay-block img {
@@ -563,7 +563,7 @@ body {
   height: 100%;
 }
 .overlay-block .btn-h {
-  visibility: hidden;
+  opacity: 0;
 }
 
 .ov-video {

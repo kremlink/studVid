@@ -19,9 +19,9 @@ export let BoardMgr=Backbone.View.extend({
   this.listenTo(app.get('aggregator'),'board:save',this.sendData);
  },
  sendData:function(){
-  fetch(data.url+JSON.stringify({episode:epIndex,chosen:lsMgr.getData().data[epIndex].chosen})).then(()=>{
-   lsMgr.resetData(data.resetUser);
-  });
+  let ls=lsMgr.getData();
+
+  fetch(data.url+JSON.stringify({episode:epIndex,chosen:ls.data[epIndex].chosen})).then(()=>{});
  },
  setUserData:function(dat){
   let ls=lsMgr.getData();

@@ -1,3 +1,6 @@
 export const data={
- theBtn:'.w-p-outer.click,.pulse-btn'
+ events:{
+  'click':'.btn-cont',
+  'mouseenter':'.btn-cont'
+ }
 };

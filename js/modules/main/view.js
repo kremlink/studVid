@@ -22,8 +22,11 @@ let app,
 export let MainView=Backbone.View.extend({
  events:events,
  el:data.view.el,
+ goOn:false,
  interactives:{},
  initialize:function(opts){
+  let throttle=_.throttle((opts)=>this.saveTimeAndPhase(opts),data.throttle,{leading:false});
+
   app=opts.app;
   data=app.configure({main:dat}).main;
 
@@ -34,6 +37,7 @@ export let MainView=Backbone.View.extend({
   this.listenTo(app.get('aggregator'),'interactive:toggle',this.toggle);
   this.listenTo(app.get('aggregator'),'player:back',this.hide);
   this.listenTo(app.get('aggregator'),'player:interactive',this.step);
+  this.listenTo(app.get('aggregator'),'player:timeupdate',throttle);
 
   $(window).on('visibilitychange pagehide',()=>app.get('aggregator').trigger('page:state'));
 
@@ -44,14 +48,28 @@ export let MainView=Backbone.View.extend({
 
   /*app.get('aggregator').trigger('board:score',{what:'test',points:5});*/
  },
+ saveTimeAndPhase:function(opts){
+  let ls=this.lsMgr.getData();
+
+  ls.data[epIndex].savedTime=opts.currTime;
+  ls.data[epIndex].phase=opts.phase;
+  this.lsMgr.setData(ls);
+
+  if(ls.data[epIndex].phase.type!=='base'||ls.data[epIndex].phase.step>0)
+   app.get('aggregator').trigger('timer:ini',true);
+ },
  hide:function(){
   this.$el.removeClass(data.view.shownCls);
   app.get('aggregator').trigger('player:rewind',false);
   for(let x of Object.values(this.interactives))
    x.toggle(false);
  },
+ setGoOn:function(){
+  this.goOn=true;
+ },
  toggle:function({show:show,correct:correct,opts}){
   let d=this.player.getData(),
+      ls=this.lsMgr.getData(),
       int;
 
   app.get('aggregator').trigger('main:toggle',!show);
@@ -69,20 +87,27 @@ export let MainView=Backbone.View.extend({
      this.player.play();
     }else//choose pop
     {
-     this.player.changeData({index:opts.index,type:'choose',correct:correct});
+     ls.data[epIndex].correct=correct;
+     this.lsMgr.setData(ls);
+
+     this.player.changeData({index:opts.index,type:'choose'});
      this.player.changeSrc(d.pData[d.phase.step][d.phase.type][d.phase.index].src);
      this.player.play({time:correct?0:5});//TODO: remove param after
     }
    }else
    {
-    if(d.phase.correct)
+    if(ls.data[epIndex].correct)
     {
      if(d.phase.step===d.pData.length-1)
      {
-      console.log('redirect to clr page');
+      this.lsMgr.resetData();
+      location.reload();
      }else
      {
-      this.player.changeData({step:d.phase.step+1,index:0,type:'base',correct:false});
+      ls.data[epIndex].correct=false;
+      this.lsMgr.setData(ls);
+
+      this.player.changeData({step:d.phase.step+1,index:0,type:'base'});
       this.player.changeSrc(d.pData[d.phase.step][d.phase.type].src);
       this.player.play();
       this.player.setStepsChoose();
@@ -101,6 +126,7 @@ export let MainView=Backbone.View.extend({
  },
  step:function(){
   let d=this.player.getData(),
+      ls=this.lsMgr.getData(),
       tItem,
       int;
 
@@ -110,12 +136,11 @@ export let MainView=Backbone.View.extend({
 
    int=tItem.data.interactive;
 
-   let ls=this.lsMgr.getData();
+   if(int==='Start')
+    app.get('aggregator').trigger('timer:ini',this.goOn);
 
    if(int!=='Start'||int==='Start'&&!ls.user.name)
    {
-    if(int==='Start')
-     app.get('aggregator').trigger('timer:ini');
     if(!this.interactives[int])
      this.interactives[int]=new Interactives[int]({app:app,data:d});else
      this.interactives[int].toggle(true);
@@ -136,8 +161,12 @@ export let MainView=Backbone.View.extend({
     this.interactives[int]=new Interactives[int]({app:app,data:d});else
     this.interactives[int].toggle(true);
 
-    if(d.phase.step===d.pData.length-1&&d.phase.correct)
+    if(d.phase.step===d.pData.length-1&&ls.data[epIndex].correct&&!ls.data[epIndex].saved)
+    {
      app.get('aggregator').trigger('board:save');
+     ls.data[epIndex].saved=true;
+     this.lsMgr.setData(ls);
+    }
   }
  }
 });

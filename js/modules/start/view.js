@@ -37,8 +37,5 @@ export let StartView=BaseIntView.extend({
    app.get('aggregator').trigger('board:user',Object.fromEntries(this.$inp.serializeArray().map(({name,value})=>[name,value])));
    this.away();
   }
-  //app.get('aggregator').trigger('board:score',{what:'start-two',points:corr?30:-10});
-  //this.away(false,corr?{end:'endGood'}:{});
-  //app.get('aggregator').trigger('sound',corr?'plus':'minus');
  }
 });

@@ -80,10 +80,10 @@
       @include med(){
         &:hover{
           .btn{
-            visibility:hidden;
+            opacity:1;
           }
           .btn-h{
-            visibility:visible;
+            opacity:1;
           }
         }
       }
@@ -94,7 +94,7 @@
       height:100%;
     }
     .btn-h{
-      visibility:hidden;
+      opacity:0;
     }
   }
   //---

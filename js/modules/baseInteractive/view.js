@@ -1,19 +1,26 @@
 import {data as dat} from './data.js';
 
 let app,
+    events={},
     data=dat;
 
+events[`click.base ${data.events.click}`]='btnClick';
+events[`mouseenter.base ${data.events.mouseenter}`]='btnHover';
+
 export let BaseIntView=Backbone.View.extend({
- data:null,
+ events:events,
+ dat:null,
  initialize:function(opts){
   app=opts.app;
   this.dat=opts.data;
 
   this.toggle(true);
-
-  $(data.theBtn).on('click',()=>{
-   app.get('aggregator').trigger('sound','btn');
-  });
+ },
+ btnClick:function(){
+  app.get('aggregator').trigger('sound','btn');
+ },
+ btnHover:function(){
+  app.get('aggregator').trigger('sound','btn-h');
  },
  away:function(correct=false,opts){
   app.get('aggregator').trigger('interactive:toggle',{show:false,correct:correct,opts:opts});
@@ -21,5 +28,6 @@ export let BaseIntView=Backbone.View.extend({
  },
  toggle:function(f){
   this.$el.toggleClass(this.dat.view.shownCls,f);
+  //app.get('aggregator').trigger(f?'sound':'unsound','bg')
  }
 });

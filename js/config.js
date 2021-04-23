@@ -18,7 +18,7 @@ export let config={
   url:'php.php?board='
  },
  sound:{
-  template:'<audio src="../sounds/<%= src %>.mp3" preload="auto"></audio>'
+  template:'<audio src="../sounds/<%= src %>.mp3" preload="auto" <%= loop?"loop":"" %>></audio>'
  },
  /*redirect:{//needed?
    '1':'end.php'

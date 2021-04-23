@@ -9,7 +9,9 @@ let app,
 events[`click ${data.events.click}`]='click';
 
 export let UPopView=BaseIntView.extend({
- events:events,
+ events:function(){
+  return _.extend({},BaseIntView.prototype.events,events);
+ },
  el:data.view.el,
  template:_.template($(data.view.template).html()),
  initialize:function(opts){
@@ -47,9 +49,6 @@ export let UPopView=BaseIntView.extend({
  click:function(e){
   let corr=false,
       ind=$(e.currentTarget).index();
-  /*if(this.opts.phase.type==='base')
-   app.get('aggregator').trigger('board:user',{step:this.opts.phase.index,index:$(e.target).index()});else
-   app.get('aggregator').trigger('player:src',{});*/
 
   if(this.data.phase.type==='base')
   {
@@ -59,6 +58,5 @@ export let UPopView=BaseIntView.extend({
   }
 
   this.away(corr,{index:ind});
-  //app.get('aggregator').trigger('sound',corr?'plus':'minus');
  }
 });

@@ -20,8 +20,6 @@ export let TimerView=Backbone.View.extend({
   app=opts.app;
   data=app.configure({timer:dat}).timer;
 
-  let throttle=_.throttle((opts)=>this.saveData(opts),data.throttle,{leading:false})
-
   lsMgr=opts.lsMgr;
 
   epIndex=app.get('epIndex');
@@ -31,7 +29,6 @@ export let TimerView=Backbone.View.extend({
   this.listenTo(app.get('aggregator'),'player:ended',this.ended);
   //this.listenTo(app.get('aggregator'),'timer:update',this.change);
   this.listenTo(app.get('aggregator'),'timer:ini',this.ini);
-  this.listenTo(app.get('aggregator'),'player:timeupdate',throttle);
   this.listenTo(app.get('aggregator'),'page:state',this.freeze);
  },
  freeze:function(){
@@ -47,24 +44,29 @@ export let TimerView=Backbone.View.extend({
  ini:function(goOn=false){
   let ls=lsMgr.getData();
 
-  if(!ls.data[epIndex].timer||!goOn)
-   ls.data[epIndex].timer=0;
-  if(!ls.data[epIndex].savedTime)
-   ls.data[epIndex].savedTime=0;
-
-  this.timer=ls.data[epIndex].timer;
-
-  if(!goOn)
+  if(!this.done)
   {
-   ls.data[epIndex].savedTime=0;
-   lsMgr.setData(ls);
+   if(!ls.data[epIndex].timer||!goOn)
+    ls.data[epIndex].timer=0;
+   if(!ls.data[epIndex].savedTime)
+    ls.data[epIndex].savedTime=0;
+
+   this.timer=ls.data[epIndex].timer;
+
+   if(!goOn)
+   {
+    ls.data[epIndex].savedTime=0;
+    lsMgr.setData(ls);
+   }
+
+   app.get('aggregator').trigger('timer:show');
+
+   this.start();
+
+   this.$timer.text(s2t(this.timer));
+
+   this.done=true;
   }
-
-  app.get('aggregator').trigger('timer:show');
-
-  this.start();
-
-  this.$timer.text(s2t(this.timer));
  },
  start:function(){
   this.timerInt=setInterval(()=>{
@@ -73,13 +75,6 @@ export let TimerView=Backbone.View.extend({
    this.$timer.text(s2t(t));
    this.tick(t);
   },1000);
- },
- saveData:function(opts){
-  let ls=lsMgr.getData();
-
-  ls.data[epIndex].savedTime=opts.currTime;
-  ls.data[epIndex].phase=opts.phase;
-  lsMgr.setData(ls);
  },
  tick:function(t){
   let ls=lsMgr.getData();

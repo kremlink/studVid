@@ -18,7 +18,7 @@ export let PlayerView=Backbone.View.extend({
  qual:null,
  pausable:true,
  firstTime:true,
- phase:{step:0,type:'base',index:0,correct:false,rewind:false},
+ phase:{step:0,type:'base',index:0,rewind:false},
  initialize:function(opts){
   app=opts.app;
   data=app.configure({player:dat}).player;
@@ -130,13 +130,13 @@ export let PlayerView=Backbone.View.extend({
 
   this.player.controlBar.addChild('QualitySelector');
 
-  if(app.get('_dev'))
+  if(app.get('_dev-player'))
    this.player.muted(true);
   this.player.on('pause',()=>{
 
   });
   this.player.on('play',()=>{
-   if(!app.get('_dev')&&!document.fullscreenElement&&document.documentElement.requestFullscreen)
+   if(!app.get('_dev-player')&&!document.fullscreenElement&&document.documentElement.requestFullscreen)
     document.documentElement.requestFullscreen();
   });
 

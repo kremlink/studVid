@@ -7,13 +7,25 @@
     <bookmark url="file://$PROJECT_DIR$/js/modules/boardMgr/view.js" line="43" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="test text">
+    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="score">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_dev/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_dev/scss/components/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/components/_main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modules/baseInteractive/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/baseInteractive/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modules/baseInteractive/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/baseInteractive/view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/boardMgr/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/boardMgr/data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/boardMgr/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/boardMgr/view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/index-page/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/index-page/view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/main/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/main/view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modules/player/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/player/view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modules/soundMgr/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/soundMgr/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modules/soundMgr/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/soundMgr/view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modules/start/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/start/view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modules/timer/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/timer/view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/u-pop/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/u-pop/view.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -540,14 +552,7 @@
       <workItem from="1617451618872" duration="40136000" />
       <workItem from="1618046376679" duration="30499000" />
       <workItem from="1618747691724" duration="4000" />
-      <workItem from="1618747713486" duration="28850000" />
-    </task>
-    <task id="LOCAL-00017" summary="cartograph process">
-      <created>1597927002507</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1597927002507</updated>
+      <workItem from="1618747713486" duration="42492000" />
     </task>
     <task id="LOCAL-00018" summary="forest process">
       <created>1598019418460</created>
@@ -885,7 +890,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619085307242</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="score">
+      <created>1619136020528</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1619136020528</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -931,7 +943,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="board mgr fix" />
     <MESSAGE value="vibrate v4 process" />
     <MESSAGE value="episode 4 process" />
     <MESSAGE value="ep4 map:four&#10;preload fix&#10;misc fixes" />
@@ -956,7 +967,8 @@
     <MESSAGE value="rewind fix&#10;btns process" />
     <MESSAGE value="btns ready" />
     <MESSAGE value="test text" />
-    <option name="LAST_COMMIT_MESSAGE" value="test text" />
+    <MESSAGE value="score" />
+    <option name="LAST_COMMIT_MESSAGE" value="score" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
