@@ -24,7 +24,7 @@ export let config={
    '1':'end.php'
   },*/
  'player':{
-  //btnBack:30,
+  k:1024/576,
   quality:[
    {
     width:'(min-width:1281px)',
@@ -39,26 +39,37 @@ export let config={
    '1':[//[noAutoClose:true|repeatable:true|delayedPause:-1|noVidAutoPlay:true|]checkpoint:true|iniTimer:true
     {
      base:{
-      src:['../night.mp4','../oceans1.mp4'],
-      timecodes:[{start:1,invoked:false,data:{interactive:'Start'}},
-       {start:2.5,invoked:false,data:{interactive:'UPop',conf:{cls:'choose'}}}],
-      rewindTime:4
+      src:['../videos/base3.mp4','../videos/base3.mp4'],
+      timecodes:[{start:4,invoked:false,data:{interactive:'Start'}},
+       {start:5,invoked:false,data:{interactive:'UPop',conf:{cls:'choose'}}}],
+      rewindTime:7
      },
      choose:[
-      {src:['../night.mp4','../oceans1.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
-      {src:['../night.mp4','../night1.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
-      {src:['../night.mp4','../night1.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
+      {src:['../videos/win1.mp4','../videos/win1.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
+      {src:['../videos/base3.mp4','../videos/base3.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
      ]
     },
     {
      base:{
-      src:['../oceans.mp4','../oceans.mp4'],
-      timecodes:[{start:3,invoked:false,data:{interactive:'UPop',conf:{cls:'choose'}}}],
-      rewindTime:44
+      src:['../videos/base2.mp4','../videos/base2.mp4'],
+      timecodes:[{start:12,invoked:false,data:{interactive:'UPop',conf:{cls:'choose'}}}],
+      rewindTime:14
      },
      choose:[
-      {src:['../night.mp4','../night1.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
-      {src:['../night.mp4','../night1.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
+      {src:['../videos/fail2-1.mp4','../videos/fail2-1.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
+      {src:['../videos/win2.mp4','../videos/win2.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
+      {src:['../videos/fail2-2.mp4','../videos/fail2-2.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
+     ]
+    },
+    {
+     base:{
+      src:['../videos/base3.mp4','../videos/base3.mp4'],
+      timecodes:[{start:5,invoked:false,data:{interactive:'UPop',conf:{cls:'choose'}}}],
+      rewindTime:7
+     },
+     choose:[
+      {src:['../videos/fail3.mp4','../videos/fail3.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
+      {src:['../videos/win3.mp4','../videos/win3.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}}
      ]
     }/*,
     {

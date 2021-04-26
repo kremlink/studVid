@@ -18,6 +18,7 @@ export let PlayerView=Backbone.View.extend({
  qual:null,
  pausable:true,
  firstTime:true,
+ currTime:-1,
  phase:{step:0,type:'base',index:0,rewind:false},
  initialize:function(opts){
   app=opts.app;
@@ -29,6 +30,7 @@ export let PlayerView=Backbone.View.extend({
   lsMgr=opts.lsMgr;
 
   this.$btns=$(data.view.$btns);
+  this.$smooth=$(data.view.$smooth);
 
   this.extTemplate=ext.length?_.template($(data.view.extTemplate).html()):()=>{};
   this.pData=$.extend(true,[],data.data[epIndex]);
@@ -53,7 +55,7 @@ export let PlayerView=Backbone.View.extend({
   this.listenTo(app.get('aggregator'),'main:toggle',this.setPausable);
   this.listenTo(app.get('aggregator'),'page:state',this.freeze);
 
-  this.player.on('qualitySelected',()=>!this.firstTime?this.play({}):'');
+  this.player.on('qualitySelected',()=>!this.firstTime?this.play({time:this.currTime}):'');
  },
  freeze:function(){
   if(document.visibilityState==='hidden')
@@ -84,10 +86,11 @@ export let PlayerView=Backbone.View.extend({
   app.get('aggregator').trigger('player:back');
   this.changeData({step:index,index:0,type:'base'});
   this.changeSrc(this.pData[this.phase.step][this.phase.type].src);
-  this.player.play();
  },
- changeSrc:function(src){
+ changeSrc:function(src,time=-1){
   let ind=this.qual.findIndex((o)=>matchMedia(o.width).matches);
+
+  this.currTime=time;
 
   for(let i=0;i<this.qual.length;i++)
   {
@@ -96,7 +99,27 @@ export let PlayerView=Backbone.View.extend({
     this.qual[i].selected=true;
   }
 
-  this.player.src(this.qual);
+  this.smoothify(()=>this.player.src(this.qual));
+ },
+ smoothify:function(changeSrc){
+  let ctx=this.$smooth[0].getContext('2d'),
+      cW,
+      cH,
+      iW=this.$el.find('video')[0].videoWidth,
+      iH=this.$el.find('video')[0].videoHeight,
+      r;
+
+  ctx.clearRect(0,0,10000,10000);
+  this.$smooth.removeAttr('width').removeAttr('height');
+  cW=this.$smooth.width();
+  cH=this.$smooth.height();
+  r=Math.min(cW/iW,cH/iH);
+  this.$smooth.attr({width:cW,height:cH});
+  ctx.drawImage(this.$el.find('video')[0],0,0,iW,iH,(cW-iW*r)/2,(cH-iH*r)/2,iW*r,iH*r);
+  this.$smooth.addClass(data.view.shownCls);
+  setTimeout(()=>{
+   changeSrc();
+  },50);
  },
  getData:function(){
   return {
@@ -124,7 +147,7 @@ export let PlayerView=Backbone.View.extend({
   let touched={};
 
   this.setElement(data.view.el);
-  this.$el.append(this.$btns);
+  this.$el.append(this.$btns).append(this.$smooth);
 
   this.changeSrc(this.pData[this.phase.step][this.phase.type].src);
 
@@ -193,6 +216,10 @@ export let PlayerView=Backbone.View.extend({
    this.firstTime=false;
   });
 
+  this.player.on('playing',()=>{
+   this.$smooth.removeClass(data.view.shownCls);//TODO:fix this with "seeked"
+  });
+
   $(document).on('keypress',(e)=>{
    if(e.which===32&&this.pausable)
     this.playPauseByCtrls();
@@ -208,13 +235,10 @@ export let PlayerView=Backbone.View.extend({
     this.player.pause();
   }
  },
- play:function({time=-1,phase=null}={}){
-  if(phase)
+ play:function({time=-1,goOnPhase=null}={}){
+  if(goOnPhase)
   {
-   this.phase=phase;
-   if(this.phase.type==='base')
-    this.changeSrc(this.pData[this.phase.step][this.phase.type].src);else
-    this.changeSrc(this.pData[this.phase.step][this.phase.type][this.phase.index].src);
+   this.phase=goOnPhase;
 
    if(this.phase.rewind)
    {
@@ -222,11 +246,15 @@ export let PlayerView=Backbone.View.extend({
 
     time=timecodes[timecodes.length-1].start;
    }
+
+   if(this.phase.type==='base')
+    this.changeSrc(this.pData[this.phase.step][this.phase.type].src,time);else
+    this.changeSrc(this.pData[this.phase.step][this.phase.type][this.phase.index].src,time);
   }
 
   if(~time)
    this.player.currentTime(time);
-  if(this.player.paused())
+  if(this.player.paused()&&!goOnPhase)
   {
    this.player.play();
    app.get('aggregator').trigger('player:play');

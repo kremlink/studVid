@@ -92,7 +92,7 @@ export let MainView=Backbone.View.extend({
 
      this.player.changeData({index:opts.index,type:'choose'});
      this.player.changeSrc(d.pData[d.phase.step][d.phase.type][d.phase.index].src);
-     this.player.play({time:correct?0:5});//TODO: remove param after
+     //this.player.play();
     }
    }else
    {
@@ -109,14 +109,14 @@ export let MainView=Backbone.View.extend({
 
       this.player.changeData({step:d.phase.step+1,index:0,type:'base'});
       this.player.changeSrc(d.pData[d.phase.step][d.phase.type].src);
-      this.player.play();
+      //this.player.play();
       this.player.setStepsChoose();
      }
     }else
     {
      this.player.changeData({type:'base',rewind:true});
-     this.player.changeSrc(d.pData[d.phase.step][d.phase.type].src);
-     this.player.play({time:d.pData[d.phase.step][d.phase.type].rewindTime});
+     this.player.changeSrc(d.pData[d.phase.step][d.phase.type].src,d.pData[d.phase.step][d.phase.type].rewindTime);
+     //this.player.play({time:d.pData[d.phase.step][d.phase.type].rewindTime});
      app.get('aggregator').trigger('player:rewind',true);
     }
    }

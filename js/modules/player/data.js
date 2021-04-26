@@ -1,4 +1,5 @@
 export const data={
+ k:1,
  btnBack:0,
  timecodes:[],
  touchPlayRadius:20,
@@ -13,6 +14,8 @@ export const data={
   el:'.video-js',
   goOn:'.continue',
   extTemplate:'#ext-player-template',
-  $btns:'.special-btns'
+  $btns:'.special-btns',
+  $smooth:'.smooth',
+  shownCls:'shown'
  }
 };
