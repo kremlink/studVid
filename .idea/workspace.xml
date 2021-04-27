@@ -7,17 +7,10 @@
     <bookmark url="file://$PROJECT_DIR$/js/modules/boardMgr/view.js" line="43" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="test fix">
+    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="smoother&#10;play optimize">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/scss/components/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/components/_main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/scss/components/_video.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/components/_video.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/index-page/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/index-page/view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/main/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/main/view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/player/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/player/data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/player/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/player/view.js" afterDir="false" />
     </list>
@@ -545,14 +538,7 @@
       <workItem from="1617451618872" duration="40136000" />
       <workItem from="1618046376679" duration="30499000" />
       <workItem from="1618747691724" duration="4000" />
-      <workItem from="1618747713486" duration="58984000" />
-    </task>
-    <task id="LOCAL-00020" summary="forest ready&#10;vibrate v3 ready">
-      <created>1598264267716</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1598264267716</updated>
+      <workItem from="1618747713486" duration="62675000" />
     </task>
     <task id="LOCAL-00021" summary="simple &quot;one&quot; fix">
       <created>1598298397231</created>
@@ -890,7 +876,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619194630576</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="smoother&#10;play optimize">
+      <created>1619479085932</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1619479085932</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -936,7 +929,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="ep4 map:four&#10;preload fix&#10;misc fixes" />
     <MESSAGE value="sprites for each episode&#10;quality&#10;map four fix" />
     <MESSAGE value="boat process" />
     <MESSAGE value="boat&#10;timer localstorage&#10;board localstorage" />
@@ -961,7 +953,8 @@
     <MESSAGE value="score" />
     <MESSAGE value="refactor different parts&#10;sound&#10;score&#10;clr" />
     <MESSAGE value="test fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="test fix" />
+    <MESSAGE value="smoother&#10;play optimize" />
+    <option name="LAST_COMMIT_MESSAGE" value="smoother&#10;play optimize" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

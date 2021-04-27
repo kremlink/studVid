@@ -24,7 +24,6 @@ export let config={
    '1':'end.php'
   },*/
  'player':{
-  k:1024/576,
   quality:[
    {
     width:'(min-width:1281px)',
@@ -39,14 +38,14 @@ export let config={
    '1':[//[noAutoClose:true|repeatable:true|delayedPause:-1|noVidAutoPlay:true|]checkpoint:true|iniTimer:true
     {
      base:{
-      src:['../videos/base3.mp4','../videos/base3.mp4'],
+      src:['../videos/base1.mp4','../videos/base1.mp4'],
       timecodes:[{start:4,invoked:false,data:{interactive:'Start'}},
-       {start:5,invoked:false,data:{interactive:'UPop',conf:{cls:'choose'}}}],
-      rewindTime:7
+       {start:20,invoked:false,data:{interactive:'UPop',conf:{cls:'choose'}}}],
+      rewindTime:22
      },
      choose:[
       {src:['../videos/win1.mp4','../videos/win1.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
-      {src:['../videos/base3.mp4','../videos/base3.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
+      {src:['../videos/fail1.mp4','../videos/fail1.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
      ]
     },
     {

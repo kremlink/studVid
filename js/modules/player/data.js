@@ -1,6 +1,4 @@
 export const data={
- k:1,
- btnBack:0,
  timecodes:[],
  touchPlayRadius:20,
  testSpeedFile:'images/dl-speed.jpg',

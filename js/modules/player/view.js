@@ -18,7 +18,7 @@ export let PlayerView=Backbone.View.extend({
  qual:null,
  pausable:true,
  firstTime:true,
- currTime:-1,
+ currTime:-1,//set when rewind (currentTime changes together with src)
  phase:{step:0,type:'base',index:0,rewind:false},
  initialize:function(opts){
   app=opts.app;
@@ -155,9 +155,7 @@ export let PlayerView=Backbone.View.extend({
 
   if(app.get('_dev-player'))
    this.player.muted(true);
-  this.player.on('pause',()=>{
 
-  });
   this.player.on('play',()=>{
    if(!app.get('_dev-player')&&!document.fullscreenElement&&document.documentElement.requestFullscreen)
     document.documentElement.requestFullscreen();
@@ -214,10 +212,16 @@ export let PlayerView=Backbone.View.extend({
    if(this.firstTime)
     app.get('aggregator').trigger('player:ready');
    this.firstTime=false;
+   if(!~this.currTime)
+    this.$smooth.removeClass(data.view.shownCls);
   });
 
-  this.player.on('playing',()=>{
-   this.$smooth.removeClass(data.view.shownCls);//TODO:fix this with "seeked"
+  this.player.on('seeked',()=>{
+   if(~this.currTime)
+   {
+    this.$smooth.removeClass(data.view.shownCls);
+    this.currTime=-1;
+   }
   });
 
   $(document).on('keypress',(e)=>{
@@ -254,7 +258,7 @@ export let PlayerView=Backbone.View.extend({
 
   if(~time)
    this.player.currentTime(time);
-  if(this.player.paused()&&!goOnPhase)
+  if(!goOnPhase)
   {
    this.player.play();
    app.get('aggregator').trigger('player:play');

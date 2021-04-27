@@ -21,7 +21,7 @@ if(~modules.indexOf('index'))
 
  app.set({dest:'objects.epIndex',object:dataApp.index});
 
- //app.set({dest:'objects._dev-sound',object:true});//TODO:remove
+ app.set({dest:'objects._dev-sound',object:true});//TODO:remove
  app.set({dest:'objects._dev-player',object:true});//TODO:remove
 //app.set({dest:'objects.isPomoi',object:/iPad|iPhone|iPod/.test(navigator.platform)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1)});
 
