@@ -39,16 +39,15 @@ export let config={
     {
      base:{
       src:['../videos/base1.mp4','../videos/base1.mp4'],
-      timecodes:[{start:4,invoked:false,data:{interactive:'Start'}},
-       {start:20,invoked:false,data:{interactive:'UPop',conf:{cls:'choose'}}}],
-      rewindTime:22
+      timecodes:[{start:4,invoked:false,data:{interactive:'Start'}}],
+      end:{data:{interactive:'UPop',conf:{cls:'choose'}}}
      },
      choose:[
-      {src:['../videos/win1.mp4','../videos/win1.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
-      {src:['../videos/fail1.mp4','../videos/fail1.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
+      {src:['../videos/win1.mp4','../videos/win1.mp4'],rewind:['../night.mp4','../night.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
+      {src:['../videos/fail1.mp4','../videos/fail1.mp4'],rewind:['../night1.mp4','../night1.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
      ]
     },
-    {
+    {//TODO:change format below!
      base:{
       src:['../videos/base2.mp4','../videos/base2.mp4'],
       timecodes:[{start:12,invoked:false,data:{interactive:'UPop',conf:{cls:'choose'}}}],

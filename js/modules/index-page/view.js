@@ -110,7 +110,9 @@ export let Index=Backbone.View.extend({
 
   if(d.phase.type==='base')
   {
-   int=d.pData[d.phase.step][d.phase.type].timecodes[d.phase.index].data.interactive;
+   int=~d.phase.index?
+       d.pData[d.phase.step][d.phase.type].timecodes[d.phase.index].data.interactive:
+       d.pData[d.phase.step][d.phase.type].end.data.interactive;
    if(int!=='Start'||int==='Start'&&!lsMgr.getData().user)
     this.$el.addClass(data.view.pauseCls);
   }else

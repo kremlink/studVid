@@ -19,7 +19,7 @@ export let PlayerView=Backbone.View.extend({
  pausable:true,
  firstTime:true,
  currTime:-1,//set when rewind (currentTime changes together with src)
- phase:{step:0,type:'base',index:0,rewind:false},
+ phase:{step:0,type:'base',index:-1,rewind:false},
  initialize:function(opts){
   app=opts.app;
   data=app.configure({player:dat}).player;
@@ -55,7 +55,7 @@ export let PlayerView=Backbone.View.extend({
   this.listenTo(app.get('aggregator'),'main:toggle',this.setPausable);
   this.listenTo(app.get('aggregator'),'page:state',this.freeze);
 
-  this.player.on('qualitySelected',()=>!this.firstTime?this.play({time:this.currTime}):'');
+  //this.player.on('qualitySelected',()=>!this.firstTime?this.play(/*{time:this.currTime}*/):'');
  },
  freeze:function(){
   if(document.visibilityState==='hidden')
@@ -194,7 +194,16 @@ export let PlayerView=Backbone.View.extend({
   });
 
   this.player.on('ended',()=>{
-   let timecodes=this.pData[this.phase.step]['base'].timecodes;
+   if(this.phase.type==='base')
+   {
+    this.changeData({index:-1});
+    app.get('aggregator').trigger('player:interactive');
+   }
+   if(this.phase.type==='choose')
+   {
+    app.get('aggregator').trigger('player:interactive');
+   }
+   /*let timecodes=this.pData[this.phase.step]['base'].timecodes;
 
    if(this.phase.type==='choose')
    {
@@ -205,23 +214,29 @@ export let PlayerView=Backbone.View.extend({
    {
     timecodes[timecodes.length-1].invoked=false;
     this.play({time:timecodes[timecodes.length-1].start});
-   }
+   }*/
   });
 
   this.player.on('loadedmetadata',()=>{
    if(this.firstTime)
     app.get('aggregator').trigger('player:ready');
    this.firstTime=false;
-   if(!~this.currTime)
+   if(!~this.currTime||this.currTime==='end')
+   {
     this.$smooth.removeClass(data.view.shownCls);
+    if(this.currTime==='end')
+     this.currTime=this.player.duration();
+    console.log(this.currTime);
+    this.play();
+   }
   });
 
   this.player.on('seeked',()=>{
-   if(~this.currTime)
+   /*if(~this.currTime)
    {
     this.$smooth.removeClass(data.view.shownCls);
     this.currTime=-1;
-   }
+   }*/
   });
 
   $(document).on('keypress',(e)=>{
@@ -240,16 +255,21 @@ export let PlayerView=Backbone.View.extend({
   }
  },
  play:function({time=-1,goOnPhase=null}={}){
+  if(~this.currTime)
+   time=this.currTime;
+  /*console.log(typeof time,time);
+  if(typeof time==='string')
+   debugger;*/
   if(goOnPhase)
   {
    this.phase=goOnPhase;
 
-   if(this.phase.rewind)
+   /*if(this.phase.rewind)
    {
     let timecodes=this.pData[this.phase.step]['base'].timecodes;
 
     time=timecodes[timecodes.length-1].start;
-   }
+   }*/
 
    if(this.phase.type==='base')
     this.changeSrc(this.pData[this.phase.step][this.phase.type].src,time);else

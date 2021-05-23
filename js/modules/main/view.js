@@ -81,7 +81,9 @@ export let MainView=Backbone.View.extend({
   {
    if(d.phase.type==='base')
    {
-    int=d.pData[d.phase.step][d.phase.type].timecodes[d.phase.index].data.interactive;
+    int=~d.phase.index?
+        d.pData[d.phase.step][d.phase.type].timecodes[d.phase.index].data.interactive:
+        d.pData[d.phase.step][d.phase.type].end.data.interactive;
     if(int==='Start')
     {
      this.player.play();
@@ -107,15 +109,15 @@ export let MainView=Backbone.View.extend({
       ls.data[epIndex].correct=false;
       this.lsMgr.setData(ls);
 
-      this.player.changeData({step:d.phase.step+1,index:0,type:'base'});
+      this.player.changeData({step:d.phase.step+1,index:-1,type:'base'});
       this.player.changeSrc(d.pData[d.phase.step][d.phase.type].src);
       //this.player.play();
       this.player.setStepsChoose();
      }
     }else
     {
-     this.player.changeData({type:'base',rewind:true});
-     this.player.changeSrc(d.pData[d.phase.step][d.phase.type].src,d.pData[d.phase.step][d.phase.type].rewindTime);
+     this.player.changeData({rewind:true});
+     this.player.changeSrc(d.pData[d.phase.step][d.phase.type][d.phase.index].rewind);
      //this.player.play({time:d.pData[d.phase.step][d.phase.type].rewindTime});
      app.get('aggregator').trigger('player:rewind',true);
     }
@@ -132,7 +134,8 @@ export let MainView=Backbone.View.extend({
 
   if(d.phase.type==='base')
   {
-   tItem=d.pData[d.phase.step][d.phase.type].timecodes[d.phase.index];
+   tItem=~d.phase.index?d.pData[d.phase.step][d.phase.type].timecodes[d.phase.index]:d.pData[d.phase.step][d.phase.type].end;
+
 
    int=tItem.data.interactive;
 
@@ -147,19 +150,26 @@ export let MainView=Backbone.View.extend({
     this.toggle({show:true});
    }
 
-   if(int!=='Start')
+   /*if(int!=='Start')
    {
     app.get('aggregator').trigger('player:rewind',false);
     this.player.changeData({rewind:false});
-   }
+   }*/
   }else
   {
-   this.toggle({show:true});
+   if(d.phase.rewind)
+   {
+    this.player.changeData({rewind:false,type:'base',index:-1});
+    this.player.changeSrc(d.pData[d.phase.step][d.phase.type].src,'end');
+    app.get('aggregator').trigger('player:rewind',false);
+   }else
+   {
+    this.toggle({show:true});
 
-   int=d.pData[d.phase.step][d.phase.type][d.phase.index].data.interactive;
-   if(!this.interactives[int])
-    this.interactives[int]=new Interactives[int]({app:app,data:d});else
-    this.interactives[int].toggle(true,ls.data[epIndex].correct);
+    int=d.pData[d.phase.step][d.phase.type][d.phase.index].data.interactive;
+    if(!this.interactives[int])
+     this.interactives[int]=new Interactives[int]({app:app,data:d});else
+     this.interactives[int].toggle(true,ls.data[epIndex].correct);
 
     if(d.phase.step===d.pData.length-1&&ls.data[epIndex].correct&&!ls.data[epIndex].saved)
     {
@@ -167,6 +177,7 @@ export let MainView=Backbone.View.extend({
      ls.data[epIndex].saved=true;
      this.lsMgr.setData(ls);
     }
+   }
   }
  }
 });

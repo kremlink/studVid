@@ -28,7 +28,7 @@
       }
     }
     .vjs-progress-control{
-      pointer-events:none;//TODO:if seek after popups, then set currenttime on first popup
+      //pointer-events:none;//TODO:if seek after popups, then set currenttime on first popup
     }
     .vjs-play-progress:before{
       display:none;

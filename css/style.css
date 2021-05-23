@@ -781,9 +781,6 @@ body {
 .paused .video-js .vjs-control-bar, .nope .video-js .vjs-control-bar {
   display: none;
 }
-.video-js .vjs-progress-control {
-  pointer-events: none;
-}
 .video-js .vjs-play-progress:before {
   display: none;
 }

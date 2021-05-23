@@ -36,7 +36,7 @@ export let UPopView=BaseIntView.extend({
   {
    what=pData[phase.step][phase.type];
    this.$el.html(this.template({
-    cls:phase.type==='base'?what.timecodes[phase.index].data.conf.cls:what[phase.index].data.conf.cls,
+    cls:phase.type==='base'?what.end.data.conf.cls:what[phase.index].data.conf.cls,
     ep:epIndex,
     step:phase.step,
     last:phase.step===pData.length-1,
