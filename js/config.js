@@ -43,30 +43,30 @@ export let config={
       end:{data:{interactive:'UPop',conf:{cls:'choose'}}}
      },
      choose:[
-      {src:['../videos/win1.mp4','../videos/win1.mp4'],rewind:['../night.mp4','../night.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
-      {src:['../videos/fail1.mp4','../videos/fail1.mp4'],rewind:['../night1.mp4','../night1.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
+      {src:['../videos/win1.mp4','../videos/win1.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
+      {src:['../videos/fail1.mp4','../videos/fail1.mp4'],rewind:'../night1.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
      ]
     },
-    {//TODO:change format below!
+    {
      base:{
       src:['../videos/base2.mp4','../videos/base2.mp4'],
-      timecodes:[{start:12,invoked:false,data:{interactive:'UPop',conf:{cls:'choose'}}}],
-      rewindTime:14
+      timecodes:[],
+      end:{data:{interactive:'UPop',conf:{cls:'choose'}}}
      },
      choose:[
-      {src:['../videos/fail2-1.mp4','../videos/fail2-1.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
+      {src:['../videos/fail2-1.mp4','../videos/fail2-1.mp4'],rewind:'../night.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
       {src:['../videos/win2.mp4','../videos/win2.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
-      {src:['../videos/fail2-2.mp4','../videos/fail2-2.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
+      {src:['../videos/fail2-2.mp4','../videos/fail2-2.mp4'],rewind:'../night.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
      ]
     },
     {
      base:{
       src:['../videos/base3.mp4','../videos/base3.mp4'],
-      timecodes:[{start:5,invoked:false,data:{interactive:'UPop',conf:{cls:'choose'}}}],
-      rewindTime:7
+      timecodes:[],
+      end:{data:{interactive:'UPop',conf:{cls:'choose'}}}
      },
      choose:[
-      {src:['../videos/fail3.mp4','../videos/fail3.mp4'],data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
+      {src:['../videos/fail3.mp4','../videos/fail3.mp4'],rewind:'../night.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
       {src:['../videos/win3.mp4','../videos/win3.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}}
      ]
     }/*,

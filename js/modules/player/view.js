@@ -18,6 +18,7 @@ export let PlayerView=Backbone.View.extend({
  qual:null,
  pausable:true,
  firstTime:true,
+ goOn:false,
  currTime:-1,//set when rewind (currentTime changes together with src)
  phase:{step:0,type:'base',index:-1,rewind:false},
  initialize:function(opts){
@@ -84,7 +85,7 @@ export let PlayerView=Backbone.View.extend({
    });
   }
   app.get('aggregator').trigger('player:back');
-  this.changeData({step:index,index:0,type:'base'});
+  this.changeData({step:index,index:-1,type:'base'});
   this.changeSrc(this.pData[this.phase.step][this.phase.type].src);
  },
  changeSrc:function(src,time=-1){
@@ -94,12 +95,14 @@ export let PlayerView=Backbone.View.extend({
 
   for(let i=0;i<this.qual.length;i++)
   {
-   this.qual[i].src=src[i];
+   this.qual[i].src=this.phase.rewind?src:src[i];
    if(i===ind)
     this.qual[i].selected=true;
   }
 
-  this.smoothify(()=>this.player.src(this.qual));
+  //if(this.phase.goOn)
+   //this.player.src(this.qual);else
+   this.smoothify(()=>this.player.src(this.qual));
  },
  smoothify:function(changeSrc){
   let ctx=this.$smooth[0].getContext('2d'),
@@ -108,7 +111,7 @@ export let PlayerView=Backbone.View.extend({
       iW=this.$el.find('video')[0].videoWidth,
       iH=this.$el.find('video')[0].videoHeight,
       r;
-
+console.log('sm');
   ctx.clearRect(0,0,10000,10000);
   this.$smooth.removeAttr('width').removeAttr('height');
   cW=this.$smooth.width();
@@ -142,6 +145,11 @@ export let PlayerView=Backbone.View.extend({
       })();
 
   this.$btns.html(this.extTemplate({choose:choose}));
+ },
+ setGoOn:function(phase){
+  this.phase=phase;
+  this.goOn=true;
+  app.get('aggregator').trigger('player:goOn');
  },
  prepare:function(){
   let touched={};
@@ -220,15 +228,19 @@ export let PlayerView=Backbone.View.extend({
   this.player.on('loadedmetadata',()=>{
    if(this.firstTime)
     app.get('aggregator').trigger('player:ready');
-   this.firstTime=false;
-   if(!~this.currTime||this.currTime==='end')
+   console.log('lmd',this.currTime,this.goOn);
+   if(!~this.currTime||this.currTime==='end'||this.goOn)
    {
+    this.goOn=false;
     this.$smooth.removeClass(data.view.shownCls);
+    console.log('sm-');
     if(this.currTime==='end')
      this.currTime=this.player.duration();
-    console.log(this.currTime);
-    this.play();
+    console.log(this.currTime,this.firstTime);
+    if(!this.firstTime)
+     this.play();
    }
+   this.firstTime=false;
   });
 
   this.player.on('seeked',()=>{
@@ -254,16 +266,14 @@ export let PlayerView=Backbone.View.extend({
     this.player.pause();
   }
  },
- play:function({time=-1,goOnPhase=null}={}){
+ play:function({time=-1}={}){/*if(goOnPhase)debugger;*/
   if(~this.currTime)
    time=this.currTime;
   /*console.log(typeof time,time);
   if(typeof time==='string')
    debugger;*/
-  if(goOnPhase)
+  if(this.goOn)
   {
-   this.phase=goOnPhase;
-
    /*if(this.phase.rewind)
    {
     let timecodes=this.pData[this.phase.step]['base'].timecodes;
@@ -276,10 +286,10 @@ export let PlayerView=Backbone.View.extend({
     this.changeSrc(this.pData[this.phase.step][this.phase.type][this.phase.index].src,time);
   }
 
-  if(~time)
-   this.player.currentTime(time);
-  if(!goOnPhase)
+  if(!this.goOn)
   {
+   if(~time)
+    this.player.currentTime(time);
    this.player.play();
    app.get('aggregator').trigger('player:play');
   }

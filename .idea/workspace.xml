@@ -7,16 +7,12 @@
     <bookmark url="file://$PROJECT_DIR$/js/modules/boardMgr/view.js" line="43" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="smoother&#10;play optimize">
+    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="redo rewind logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/scss/components/_video.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/components/_video.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/index-page/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/index-page/view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/main/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/main/view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/player/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/player/view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/u-pop/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/u-pop/view.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -544,14 +540,8 @@
       <workItem from="1618747691724" duration="4000" />
       <workItem from="1618747713486" duration="62675000" />
       <workItem from="1621545695393" duration="8000" />
-      <workItem from="1621582898109" duration="7525000" />
-    </task>
-    <task id="LOCAL-00021" summary="simple &quot;one&quot; fix">
-      <created>1598298397231</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1598298397231</updated>
+      <workItem from="1621582898109" duration="8107000" />
+      <workItem from="1621867861523" duration="8717000" />
     </task>
     <task id="LOCAL-00022" summary="different steps upgrade ('type' in params)&#10;map (3-buttons show/hide vid)">
       <created>1598360931722</created>
@@ -889,7 +879,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619479085932</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="redo rewind logic">
+      <created>1621811179118</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1621811179118</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -935,7 +932,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="sprites for each episode&#10;quality&#10;map four fix" />
     <MESSAGE value="boat process" />
     <MESSAGE value="boat&#10;timer localstorage&#10;board localstorage" />
     <MESSAGE value="board fix" />
@@ -960,7 +956,8 @@
     <MESSAGE value="refactor different parts&#10;sound&#10;score&#10;clr" />
     <MESSAGE value="test fix" />
     <MESSAGE value="smoother&#10;play optimize" />
-    <option name="LAST_COMMIT_MESSAGE" value="smoother&#10;play optimize" />
+    <MESSAGE value="redo rewind logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="redo rewind logic" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

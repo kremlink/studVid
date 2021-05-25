@@ -38,6 +38,7 @@ export let MainView=Backbone.View.extend({
   this.listenTo(app.get('aggregator'),'player:back',this.hide);
   this.listenTo(app.get('aggregator'),'player:interactive',this.step);
   this.listenTo(app.get('aggregator'),'player:timeupdate',throttle);
+  this.listenTo(app.get('aggregator'),'player:goOn',this.setGoOn);
 
   $(window).on('visibilitychange pagehide',()=>app.get('aggregator').trigger('page:state'));
 

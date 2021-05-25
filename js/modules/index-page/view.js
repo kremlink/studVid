@@ -81,9 +81,9 @@ export let Index=Backbone.View.extend({
  goOn:function(){
   let ls=lsMgr.getData();
 
-  this.main.setGoOn();
   this.$el.addClass(data.view.startCls);
-  this.main.player.play({time:ls.data[epIndex].savedTime,goOnPhase:ls.data[epIndex].phase});
+  this.main.player.setGoOn(ls.data[epIndex].phase);
+  this.main.player.play({time:ls.data[epIndex].savedTime});
   this.main.player.setStepsChoose();
  },
  clr:function(){
