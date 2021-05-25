@@ -7,11 +7,9 @@
     <bookmark url="file://$PROJECT_DIR$/js/modules/boardMgr/view.js" line="43" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="redo rewind logic">
+    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="pass params refactor&#10;goOn fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/index-page/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/index-page/view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/main/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/main/view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modules/boardMgr/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/boardMgr/view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/player/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/player/view.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -541,14 +539,7 @@
       <workItem from="1618747713486" duration="62675000" />
       <workItem from="1621545695393" duration="8000" />
       <workItem from="1621582898109" duration="8107000" />
-      <workItem from="1621867861523" duration="8717000" />
-    </task>
-    <task id="LOCAL-00022" summary="different steps upgrade ('type' in params)&#10;map (3-buttons show/hide vid)">
-      <created>1598360931722</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1598360931722</updated>
+      <workItem from="1621867861523" duration="11791000" />
     </task>
     <task id="LOCAL-00023" summary="fixes">
       <created>1598468003653</created>
@@ -886,7 +877,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621811179118</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="pass params refactor&#10;goOn fix">
+      <created>1621941773649</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1621941773650</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -932,7 +930,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="boat process" />
     <MESSAGE value="boat&#10;timer localstorage&#10;board localstorage" />
     <MESSAGE value="board fix" />
     <MESSAGE value="score process" />
@@ -957,7 +954,8 @@
     <MESSAGE value="test fix" />
     <MESSAGE value="smoother&#10;play optimize" />
     <MESSAGE value="redo rewind logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="redo rewind logic" />
+    <MESSAGE value="pass params refactor&#10;goOn fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="pass params refactor&#10;goOn fix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

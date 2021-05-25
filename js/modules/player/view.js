@@ -87,6 +87,7 @@ export let PlayerView=Backbone.View.extend({
   app.get('aggregator').trigger('player:back');
   this.changeData({step:index,index:-1,type:'base'});
   this.changeSrc(this.pData[this.phase.step][this.phase.type].src);
+  this.setStepsChoose();
  },
  changeSrc:function(src,time=-1){
   let ind=this.qual.findIndex((o)=>matchMedia(o.width).matches);
@@ -111,7 +112,7 @@ export let PlayerView=Backbone.View.extend({
       iW=this.$el.find('video')[0].videoWidth,
       iH=this.$el.find('video')[0].videoHeight,
       r;
-console.log('sm');
+
   ctx.clearRect(0,0,10000,10000);
   this.$smooth.removeAttr('width').removeAttr('height');
   cW=this.$smooth.width();
@@ -228,15 +229,12 @@ console.log('sm');
   this.player.on('loadedmetadata',()=>{
    if(this.firstTime)
     app.get('aggregator').trigger('player:ready');
-   console.log('lmd',this.currTime,this.goOn);
    if(!~this.currTime||this.currTime==='end'||this.goOn)
    {
     this.goOn=false;
     this.$smooth.removeClass(data.view.shownCls);
-    console.log('sm-');
     if(this.currTime==='end')
      this.currTime=this.player.duration();
-    console.log(this.currTime,this.firstTime);
     if(!this.firstTime)
      this.play();
    }
@@ -280,7 +278,11 @@ console.log('sm');
 
     time=timecodes[timecodes.length-1].start;
    }*/
-
+   if(this.phase.rewind)
+   {
+    this.changeData({rewind:false,type:'base',index:-1});
+    time='end';
+   }
    if(this.phase.type==='base')
     this.changeSrc(this.pData[this.phase.step][this.phase.type].src,time);else
     this.changeSrc(this.pData[this.phase.step][this.phase.type][this.phase.index].src,time);

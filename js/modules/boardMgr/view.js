@@ -21,7 +21,7 @@ export let BoardMgr=Backbone.View.extend({
  sendData:function(){
   let ls=lsMgr.getData();
 
-  fetch(data.url+JSON.stringify({episode:epIndex,chosen:ls.data[epIndex].chosen})).then(()=>{});
+  fetch(data.url+JSON.stringify({user:ls.user,episode:epIndex,chosen:ls.data[epIndex].chosen})).then(()=>{});
  },
  setUserData:function(dat){
   let ls=lsMgr.getData();
