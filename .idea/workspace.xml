@@ -7,10 +7,8 @@
     <bookmark url="file://$PROJECT_DIR$/js/modules/boardMgr/view.js" line="43" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="pass params refactor&#10;goOn fix">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="goOn fix&#10;save fix">
       <change beforePath="$PROJECT_DIR$/js/modules/boardMgr/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/boardMgr/view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/player/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/player/view.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -539,14 +537,7 @@
       <workItem from="1618747713486" duration="62675000" />
       <workItem from="1621545695393" duration="8000" />
       <workItem from="1621582898109" duration="8107000" />
-      <workItem from="1621867861523" duration="11791000" />
-    </task>
-    <task id="LOCAL-00023" summary="fixes">
-      <created>1598468003653</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1598468003653</updated>
+      <workItem from="1621867861523" duration="11900000" />
     </task>
     <task id="LOCAL-00024" summary="episode3&#10;&#10;interactive 3">
       <created>1600633915627</created>
@@ -884,7 +875,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621941773650</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="goOn fix&#10;save fix">
+      <created>1621975958048</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1621975958048</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -930,7 +928,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="boat&#10;timer localstorage&#10;board localstorage" />
     <MESSAGE value="board fix" />
     <MESSAGE value="score process" />
     <MESSAGE value="score&#10;bugfixes&#10;&#10;board and app clr upgrade" />
@@ -955,7 +952,8 @@
     <MESSAGE value="smoother&#10;play optimize" />
     <MESSAGE value="redo rewind logic" />
     <MESSAGE value="pass params refactor&#10;goOn fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="pass params refactor&#10;goOn fix" />
+    <MESSAGE value="goOn fix&#10;save fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="goOn fix&#10;save fix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
