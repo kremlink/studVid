@@ -88,6 +88,7 @@ export let Index=Backbone.View.extend({
  },
  clr:function(){
   lsMgr.resetData(true);
+  this.$el.removeClass(data.view.goOnCls);
  },
  loaded:function(){
   this.$el.addClass(data.view.loadedCls);

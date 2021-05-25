@@ -168,6 +168,8 @@ export let PlayerView=Backbone.View.extend({
   this.player.on('play',()=>{
    if(!app.get('_dev-player')&&!document.fullscreenElement&&document.documentElement.requestFullscreen)
     document.documentElement.requestFullscreen();
+   if(!this.pausable)
+    this.pause();
   });
 
   this.player.on('touchstart',e=>{
@@ -256,13 +258,8 @@ export let PlayerView=Backbone.View.extend({
  },
  playPauseByCtrls:function(){
   if(this.player.paused())
-  {
-   this.player.play();
-  }else
-  {
-   if(!this.player.seeking())
-    this.player.pause();
-  }
+   this.player.play();else
+   this.pause();
  },
  play:function({time=-1}={}){/*if(goOnPhase)debugger;*/
   if(~this.currTime)
