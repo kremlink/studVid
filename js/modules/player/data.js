@@ -12,7 +12,7 @@ export const data={
   el:'.video-js',
   goOn:'.continue',
   extTemplate:'#ext-player-template',
-  $btns:'.special-btns',
+  $extra:'.special-btns',
   $smooth:'.smooth',
   shownCls:'shown'
  }

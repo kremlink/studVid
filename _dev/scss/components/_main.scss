@@ -129,23 +129,54 @@
   }
   //test
   .special-btns{
-    @include abs($l:0,$t:0,$b:0);
-    width:4em;
-    background:rgba(#000,0.36);
+    @include abs($l:4em,$t:0);
+    height:4em;
     z-index:2;
     display:none;
     .start &{
       display:block;
     }
-    div{
-      cursor:pointer;
-      background: url(#{$path}t1.svg) center/70% 70% no-repeat;
+    input{
+      opacity:0;
+      @include abs($l:-4em,$t:0);
+      width:4em;
       height:4em;
-      opacity:0.3;
+      cursor:pointer;
+      &:checked{
+        &~.sp-toggle{
+          background:#fff;
+        }
+        &~.step-btns{
+          @include flx(display,flex);
+        }
+      }
+    }
+    .step-btns{
+      height:100%;
+      display:none;
+    }
+    .sp-toggle{
+      @include abs($l:-4em,$t:0,$b:0);
+      width:4em;
+      background:rgba(#fff,0.5);
       pointer-events:none;
+    }
+    .int-ind-back{
+      cursor:pointer;
+      border-radius:50%;
+      border:.1em solid #fff;
+      width:2em;
+      opacity:0.3;
+      color:#fff;
+      font-size:2em;
+      pointer-events:none;
+      position:relative;
       &.enabled{
         opacity:1;
         pointer-events:auto;
+      }
+      span{
+        @include center();
       }
     }
   }

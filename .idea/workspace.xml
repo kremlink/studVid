@@ -7,10 +7,15 @@
     <bookmark url="file://$PROJECT_DIR$/js/modules/boardMgr/view.js" line="43" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="save all">
+    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="seekable fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/boardMgr/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/boardMgr/view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/index-page/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/index-page/view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_dev/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_dev/scss/components/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/components/_main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modules/player/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/player/data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/player/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/player/view.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -540,14 +545,8 @@
       <workItem from="1618747713486" duration="62675000" />
       <workItem from="1621545695393" duration="8000" />
       <workItem from="1621582898109" duration="8107000" />
-      <workItem from="1621867861523" duration="14163000" />
-    </task>
-    <task id="LOCAL-00025" summary="interactive 1">
-      <created>1600716549770</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1600716549770</updated>
+      <workItem from="1621867861523" duration="15632000" />
+      <workItem from="1622124770182" duration="10175000" />
     </task>
     <task id="LOCAL-00026" summary="interactive 4 process">
       <created>1601069724345</created>
@@ -885,7 +884,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621976052693</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="seekable fix">
+      <created>1621981782292</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1621981782292</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -931,7 +937,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="score process" />
     <MESSAGE value="score&#10;bugfixes&#10;&#10;board and app clr upgrade" />
     <MESSAGE value="events refactoring" />
     <MESSAGE value="&quot;continue&quot;" />
@@ -956,7 +961,8 @@
     <MESSAGE value="pass params refactor&#10;goOn fix" />
     <MESSAGE value="goOn fix&#10;save fix" />
     <MESSAGE value="save all" />
-    <option name="LAST_COMMIT_MESSAGE" value="save all" />
+    <MESSAGE value="seekable fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="seekable fix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

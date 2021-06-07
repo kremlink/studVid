@@ -30,7 +30,7 @@ export let PlayerView=Backbone.View.extend({
   epIndex=app.get('epIndex');
   lsMgr=opts.lsMgr;
 
-  this.$btns=$(data.view.$btns);
+  this.$extra=$(data.view.$extra);
   this.$smooth=$(data.view.$smooth);
 
   this.extTemplate=ext.length?_.template($(data.view.extTemplate).html()):()=>{};
@@ -145,7 +145,7 @@ export let PlayerView=Backbone.View.extend({
        return arr;
       })();
 
-  this.$btns.html(this.extTemplate({choose:choose}));
+  this.$extra.html(this.extTemplate({choose:choose}));
  },
  setGoOn:function(phase){
   this.phase=phase;
@@ -156,7 +156,7 @@ export let PlayerView=Backbone.View.extend({
   let touched={};
 
   this.setElement(data.view.el);
-  this.$el.append(this.$btns).append(this.$smooth);
+  this.$el.append(this.$extra).append(this.$smooth);
 
   this.changeSrc(this.pData[this.phase.step][this.phase.type].src);
 

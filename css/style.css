@@ -600,27 +600,63 @@ body {
 
 .special-btns {
   position: absolute;
-  left: 0;
+  left: 4em;
   top: 0;
-  bottom: 0;
-  width: 4em;
-  background: rgba(0, 0, 0, 0.36);
+  height: 4em;
   z-index: 2;
   display: none;
 }
 .start .special-btns {
   display: block;
 }
-.special-btns div {
-  cursor: pointer;
-  background: url(../images/t1.svg) center/70% 70% no-repeat;
+.special-btns input {
+  opacity: 0;
+  position: absolute;
+  left: -4em;
+  top: 0;
+  width: 4em;
   height: 4em;
-  opacity: 0.3;
+  cursor: pointer;
+}
+.special-btns input:checked ~ .sp-toggle {
+  background: #fff;
+}
+.special-btns input:checked ~ .step-btns {
+  display: flex;
+}
+.special-btns .step-btns {
+  height: 100%;
+  display: none;
+}
+.special-btns .sp-toggle {
+  position: absolute;
+  left: -4em;
+  top: 0;
+  bottom: 0;
+  width: 4em;
+  background: rgba(255, 255, 255, 0.5);
   pointer-events: none;
 }
-.special-btns div.enabled {
+.special-btns .int-ind-back {
+  cursor: pointer;
+  border-radius: 50%;
+  border: 0.1em solid #fff;
+  width: 2em;
+  opacity: 0.3;
+  color: #fff;
+  font-size: 2em;
+  pointer-events: none;
+  position: relative;
+}
+.special-btns .int-ind-back.enabled {
   opacity: 1;
   pointer-events: auto;
+}
+.special-btns .int-ind-back span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .loader-pop {

@@ -92,9 +92,13 @@
             <canvas class="smooth"></canvas>
 		</div>
         <script type="text/template" id="ext-player-template">
-            <% for(let i=0;i<choose.length;i++){ %>
-            <div class="int-ind-back<%= choose[i]?' enabled':' ' %>"></div>
-            <% } %>
+            <input type="checkbox" />
+            <div class="sp-toggle"></div>
+            <div class="step-btns">
+                <% for(let i=0;i<choose.length;i++){ %>
+                <div class="int-ind-back<%= choose[i]?' enabled':' ' %>"><span><%= i+1 %></span></div>
+                <% } %>
+            </div>
         </script>
     <script type="text/template" id="u-pop-template">
         <div class="ov-inner <%= cls %>">
