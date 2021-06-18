@@ -7,15 +7,15 @@
     <bookmark url="file://$PROJECT_DIR$/js/modules/boardMgr/view.js" line="43" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="seekable fix">
+    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="btns show-hide">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_dev/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/html/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_dev/scss/components/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/components/_main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bg.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/player/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/player/data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/player/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/player/view.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -546,14 +546,7 @@
       <workItem from="1621545695393" duration="8000" />
       <workItem from="1621582898109" duration="8107000" />
       <workItem from="1621867861523" duration="15632000" />
-      <workItem from="1622124770182" duration="10175000" />
-    </task>
-    <task id="LOCAL-00026" summary="interactive 4 process">
-      <created>1601069724345</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1601069724345</updated>
+      <workItem from="1622124770182" duration="19087000" />
     </task>
     <task id="LOCAL-00027" summary="interactive 4">
       <created>1601148938745</created>
@@ -891,7 +884,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621981782292</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="btns show-hide">
+      <created>1623107125249</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1623107125250</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -937,7 +937,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="score&#10;bugfixes&#10;&#10;board and app clr upgrade" />
     <MESSAGE value="events refactoring" />
     <MESSAGE value="&quot;continue&quot;" />
     <MESSAGE value="- remove not needed&#10;- fix localstorage logic" />
@@ -962,7 +961,8 @@
     <MESSAGE value="goOn fix&#10;save fix" />
     <MESSAGE value="save all" />
     <MESSAGE value="seekable fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="seekable fix" />
+    <MESSAGE value="btns show-hide" />
+    <option name="LAST_COMMIT_MESSAGE" value="btns show-hide" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

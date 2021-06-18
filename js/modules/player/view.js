@@ -258,7 +258,7 @@ export let PlayerView=Backbone.View.extend({
  },
  playPauseByCtrls:function(){
   if(this.player.paused())
-   this.player.play();else
+   this.play();else
    this.pause();
  },
  play:function({time=-1}={}){/*if(goOnPhase)debugger;*/

@@ -35,20 +35,28 @@
 			<div class="overlay-block">
                 <div class="ov-wrap start">
                     <div class="ov-inner">
-                        <img src="images/bg.svg" alt=""/>
-                        <div class="form">
-                            <input data-valid="\S+" placeholder="Введи свое имя" type="text" name="name"/>
-                            <input data-valid="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" placeholder="Введи свой email" type="text" name="email"/>
+                        <div class="lets">
+                            Добро пожаловать на ваше рабочее место. <br/>
+                            Давайте закончим оформление документов.<br/>
+                            Представьтесь, инспектор.
                         </div>
-                        <div class="btn-cont">
-                            <img src="images/t1.svg" alt="" class="btn"/>
-                            <img src="images/t2.svg" alt="" class="btn-h"/>
+                        <img src="images/reg-form-bg.svg" alt=""/>
+                        <div class="form">
+                            <input data-valid="\S+" placeholder="Введите ваше имя" type="text" name="name"/>
+                            <input data-valid="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" placeholder="Введите свой email" type="text" name="email"/>
+                        </div>
+                        <div class="btns">
+                            <div class="btn-cont">
+                                <img src="images/reg-form-btn.svg" alt="" class="btn"/>
+                                <img src="images/reg-form-btn-h.svg" alt="" class="btn-h"/>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="ov-wrap u-pop">
 
                 </div>
+                <div class="circus"></div>
             </div>
             <div class="the-timer">
                 <div class="the-t-text"></div>
@@ -89,21 +97,21 @@
                 <% } %>
             </div>
             <% if(choose){ %>
-            <img src="images/ep<%= ep %>-step<%= step %>-pop-base-bg.svg" alt=""/>
+            <img src="../pops-images/ep<%= ep %>-step<%= step %>-pop-base-bg.svg" alt=""/>
             <% }else{ %>
-            <img src="images/ep<%= ep %>-step<%= step %>-pop-chosen<%= chosen %>-bg.svg" alt=""/>
+            <img src="../pops-images/ep<%= ep %>-step<%= step %>-pop-chosen<%= chosen %>-bg.svg" alt=""/>
             <% } %>
             <div class="btns">
                 <% if(choose){
                 for(let i=0;i<choose;i++){ %>
                 <div class="btn-cont">
-                    <img src="images/ep<%= ep %>-step<%= step %>-choose<%= i %>.svg" alt="" class="btn"/>
-                    <img src="images/ep<%= ep %>-step<%= step %>-choose<%= i %>-h.svg" alt="" class="btn-h"/>
+                    <img src="../pops-images/ep<%= ep %>-step<%= step %>-choose<%= i %>.svg" alt="" class="btn"/>
+                    <img src="../pops-images/ep<%= ep %>-step<%= step %>-choose<%= i %>-h.svg" alt="" class="btn-h"/>
                 </div>
                 <% }}else{ %>
                 <div class="btn-cont">
-                    <img src="images/ep<%= ep %>-step<%= step %>-chosen<%= chosen %>-ok.svg" alt="" class="btn"/>
-                    <img src="images/ep<%= ep %>-step<%= step %>-chosen<%= chosen %>-ok-h.svg" alt="" class="btn-h"/>
+                    <img src="../pops-images/ep<%= ep %>-step<%= step %>-chosen<%= chosen %>-ok.svg" alt="" class="btn"/>
+                    <img src="../pops-images/ep<%= ep %>-step<%= step %>-chosen<%= chosen %>-ok-h.svg" alt="" class="btn-h"/>
                 </div>
                 <% } %>
             </div>

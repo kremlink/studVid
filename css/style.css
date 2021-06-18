@@ -464,106 +464,143 @@ body {
   height: 56.25vw;
   max-height: 100vh;
   max-width: 177.7777vh;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease-in-out;
   position: absolute;
-  left: 50%;
+  left: 100%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(0, -50%);
+  z-index: 1;
+}
+.overlay-block .ov-wrap.start .btns {
+  top: 93%;
+  bottom: -30%;
 }
 .overlay-block .ov-wrap.start .btn-cont {
-  width: 5em;
-  height: 2em;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 0);
+  width: 100%;
+  height: 3.2793522267em;
+}
+.overlay-block .ov-wrap.start.shown ~ .circus {
+  opacity: 1;
 }
 .overlay-block .ov-wrap.shown {
-  opacity: 1;
-  pointer-events: auto;
+  transition: all 0.3s ease-in-out;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .overlay-block .ov-inner {
   width: 30em;
-  height: 10em;
+  height: 13.6363636364em;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
+.overlay-block .ov-inner.choose .btns {
+  bottom: -22%;
+}
 .overlay-block .ov-inner.choose .btn-cont {
   flex: 1 0 0;
-  height: 2em;
+}
+.overlay-block .ov-inner.info .btns {
+  bottom: -30%;
 }
 .overlay-block .ov-inner.info .btn-cont {
-  width: 5em;
-  height: 2em;
+  width: 100%;
+  height: 3.1558441558em;
+}
+
+.lets {
   position: absolute;
   left: 50%;
-  bottom: 0;
+  top: -40%;
   transform: translate(-50%, 0);
+  white-space: nowrap;
+  color: #fff;
+  text-align: center;
 }
-.overlay-block .form {
-  padding-top: 2em;
+
+.form {
+  padding-top: 1.2em;
   position: relative;
   color: #fff;
   text-align: center;
 }
-.overlay-block .form input {
+.form input {
   display: block;
-  text-align: center;
-  color: #fff;
-  background: #000;
-  border: 1px solid #e2a39e;
   text-transform: uppercase;
-  width: 40%;
+  width: 22em;
+  color: #000;
   font-size: 0.8em;
-  padding: 0.2em 0;
-  margin: 1.2em auto 0 auto;
+  margin: 1.5em 0 0 14em;
+  background: none;
+  border: none;
 }
-.overlay-block .form input::-webkit-input-placeholder {
-  color: #fff;
+.form input::-webkit-input-placeholder {
+  color: #000;
 }
-.overlay-block .form input::-moz-placeholder {
-  color: #fff;
+.form input::-moz-placeholder {
+  color: #000;
   opacity: 1;
 }
-.overlay-block .form input:-ms-input-placeholder {
-  color: #fff;
+.form input:-ms-input-placeholder {
+  color: #000;
 }
-.overlay-block .form input.err {
-  background: #f00;
+.form input.err {
+  color: #f00;
 }
-.overlay-block .btns {
+.form input.err::-webkit-input-placeholder {
+  color: #f00;
+}
+.form input.err::-moz-placeholder {
+  color: #f00;
+  opacity: 1;
+}
+.form input.err:-ms-input-placeholder {
+  color: #f00;
+}
+
+.btns {
   position: absolute;
-  left: 0;
-  top: 70%;
-  right: 0;
-  bottom: 0;
+  left: 2%;
+  top: 100%;
+  right: 2%;
   display: flex;
 }
-.overlay-block .btn-cont {
+
+.btn-cont {
   cursor: pointer;
   position: relative;
 }
 @media (min-width: 1200px) {
-  .overlay-block .btn-cont:hover .btn {
+  .btn-cont:hover .btn {
     opacity: 1;
   }
-  .overlay-block .btn-cont:hover .btn-h {
+  .btn-cont:hover .btn-h {
     opacity: 1;
   }
 }
-.overlay-block img {
+
+img {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
 }
-.overlay-block .btn-h {
+
+.btn-h {
   opacity: 0;
+}
+
+.circus {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../images/circus.svg) center/cover no-repeat;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .ov-video {
@@ -704,7 +741,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: center/cover;
+  background: url(../images/circus.svg) center/cover no-repeat;
 }
 .orientation-pop .text {
   position: absolute;

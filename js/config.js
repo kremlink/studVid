@@ -183,7 +183,7 @@ export let config={
       end:{data:{interactive:'UPop',conf:{cls:'choose'}}}
      },
      choose:[
-      {src:['../videos/7-3-3-1-boom.mp4','../videos/7-3-3-1-boom.mp4'],rewind:'../videos/7-1-boom-rev.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
+      {src:['../videos/7-3-3-1-boom.mp4','../videos/7-3-3-1-boom.mp4'],rewind:'../videos/7-3-3-1-boom-rev.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
       {src:['../videos/7-3-3-2-no.mp4','../videos/7-3-3-2-no.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}}
      ]
     }
