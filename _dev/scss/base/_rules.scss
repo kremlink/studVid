@@ -1,5 +1,5 @@
 @include exports("@path:base\_rules.scss"){/*@path:base\_rules.scss*/
-  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&subset=cyrillic');
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
   .safe-hide-svg{
     @include abs($l:0,$t:-100px);

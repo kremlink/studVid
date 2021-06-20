@@ -49,7 +49,12 @@ export let PlayerView=Backbone.View.extend({
    },
    plugins:{
 
-   }
+   }/*,
+   userActions:{
+    hotkeys:{
+     playPauseKey:...
+    }
+   }*/
   },()=>{
    this.prepare();
   });
@@ -252,7 +257,7 @@ export let PlayerView=Backbone.View.extend({
   });
 
   $(document).on('keypress',(e)=>{
-   if(e.which===32&&this.pausable)
+   if(this.player.controlBar.playToggle.el()!==document.activeElement&&e.which===32&&this.pausable)
     this.playPauseByCtrls();
   });
  },

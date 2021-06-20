@@ -2,7 +2,7 @@ export const data={
  preload:{},
  waitBtn:1500,
  events:{
-  'start':'.start-pop .text',
+  'start':'.start-pop .start',
   'clr':'.clr',
   'goOn':'.continue'
  },

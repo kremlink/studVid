@@ -2,7 +2,7 @@
 /*@path:core\_base.scss*/
 /*@path:core\_mixins.scss*/
 /*@path:core\_exts.scss*/
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 .board-page {
   box-sizing: border-box;
 }
@@ -418,7 +418,7 @@ html {
 
 body {
   height: 100%;
-  font: 1.575vw/1.25 "Montserrat", sans-serif;
+  font: 1.575vw/1.25 "Press Start 2P", sans-serif;
   background: #000;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -507,6 +507,13 @@ body {
   width: 100%;
   height: 3.1558441558em;
 }
+.overlay-block img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
 
 .lets {
   position: absolute;
@@ -516,33 +523,38 @@ body {
   white-space: nowrap;
   color: #fff;
   text-align: center;
+  font-size: 0.6em;
 }
 
 .form {
-  padding-top: 1.2em;
   position: relative;
-  color: #fff;
   text-align: center;
+  font-size: 0.6em;
+  color: rgba(0, 0, 0, 0.75);
 }
 .form input {
   display: block;
-  text-transform: uppercase;
-  width: 22em;
-  color: #000;
-  font-size: 0.8em;
-  margin: 1.5em 0 0 14em;
+  width: 25em;
+  font-size: inherit;
+  margin: 4.6em 0 0 18.6em;
   background: none;
   border: none;
 }
 .form input::-webkit-input-placeholder {
-  color: #000;
+  color: rgba(0, 0, 0, 0.75);
 }
 .form input::-moz-placeholder {
-  color: #000;
+  color: rgba(0, 0, 0, 0.75);
   opacity: 1;
 }
 .form input:-ms-input-placeholder {
-  color: #000;
+  color: rgba(0, 0, 0, 0.75);
+}
+.form input:-webkit-autofill {
+  transition: all 0s 50000s;
+}
+.form input + input {
+  margin-top: 2.45em;
 }
 .form input.err {
   color: #f00;
@@ -556,6 +568,21 @@ body {
 }
 .form input.err:-ms-input-placeholder {
   color: #f00;
+}
+
+.f-date {
+  position: absolute;
+  left: 18.6em;
+  top: 6.8em;
+}
+
+.f-rand {
+  position: absolute;
+  top: 10.4em;
+  right: 1.8em;
+}
+.f-rand span {
+  font-size: 1.6em;
 }
 
 .btns {
@@ -572,19 +599,11 @@ body {
 }
 @media (min-width: 1200px) {
   .btn-cont:hover .btn {
-    opacity: 1;
+    opacity: 0;
   }
   .btn-cont:hover .btn-h {
     opacity: 1;
   }
-}
-
-img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .btn-h {
@@ -758,25 +777,65 @@ img {
   right: 0;
   bottom: 0;
   display: flex;
-  background: #000;
+  flex-flow: row wrap;
+  background: url(../images/circus.svg) center/cover no-repeat;
   z-index: 1;
   transition: opacity 0.3s ease-in-out;
+  font-size: 0.6em;
 }
 .start .start-pop {
   opacity: 0;
   pointer-events: none;
 }
 .start-pop .text {
-  margin: auto;
+  margin-top: 10em;
+  width: 100%;
   color: #fff;
+  text-align: center;
+}
+.start-pop .icons {
+  margin: -3em 10% 0 10%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.start-pop .icons img {
+  width: 20em;
+  margin: 0 10em;
+}
+.start-pop .start {
+  width: 30em;
+  height: 6.6666666667em;
+  margin: auto auto 0 auto;
+  position: relative;
   cursor: pointer;
+}
+@media (min-width: 1200px) {
+  .start-pop .start:hover img {
+    opacity: 0;
+  }
+  .start-pop .start:hover img + img {
+    opacity: 1;
+  }
+}
+.start-pop .start img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.start-pop .start img + img {
+  opacity: 0;
 }
 
 .clr {
+  font-size: 0.7em;
   z-index: 1;
   color: #fff;
   white-space: nowrap;
-  padding: 2em 3em;
+  padding: 1em;
   background: #000;
   cursor: pointer;
   position: absolute;
@@ -790,16 +849,17 @@ img {
 }
 
 .continue {
+  font-size: 0.7em;
   z-index: 1;
   color: #fff;
   white-space: nowrap;
-  padding: 2em 3em;
+  padding: 1em;
   background: #000;
   cursor: pointer;
   display: none;
   position: absolute;
   left: 50%;
-  bottom: 1em;
+  bottom: 7em;
   transform: translate(-50%, 0);
 }
 .goOn:not(.start) .continue {
@@ -825,7 +885,7 @@ img {
 .video-js {
   width: 100%;
   height: 100%;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Press Start 2P", sans-serif;
 }
 .nope .video-js {
   pointer-events: none;
@@ -906,6 +966,10 @@ img {
   display: flex;
   visibility: visible;
   opacity: 1;
+}
+
+.video-js .vjs-control:focus, .video-js .vjs-control:focus:before, .video-js .vjs-control:hover:before {
+  text-shadow: none;
 }
 
 /*@path:partials\_board.scss*/

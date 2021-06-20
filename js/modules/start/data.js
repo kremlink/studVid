@@ -7,6 +7,8 @@ export const data={
   $inp:'input',
   shownCls:'shown',
   errCls:'err',
-  vData:'valid'
+  vData:'valid',
+  $date:'.f-date',
+  $rand:'.f-rand span'
  }
 };

@@ -104,6 +104,7 @@ export let Index=Backbone.View.extend({
   lsMgr.resetData();
   this.main.player.setStepsChoose();
   this.main.player.play();
+  app.get('aggregator').trigger('sound','btn');
  },
  pause:function(){
   let d=this.main.player.getData(),

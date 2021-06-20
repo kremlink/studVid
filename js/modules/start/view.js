@@ -1,6 +1,15 @@
 import {BaseIntView} from '../baseInteractive/view.js';
 import {data as dat} from './data.js';
 
+let get5RandomString=()=>{
+ const randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+ let result='';
+
+ for(let i=0;i<5;i++)
+  result+=randomChars.charAt(Math.floor(Math.random()*randomChars.length));
+ return result;
+}
+
 let app,
     data=dat,
     events={};
@@ -8,7 +17,9 @@ let app,
 events[`click ${data.events.click}`]='click';
 
 export let StartView=BaseIntView.extend({
- events:events,
+ events:function(){
+  return _.extend({},BaseIntView.prototype.events,events);
+ },
  el:data.view.el,
  initialize:function(opts){
   app=opts.app;
@@ -24,6 +35,9 @@ export let StartView=BaseIntView.extend({
   this.$inp=this.$(data.view.$inp).on('focus',function(){
    $(this).removeClass(data.view.errCls);
   });
+
+  this.$(data.view.$date).text((new Date()).toLocaleDateString('en-GB'));
+  this.$(data.view.$rand).text(get5RandomString()+'-'+get5RandomString());
  },
  toggle:function(f){
   if(f)

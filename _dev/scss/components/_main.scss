@@ -56,36 +56,55 @@
         }
       }
     }
+    img{
+      @include abs($l:0,$t:0);
+      width:100%;
+      height:100%;
+    }
   }
   .lets{
     @include center($t:-40%);
     white-space:nowrap;
     color:#fff;
     text-align:center;
+    font-size:0.6em;
   }
-  .form{//TODO:generate code and set date
-    padding-top:1.2em;
+  .form{
     position:relative;
-    color:#fff;
     text-align:center;
+    font-size:0.6em;
+    color:rgba(#000,0.75);
     input{
       display:block;
-      text-transform:uppercase;
-      width:22em;
-      color:#000;
-      font-size:0.8em;
-      margin:1.5em 0 0 14em;
+      width:25em;
+      font-size:inherit;
+      margin:4.6em 0 0 18.6em;
       background:none;
       border:none;
       @include plh(){
-        color:#000;
+        color:rgba(#000,0.75);
       };
+      &:-webkit-autofill{
+        transition:all 0s 50000s;
+      }
+      &+input{
+        margin-top:2.45em;
+      }
       &.err{
         color:#f00;
         @include plh(){
           color:#f00;
         };
       }
+    }
+  }
+  .f-date{
+    @include abs($l:18.6em,$t:6.8em);
+  }
+  .f-rand{
+    @include abs($r:1.8em,$t:10.4em);
+    span{
+      font-size:1.6em;
     }
   }
   .btns{
@@ -98,18 +117,13 @@
     @include med(){
       &:hover{
         .btn{
-          opacity:1;
+          opacity:0;
         }
         .btn-h{
           opacity:1;
         }
       }
     }
-  }
-  img{
-    @include abs($l:0,$t:0);
-    width:100%;
-    height:100%;
   }
   .btn-h{
     opacity:0;
@@ -252,24 +266,64 @@
   .start-pop{
     @include abs($l:0,$r:0,$t:0,$b:0);
     @include flx(display,flex);
-    background:#000;
+    @include flx(flex-flow,'row wrap');
+    background:url(#{$path}circus.svg) center/cover no-repeat;
     z-index:1;
     @include trs('opacity #{$anim} ease-in-out');
+    font-size:0.6em;
     .start &{
       opacity:0;
       pointer-events:none;
     }
     .text{
-      margin:auto;
+      margin-top:10em;
+      width:100%;
       color:#fff;
+      text-align:center;
+    }
+    .icons{
+      margin:-3em 10% 0 10%;
+      width:80%;
+      @include flx(display,flex);
+      @include flx(justify-content,center);
+      @include flx(align-items,center);
+      img{
+        width:20em;
+        margin:0 10em;
+      }
+    }
+    .start{
+      width:30em;
+      height:104/468*30em;
+      margin:auto auto 0 auto;
+      position:relative;
       cursor:pointer;
+      @include med(){
+        &:hover{
+          img{
+            opacity:0;
+            &+img{
+              opacity:1;
+            }
+          }
+        }
+      }
+      img{
+        @include abs($l:0,$t:0);
+        width:100%;
+        height:100%;
+        &+img{
+          opacity:0;
+        }
+      }
     }
   }
   .clr{
+    font-size:0.7em;
     z-index:1;
     color:#fff;
     white-space:nowrap;
-    padding:2em 3em;
+    padding:1em;
     background:#000;
     cursor:pointer;
     @include center($t:1em);
@@ -279,14 +333,15 @@
     }
   }
   .continue{
+    font-size:0.7em;
     z-index:1;
     color:#fff;
     white-space:nowrap;
-    padding:2em 3em;
+    padding:1em;
     background:#000;
     cursor:pointer;
     display:none;
-    @include center($b:1em);
+    @include center($b:7em);
     .goOn:not(.start) &{
       display:block;
     }

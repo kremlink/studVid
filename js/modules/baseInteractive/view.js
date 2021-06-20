@@ -5,7 +5,7 @@ let app,
     data=dat;
 
 events[`click.base ${data.events.click}`]='btnClick';
-events[`mouseenter.base ${data.events.mouseenter}`]='btnHover';
+events[`mouseenter.base ${data.events.click}`]='btnHover';
 
 export let BaseIntView=Backbone.View.extend({
  events:events,
