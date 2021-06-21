@@ -39,7 +39,7 @@ export let config={
     {
      base:{
       src:['../videos/1-start.mp4','../videos/1-start.mp4'],
-      timecodes:[{start:4,invoked:false,data:{interactive:'Start'}}],
+      timecodes:[{start:0.5,invoked:false,data:{interactive:'Start'}}],
       end:{data:{interactive:'UPop',conf:{cls:'choose'}}}
      },
      choose:[

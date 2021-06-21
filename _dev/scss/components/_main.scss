@@ -290,6 +290,14 @@
       img{
         width:20em;
         margin:0 10em;
+        &:nth-child(2){
+          display:none;
+        }
+        @include med(-400px){
+          &:nth-child(2){
+            display:block;
+          }
+        }
       }
     }
     .start{
@@ -298,50 +306,46 @@
       margin:auto auto 0 auto;
       position:relative;
       cursor:pointer;
-      @include med(){
-        &:hover{
-          img{
-            opacity:0;
-            &+img{
-              opacity:1;
-            }
+    }
+  }
+  .hoverable{
+    @include med(){
+      &:hover{
+        img{
+          opacity:0;
+          &+img{
+            opacity:1;
           }
         }
       }
-      img{
-        @include abs($l:0,$t:0);
-        width:100%;
-        height:100%;
-        &+img{
-          opacity:0;
-        }
+    }
+    img{
+      @include abs($l:0,$t:0);
+      width:100%;
+      height:100%;
+      &+img{
+        opacity:0;
       }
     }
   }
   .clr{
-    font-size:0.7em;
-    z-index:1;
-    color:#fff;
-    white-space:nowrap;
-    padding:1em;
-    background:#000;
+    width:5em;
+    height:114/105*5em;
+    @include abs($t:0,$l:0);
     cursor:pointer;
-    @include center($t:1em);
+    z-index:1;
     display:none;
     #wrap:not(.start) &{
       display:block;
     }
   }
   .continue{
-    font-size:0.7em;
-    z-index:1;
-    color:#fff;
-    white-space:nowrap;
-    padding:1em;
-    background:#000;
+    width:5em;
+    height:114/105*5em;
+    @include abs($t:0,$l:5em);
     cursor:pointer;
+    z-index:1;
     display:none;
-    @include center($b:7em);
     .goOn:not(.start) &{
       display:block;
     }

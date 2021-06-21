@@ -403,6 +403,10 @@ table {
 
 /*@path:base\_mixins.scss*/
 /*@path:base\_rules.scss*/
+@font-face {
+  font-family: pdt-player;
+  src: url("../fonts/p-f.woff") format("woff");
+}
 .safe-hide-svg {
   position: absolute;
   left: 0;
@@ -804,6 +808,14 @@ body {
   width: 20em;
   margin: 0 10em;
 }
+.start-pop .icons img:nth-child(2) {
+  display: none;
+}
+@media (min-width: 800px) {
+  .start-pop .icons img:nth-child(2) {
+    display: block;
+  }
+}
 .start-pop .start {
   width: 30em;
   height: 6.6666666667em;
@@ -811,37 +823,34 @@ body {
   position: relative;
   cursor: pointer;
 }
+
 @media (min-width: 1200px) {
-  .start-pop .start:hover img {
+  .hoverable:hover img {
     opacity: 0;
   }
-  .start-pop .start:hover img + img {
+  .hoverable:hover img + img {
     opacity: 1;
   }
 }
-.start-pop .start img {
+.hoverable img {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
 }
-.start-pop .start img + img {
+.hoverable img + img {
   opacity: 0;
 }
 
 .clr {
-  font-size: 0.7em;
-  z-index: 1;
-  color: #fff;
-  white-space: nowrap;
-  padding: 1em;
-  background: #000;
-  cursor: pointer;
+  width: 5em;
+  height: 5.4285714286em;
   position: absolute;
-  left: 50%;
-  top: 1em;
-  transform: translate(-50%, 0);
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  z-index: 1;
   display: none;
 }
 #wrap:not(.start) .clr {
@@ -849,18 +858,14 @@ body {
 }
 
 .continue {
-  font-size: 0.7em;
-  z-index: 1;
-  color: #fff;
-  white-space: nowrap;
-  padding: 1em;
-  background: #000;
-  cursor: pointer;
-  display: none;
+  width: 5em;
+  height: 5.4285714286em;
   position: absolute;
-  left: 50%;
-  bottom: 7em;
-  transform: translate(-50%, 0);
+  left: 5em;
+  top: 0;
+  cursor: pointer;
+  z-index: 1;
+  display: none;
 }
 .goOn:not(.start) .continue {
   display: block;
@@ -886,6 +891,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Press Start 2P", sans-serif;
+  color: #c0c0c0;
 }
 .nope .video-js {
   pointer-events: none;
@@ -909,10 +915,61 @@ body {
   left: 30%;
   right: 30%;
   width: auto;
-  background: rgba(0, 0, 0, 0.36);
+  padding: 0.5em 0;
+  height: 4em;
+  background: url(../images/player-center.svg) center repeat-x;
 }
 .paused .video-js .vjs-control-bar, .nope .video-js .vjs-control-bar {
   display: none;
+}
+.video-js .vjs-control-bar:before, .video-js .vjs-control-bar:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2em;
+}
+.video-js .vjs-control-bar:before {
+  left: -1em;
+  background: url(../images/player-left.svg) left no-repeat;
+}
+.video-js .vjs-control-bar:after {
+  right: -1em;
+  background: url(../images/player-right.svg) right no-repeat;
+}
+.video-js .vjs-current-time-display, .video-js .vjs-time-divider div, .video-js .vjs-duration-display {
+  font-size: 0.8em;
+}
+.video-js .vjs-play-control.vjs-playing .vjs-icon-placeholder:before {
+  content: "B";
+}
+.video-js .vjs-play-control.vjs-ended .vjs-icon-placeholder:before {
+  content: "A";
+}
+.video-js .vjs-play-control .vjs-icon-placeholder:before {
+  content: "A";
+  font-family: pdt-player;
+}
+.video-js .vjs-mute-control {
+  margin-top: -0.5em;
+}
+.video-js .vjs-mute-control.vjs-vol-0 .vjs-icon-placeholder:before {
+  content: "D";
+}
+.video-js .vjs-mute-control.vjs-vol-1 .vjs-icon-placeholder:before {
+  content: "E";
+}
+.video-js .vjs-mute-control.vjs-vol-2 .vjs-icon-placeholder:before {
+  content: "F";
+}
+.video-js .vjs-mute-control .vjs-icon-placeholder:before {
+  content: "G";
+  font-family: pdt-player;
+  line-height: 2.3;
+}
+.video-js .vjs-volume-vertical {
+  background: #f00;
+  bottom: 8.5em;
 }
 .video-js .vjs-play-progress:before {
   display: none;
@@ -943,20 +1000,26 @@ body {
 .video-js .vjs-menu-item:focus {
   outline: none;
 }
+.video-js .vjs-control.vjs-quality-selector {
+  margin-top: -0.5em;
+}
 
 .vjs-quality-selector .vjs-menu-button {
-  margin: 0;
-  padding: 0;
   height: 100%;
   width: 100%;
 }
 .vjs-quality-selector .vjs-icon-placeholder {
-  font-family: "VideoJS";
+  font-family: "pdt-player";
   font-weight: normal;
   font-style: normal;
 }
 .vjs-quality-selector .vjs-icon-placeholder:before {
-  content: "";
+  content: "C";
+  line-height: 2.3;
+}
+
+.vjs-menu-button-popup .vjs-menu {
+  left: -5em;
 }
 
 .vjs-quality-changing .vjs-big-play-button {

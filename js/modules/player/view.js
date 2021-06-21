@@ -38,14 +38,14 @@ export let PlayerView=Backbone.View.extend({
   this.qual=[...data.quality];
   this.player=videojs(this.el,{
    controlBar:{
-    children:[
-     "playToggle",
-     "VolumePanel",
-     "progressControl",
-     "currentTimeDisplay",
-     "timeDivider",
-     "durationDisplay"
-    ]
+    children:{
+     playToggle:{},
+     volumePanel:{inline:false},
+     progressControl:{},
+     currentTimeDisplay:{},
+     timeDivider:{},
+     durationDisplay:{}
+    }
    },
    plugins:{
 

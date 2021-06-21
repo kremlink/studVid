@@ -3,6 +3,7 @@
     width:100%;
     height:100%;
     font-family:font();
+    color:#c0c0c0;
     .nope &{
       pointer-events:none;
     }
@@ -22,13 +23,64 @@
       left:30%;
       right:30%;
       width:auto;
-      background:rgba(#000,0.36);
+      padding:.5em 0;
+      height:4em;
+      background:url(#{$path}player-center.svg) center repeat-x;
       .paused &,.nope &{
         display:none;
       }
+      &:before,&:after{
+        content:'';
+        @include abs($t:0,$b:0);
+        width:2em;
+      }
+      &:before{
+        left:-1em;
+        background:url(#{$path}player-left.svg) left no-repeat;
+      }
+      &:after{
+        right:-1em;
+        background:url(#{$path}player-right.svg) right no-repeat;
+      }
+    }
+    .vjs-current-time-display,.vjs-time-divider div,.vjs-duration-display{
+      font-size:0.8em;
+    }
+    .vjs-play-control{
+      &.vjs-playing .vjs-icon-placeholder:before{
+        content:'\0042';
+      }
+      &.vjs-ended .vjs-icon-placeholder:before{
+        content:'\0041';
+      }
+      .vjs-icon-placeholder:before{
+        content:'\0041';
+        font-family:pdt-player;
+      }
+    }
+    .vjs-mute-control{
+      margin-top:-.5em;
+      &.vjs-vol-0 .vjs-icon-placeholder:before{
+        content:'\0044';
+      }
+      &.vjs-vol-1 .vjs-icon-placeholder:before{
+        content:'\0045';
+      }
+      &.vjs-vol-2 .vjs-icon-placeholder:before{
+        content:'\0046';
+      }
+      .vjs-icon-placeholder:before{
+        content:'\0047';
+        font-family:pdt-player;
+        line-height:2.3;
+      }
+    }
+    .vjs-volume-vertical{
+      background:#f00;
+      bottom:8.5em;
     }
     .vjs-progress-control{
-      //pointer-events:none;//TODO:if seek after popups, then set currenttime on first popup
+
     }
     .vjs-play-progress:before{
       display:none;
@@ -59,23 +111,29 @@
     .vjs-menu-item:focus{
       outline:none;
     }
+
+    .vjs-control.vjs-quality-selector{
+      margin-top:-.5em;
+    }
   }
-  .vjs-quality-selector {
-    .vjs-menu-button {
-      margin: 0;
-      padding: 0;
+  .vjs-quality-selector{
+    .vjs-menu-button{
       height: 100%;
       width: 100%;
     }
     .vjs-icon-placeholder {
       // From video.js font: https://github.com/videojs/font
-      font-family: 'VideoJS';
+      font-family: 'pdt-player';
       font-weight: normal;
       font-style: normal;
-      &:before {
-        content: '\f110';
+      &:before{
+        content: '\0043';
+        line-height:2.3;
       }
     }
+  }
+  .vjs-menu-button-popup .vjs-menu{
+    left:-5em;
   }
 
   .vjs-quality-changing {

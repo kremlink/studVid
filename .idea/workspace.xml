@@ -7,25 +7,19 @@
     <bookmark url="file://$PROJECT_DIR$/js/modules/boardMgr/view.js" line="43" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="btns&#10;reg process">
+    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="start&#10;reg&#10;sounds">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_dev/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/html/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_dev/scss/base/_rules.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/base/_rules.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/scss/base/_vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/base/_vars.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_dev/scss/components/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/components/_main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_dev/scss/components/_video.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/components/_video.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/t1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/t2.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/baseInteractive/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/baseInteractive/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/baseInteractive/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/baseInteractive/view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/index-page/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/index-page/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/index-page/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/index-page/view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modules/player/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/player/view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/soundMgr/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/soundMgr/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/start/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/start/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/start/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/start/view.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -459,7 +453,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -556,14 +550,7 @@
       <workItem from="1621582898109" duration="8107000" />
       <workItem from="1621867861523" duration="15632000" />
       <workItem from="1622124770182" duration="28634000" />
-      <workItem from="1624216478693" duration="6712000" />
-    </task>
-    <task id="LOCAL-00028" summary="timecodes logic upgrade">
-      <created>1602281248159</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1602281248159</updated>
+      <workItem from="1624216478693" duration="14532000" />
     </task>
     <task id="LOCAL-00029" summary="timecodes logic upgrade">
       <created>1602326236454</created>
@@ -901,7 +888,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624058260699</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="start&#10;reg&#10;sounds">
+      <created>1624223294776</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1624223294777</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -947,7 +941,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="&quot;continue&quot;" />
     <MESSAGE value="- remove not needed&#10;- fix localstorage logic" />
     <MESSAGE value="- misc&#10;- remove svg sprite&#10;- complex cteps logic" />
     <MESSAGE value="- goOn fix" />
@@ -972,7 +965,8 @@
     <MESSAGE value="seekable fix" />
     <MESSAGE value="btns show-hide" />
     <MESSAGE value="btns&#10;reg process" />
-    <option name="LAST_COMMIT_MESSAGE" value="btns&#10;reg process" />
+    <MESSAGE value="start&#10;reg&#10;sounds" />
+    <option name="LAST_COMMIT_MESSAGE" value="start&#10;reg&#10;sounds" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
