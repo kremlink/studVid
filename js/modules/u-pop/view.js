@@ -32,6 +32,8 @@ export let UPopView=BaseIntView.extend({
       phase=this.data.phase,
       what;
 
+  app.get('aggregator').trigger('sound',f?'open':'close');
+
   if(f)
   {
    what=pData[phase.step][phase.type];

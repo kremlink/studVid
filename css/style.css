@@ -468,11 +468,29 @@ body {
   height: 56.25vw;
   max-height: 100vh;
   max-width: 177.7777vh;
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  transform: translate(0, -50%);
   z-index: 1;
+}
+.overlay-block .ov-wrap.start {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  left: 150%;
+}
+.overlay-block .ov-wrap.start.shown {
+  opacity: 1;
+  left: 50%;
+}
+.overlay-block .ov-wrap.start.shown ~ .circus {
+  opacity: 1;
+}
+.overlay-block .ov-wrap.start .ov-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .overlay-block .ov-wrap.start .btns {
   top: 93%;
@@ -482,21 +500,26 @@ body {
   width: 100%;
   height: 3.2793522267em;
 }
-.overlay-block .ov-wrap.start.shown ~ .circus {
-  opacity: 1;
+.overlay-block .ov-wrap.u-pop {
+  transition: right 0.3s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: -30em;
+  transform: translate(0, -50%);
 }
-.overlay-block .ov-wrap.shown {
-  transition: all 0.3s ease-in-out;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.overlay-block .ov-wrap.u-pop.shown {
+  right: 0;
+}
+.overlay-block .ov-wrap.u-pop .ov-inner {
+  transition: right 0.3s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
 }
 .overlay-block .ov-inner {
   width: 30em;
   height: 13.6363636364em;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 .overlay-block .ov-inner.choose .btns {
   bottom: -22%;
@@ -678,15 +701,40 @@ body {
   height: 4em;
   cursor: pointer;
 }
-.special-btns input:checked ~ .sp-toggle {
-  background: #fff;
+@media (min-width: 1200px) {
+  .special-btns input:hover ~ .sp-toggle .hoverable img {
+    opacity: 0;
+  }
+  .special-btns input:hover ~ .sp-toggle .hoverable img + img {
+    opacity: 1;
+  }
+}
+.special-btns input:checked ~ .sp-toggle .hoverable:nth-child(1) {
+  display: none;
+}
+.special-btns input:checked ~ .sp-toggle .hoverable:nth-child(2) {
+  display: block;
 }
 .special-btns input:checked ~ .step-btns {
   display: flex;
 }
 .special-btns .step-btns {
-  height: 100%;
+  padding: 0 2em;
+  height: 85%;
   display: none;
+  background: #564e43;
+  border-top: 3px solid #413b32;
+  position: relative;
+}
+.special-btns .step-btns:before {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: -3px;
+  right: -3px;
+  bottom: 3px;
+  background: #564e43;
+  border-top: 3px solid #413b32;
 }
 .special-btns .sp-toggle {
   position: absolute;
@@ -694,17 +742,20 @@ body {
   top: 0;
   bottom: 0;
   width: 4em;
-  background: rgba(255, 255, 255, 0.5);
   pointer-events: none;
+}
+.special-btns .sp-toggle .hoverable {
+  height: 100%;
+}
+.special-btns .sp-toggle .hoverable:nth-child(2) {
+  display: none;
 }
 .special-btns .int-ind-back {
   cursor: pointer;
-  border-radius: 50%;
-  border: 0.1em solid #fff;
-  width: 2em;
-  opacity: 0.3;
-  color: #fff;
-  font-size: 2em;
+  width: 3.5em;
+  color: #b0aca4;
+  font-size: 1em;
+  opacity: 0.4;
   pointer-events: none;
   position: relative;
 }
@@ -892,7 +943,6 @@ body {
   height: 100%;
   font-family: "Press Start 2P", sans-serif;
   color: #b0aca4;
-  text-shadow: 0 2px 0 #413b32;
 }
 .nope .video-js {
   pointer-events: none;
@@ -918,7 +968,7 @@ body {
   width: auto;
   padding: 0.5em 0;
   height: 4em;
-  background: url(../images/player-center.svg) center repeat-x;
+  background: url(../images/player-center.svg) left top/100% 100% no-repeat;
 }
 .paused .video-js .vjs-control-bar, .nope .video-js .vjs-control-bar {
   display: none;
@@ -1059,6 +1109,15 @@ body {
 .video-js .vjs-slider {
   background: #413b32;
 }
+.video-js .vjs-control {
+  text-shadow: 0 6px 0 #413b32;
+}
+.video-js .vjs-control.vjs-time-control {
+  text-shadow: none;
+}
+.video-js .vjs-control.vjs-menu-button-popup .vjs-icon-placeholder {
+  text-shadow: 0 6px 0 #413b32;
+}
 .video-js .vjs-control:focus, .video-js .vjs-control:focus:before, .video-js .vjs-control:hover:before {
   text-shadow: none;
 }
@@ -1072,9 +1131,7 @@ body {
   text-shadow: none;
 }
 .video-js .vjs-menu-button-popup .vjs-menu .vjs-menu-content {
-  background: #413b32;
-  border-radius: 0.3em;
-  overflow: hidden;
+  background: #564f44;
 }
 .video-js .vjs-menu-button-popup .vjs-menu .vjs-menu-item:hover {
   background: #6b6458;

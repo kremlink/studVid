@@ -7,7 +7,6 @@
     $mbrn:rgb(107,100,88);
     $brn:rgb(65,59,50);
     color:$lbrn;
-    text-shadow:0 2px 0 $brn;
     .nope &{
       pointer-events:none;
     }
@@ -29,7 +28,7 @@
       width:auto;
       padding:.5em 0;
       height:4em;
-      background:url(#{$path}player-center.svg) center repeat-x;
+      background:url(#{$path}player-center.svg) left top/100% 100% no-repeat;
       .paused &,.nope &{
         display:none;
       }
@@ -177,6 +176,14 @@
     }
 
     .vjs-control{
+      text-shadow:0 6px 0 $brn;
+      &.vjs-time-control{
+        text-shadow:none;
+      }
+      &.vjs-menu-button-popup .vjs-icon-placeholder{
+        text-shadow:0 6px 0 $brn;
+      }
+
       &:focus,&:focus:before,&:hover:before{
         text-shadow:none;
       }
@@ -191,9 +198,7 @@
       border:none;
       text-shadow:none;
       .vjs-menu-content{
-        background:$brn;
-        border-radius:.3em;
-        overflow:hidden;
+        background:#564f44;
       }
       .vjs-menu-item:hover{
         background:$mbrn;

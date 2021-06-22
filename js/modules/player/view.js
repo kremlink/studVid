@@ -93,6 +93,7 @@ export let PlayerView=Backbone.View.extend({
   this.changeData({step:index,index:-1,type:'base'});
   this.changeSrc(this.pData[this.phase.step][this.phase.type].src);
   this.setStepsChoose();
+  this.setPausable(true);
  },
  changeSrc:function(src,time=-1){
   let ind=this.qual.findIndex((o)=>matchMedia(o.width).matches);
@@ -234,6 +235,7 @@ export let PlayerView=Backbone.View.extend({
   });
 
   this.player.on('loadedmetadata',()=>{
+   //console.log(this.currTime,this.firstTime);
    if(this.firstTime)
     app.get('aggregator').trigger('player:ready');
    if(!~this.currTime||this.currTime==='end'||this.goOn)
@@ -242,6 +244,7 @@ export let PlayerView=Backbone.View.extend({
     this.$smooth.removeClass(data.view.shownCls);
     if(this.currTime==='end')
      this.currTime=this.player.duration();
+    //console.log(this.currTime);
     if(!this.firstTime)
      this.play();
    }

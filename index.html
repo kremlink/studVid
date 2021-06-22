@@ -86,7 +86,7 @@
             </div>
             <div class="start-pop">
                 <div class="text">
-                    Добро пожаловать<br/>в интерактивное приключение,<br/>основанное на популярной короткометражке<br/>"Ваши документы"
+                    Добро пожаловать<br/>в интерактивное приключение,<br/>основанное на популярной короткометражке<br/>«Ваши документы»
                 </div>
                 <div class="icons">
                     <img src="images/startscreen-logo_ics.svg" alt=""/>
@@ -120,7 +120,16 @@
 		</div>
         <script type="text/template" id="ext-player-template">
             <input type="checkbox" />
-            <div class="sp-toggle"></div>
+            <div class="sp-toggle">
+                <div class="hoverable">
+                    <img src="images/player-ch-btn-open.svg" alt=""/>
+                    <img src="images/player-ch-btn-open-h.svg" alt=""/>
+                </div>
+                <div class="hoverable">
+                    <img src="images/player-ch-btn-collapse.svg" alt=""/>
+                    <img src="images/player-ch-btn-collapse-h.svg" alt=""/>
+                </div>
+            </div>
             <div class="step-btns">
                 <% for(let i=0;i<choose.length;i++){ %>
                 <div class="int-ind-back<%= choose[i]?' enabled':' ' %>"><span><%= i+1 %></span></div>
@@ -129,7 +138,7 @@
         </script>
     <script type="text/template" id="u-pop-template">
         <div class="ov-inner <%= cls %>">
-            <div class="tmp" style="position:absolute;left: 0;top: 3em;right: 0;text-align:center;color: #fff;">
+            <div class="tmp" style="position:absolute;left: 0;top: 3em;right: 0;text-align:center;color: #fff;"><!--TODO:remove this div-->
                 <% if(last&&correct){ %>
                 Кнопка очистит прохождение и вернет в начало обучения
                 <% }else{ %>

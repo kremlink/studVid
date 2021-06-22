@@ -12,10 +12,22 @@
       height:56.25vw; //h:w=9/16
       max-height:100vh;
       max-width:177.7777vh; //16/9=1.778
-      @include abs($l:100%,$t:50%);
-      @include trf(translate(0,-50%));
       z-index:1;
       &.start{
+        @include center();
+        @include trs('opacity #{$anim} ease-in-out');
+        opacity:0;
+        left:150%;
+        &.shown{
+          opacity:1;
+          left:50%;
+          &~.circus{
+            opacity:1;
+          }
+        }
+        .ov-inner{
+          @include center();
+        }
         .btns{
           top:93%;
           bottom:-30%;
@@ -24,20 +36,24 @@
           width:100%;
           height:81/741*30em;
         }
-        &.shown~.circus{
-          opacity:1;
-        }
       }
-      &.shown{
-        @include trs('all #{$anim} ease-in-out');
-        left:50%;
-        @include trf(translate(-50%,-50%));
+      &.u-pop{
+        @include trs('right #{$anim} ease-in-out');
+        @include abs($r:-30em,$t:50%);
+        @include trf(translate(0,-50%));
+        &.shown{
+          right:0;
+        }
+        .ov-inner{
+          @include trs('right #{$anim} ease-in-out');
+          @include abs($r:0,$t:50%);
+          @include trf(translate(0,-50%));
+        }
       }
     }
     .ov-inner{
       width:30em;
       height:35/77*30em;
-      @include center();
       &.choose{
         .btns{
           bottom:-22%;
@@ -181,9 +197,26 @@
       width:4em;
       height:4em;
       cursor:pointer;
+      @include med(){
+        &:hover{
+          &~.sp-toggle .hoverable img{
+            opacity:0;
+            &+img{
+              opacity:1;
+            }
+          }
+        }
+      }
       &:checked{
         &~.sp-toggle{
-          background:#fff;
+          .hoverable{
+            &:nth-child(1){
+              display:none;
+            }
+            &:nth-child(2){
+              display:block;
+            }
+          }
         }
         &~.step-btns{
           @include flx(display,flex);
@@ -191,23 +224,36 @@
       }
     }
     .step-btns{
-      height:100%;
+      padding:0 2em;
+      height:85%;
       display:none;
+      background:rgb(86,78,67);
+      border-top:3px solid rgb(65, 59, 50);
+      position:relative;
+      &:before{
+        content:'';
+        @include abs($t:-3px,$l:100%,$r:-3px,$b:3px);
+        background:rgb(86,78,67);
+        border-top:3px solid rgb(65, 59, 50);
+      }
     }
     .sp-toggle{
       @include abs($l:-4em,$t:0,$b:0);
       width:4em;
-      background:rgba(#fff,0.5);
       pointer-events:none;
+      .hoverable{
+        height:100%;
+        &:nth-child(2){
+          display:none;
+        }
+      }
     }
     .int-ind-back{
       cursor:pointer;
-      border-radius:50%;
-      border:.1em solid #fff;
-      width:2em;
-      opacity:0.3;
-      color:#fff;
-      font-size:2em;
+      width:3.5em;
+      color:rgb(176,172,164);
+      font-size:1em;
+      opacity:.4;
       pointer-events:none;
       position:relative;
       &.enabled{
