@@ -7,19 +7,15 @@
     <bookmark url="file://$PROJECT_DIR$/js/modules/boardMgr/view.js" line="43" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="start&#10;reg&#10;sounds">
+    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="player controls progress">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_dev/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/scss/base/_rules.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/base/_rules.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_dev/scss/components/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/components/_main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_dev/scss/components/_video.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/components/_video.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/t1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/t2.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/player/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/player/view.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -550,14 +546,7 @@
       <workItem from="1621582898109" duration="8107000" />
       <workItem from="1621867861523" duration="15632000" />
       <workItem from="1622124770182" duration="28634000" />
-      <workItem from="1624216478693" duration="14532000" />
-    </task>
-    <task id="LOCAL-00029" summary="timecodes logic upgrade">
-      <created>1602326236454</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1602326236454</updated>
+      <workItem from="1624216478693" duration="21835000" />
     </task>
     <task id="LOCAL-00030" summary="backtracking">
       <created>1602371286872</created>
@@ -895,7 +884,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624223294777</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="player controls progress">
+      <created>1624312277448</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1624312277448</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -941,7 +937,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="- remove not needed&#10;- fix localstorage logic" />
     <MESSAGE value="- misc&#10;- remove svg sprite&#10;- complex cteps logic" />
     <MESSAGE value="- goOn fix" />
     <MESSAGE value="- player data fix&#10;- logic process" />
@@ -966,7 +961,8 @@
     <MESSAGE value="btns show-hide" />
     <MESSAGE value="btns&#10;reg process" />
     <MESSAGE value="start&#10;reg&#10;sounds" />
-    <option name="LAST_COMMIT_MESSAGE" value="start&#10;reg&#10;sounds" />
+    <MESSAGE value="player controls progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="player controls progress" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

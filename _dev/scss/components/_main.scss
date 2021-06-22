@@ -329,8 +329,8 @@
     }
   }
   .clr{
-    width:5em;
-    height:114/105*5em;
+    width:3em;
+    height:114/105*3em;
     @include abs($t:0,$l:0);
     cursor:pointer;
     z-index:1;
@@ -340,9 +340,9 @@
     }
   }
   .continue{
-    width:5em;
-    height:114/105*5em;
-    @include abs($t:0,$l:5em);
+    width:3em;
+    height:114/105*3em;
+    @include abs($t:0,$l:2.9em);
     cursor:pointer;
     z-index:1;
     display:none;

@@ -38,7 +38,7 @@ export let config={
    '1':[//[noAutoClose:true|repeatable:true|delayedPause:-1|noVidAutoPlay:true|]checkpoint:true|iniTimer:true
     {
      base:{
-      src:['../videos/1-start.mp4','../videos/1-start.mp4'],
+      src:['../videos/1-start.mp4','../videos/1-start_.mp4'],
       timecodes:[{start:0.5,invoked:false,data:{interactive:'Start'}}],
       end:{data:{interactive:'UPop',conf:{cls:'choose'}}}
      },
