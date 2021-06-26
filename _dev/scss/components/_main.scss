@@ -13,6 +13,10 @@
       max-height:100vh;
       max-width:177.7777vh; //16/9=1.778
       z-index:1;
+      pointer-events:none;
+      &.shown{
+        pointer-events:auto;
+      }
       &.start{
         @include center();
         @include trs('opacity #{$anim} ease-in-out');
@@ -27,9 +31,12 @@
         }
         .ov-inner{
           @include center();
+          >img{
+            z-index:auto;
+          }
         }
         .btns{
-          top:93%;
+          top:92.5%;
           bottom:-30%;
         }
         .btn-cont{
@@ -52,8 +59,12 @@
       }
     }
     .ov-inner{
-      width:30em;
-      height:35/77*30em;
+      width:50em;
+      height:35/77*50em;
+      @media(min-width:1025px){
+        width:30em;
+        height:35/77*30em;
+      }
       &.choose{
         .btns{
           bottom:-22%;
@@ -68,8 +79,14 @@
         }
         .btn-cont{
           width:100%;
-          height:81/770*30em;
+          height:81/770*50em;
+          @media(min-width:1025px){
+            height:81/770*30em;
+          }
         }
+      }
+      >img{
+        z-index:1;
       }
     }
     img{
@@ -83,13 +100,19 @@
     white-space:nowrap;
     color:#fff;
     text-align:center;
-    font-size:0.6em;
+    font-size:1em;
+    @media(min-width:1025px){
+      font-size:0.6em;
+    }
   }
   .form{
     position:relative;
     text-align:center;
-    font-size:0.6em;
+    font-size:1em;
     color:rgba(#000,0.75);
+    @media(min-width:1025px){
+      font-size:0.6em;
+    }
     input{
       display:block;
       width:25em;
@@ -124,13 +147,14 @@
     }
   }
   .btns{
-    @include abs($l:2%,$r:2%,$t:100%);
+    @include abs($l:2%,$r:2%,$t:99.5%);
     @include flx(display,flex);
   }
   .btn-cont{
     cursor:pointer;
     position:relative;
-    @include med(){
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    @media(min-width:1025px){
       &:hover{
         .btn{
           opacity:0;
@@ -165,7 +189,7 @@
   }
   .the-timer{
     z-index:1;
-    font-size:0.8em;
+    font-size:0.5em;
     padding:0 4em 8em*64/330 4em;
     color:#fff;
     visibility:hidden;
@@ -184,20 +208,25 @@
   }
   //test
   .special-btns{
-    @include abs($l:4em,$t:0);
+    @include abs($l:8em,$t:0);
     height:4em;
     z-index:2;
     display:none;
     .start &{
       display:block;
     }
+    .return{
+      @include abs($l:-8em,$t:0);
+      width:4em;
+      height:100%;
+    }
     input{
       opacity:0;
       @include abs($l:-4em,$t:0);
       width:4em;
-      height:4em;
+      height:100%;
       cursor:pointer;
-      @include med(){
+      @media(min-width:1025px){
         &:hover{
           &~.sp-toggle .hoverable img{
             opacity:0;
@@ -355,7 +384,8 @@
     }
   }
   .hoverable{
-    @include med(){
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    @media(min-width:1025px){
       &:hover{
         img{
           opacity:0;
@@ -374,26 +404,29 @@
       }
     }
   }
-  .clr{
-    width:3em;
-    height:114/105*3em;
-    @include abs($t:0,$l:0);
+  .s-ctrls{
+    @include abs($l:0,$t:0);
+    $h:3.25em;
+    height:$h;
+    @include flx(display,flex);
     cursor:pointer;
     z-index:1;
-    display:none;
-    #wrap:not(.start) &{
-      display:block;
+    .clr{
+      width:105/114*$h;
+      display:none;
+      position:relative;
+      margin-left:-1px;
+      #wrap:not(.start) &{
+        display:block;
+      }
     }
-  }
-  .continue{
-    width:3em;
-    height:114/105*3em;
-    @include abs($t:0,$l:2.9em);
-    cursor:pointer;
-    z-index:1;
-    display:none;
-    .goOn:not(.start) &{
-      display:block;
+    .continue{
+      width:510/114*$h;
+      display:none;
+      position:relative;
+      .goOn:not(.start) &{
+        display:block;
+      }
     }
   }
 

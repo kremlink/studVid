@@ -77,13 +77,15 @@
                     <img src="images/startscreen-btn-h.svg" alt=""/>
                 </div>
             </div>
-            <div class="clr hoverable">
-                <img src="images/startscreen-btn-restart.svg" alt=""/>
-                <img src="images/startscreen-btn-restart-h.svg" alt=""/>
-            </div>
-            <div class="continue hoverable">
-                <img src="images/startscreen-btn-continue.svg" alt=""/>
-                <img src="images/startscreen-btn-continue-h.svg" alt=""/>
+            <div class="s-ctrls">
+                <div class="continue hoverable">
+                    <img src="images/startscreen-btn-continue.svg" alt=""/>
+                    <img src="images/startscreen-btn-continue-h.svg" alt=""/>
+                </div>
+                <div class="clr hoverable">
+                    <img src="images/startscreen-btn-restart.svg" alt=""/>
+                    <img src="images/startscreen-btn-restart-h.svg" alt=""/>
+                </div>
             </div>
             <div class="loader-pop">
                 <div class="l"></div>
@@ -91,13 +93,17 @@
             <div class="orientation-pop">
                 <div class="text">
                     Экран слишком мал :(<br/>
-                    Возможно, вам поможет поворот девайса.
+                    Переверните устройство или используйте компьютер, инспектор.
                 </div>
             </div>
             <div class="special-btns"></div>
             <canvas class="smooth"></canvas>
 		</div>
         <script type="text/template" id="ext-player-template">
+            <a href="" class="return hoverable">
+                <img src="images/player-close.svg" alt=""/>
+                <img src="images/player-close-h.svg" alt=""/>
+            </a>
             <input type="checkbox" />
             <div class="sp-toggle">
                 <div class="hoverable">
@@ -117,13 +123,13 @@
         </script>
     <script type="text/template" id="u-pop-template">
         <div class="ov-inner <%= cls %>">
-            <div class="tmp" style="position:absolute;left: 0;top: 3em;right: 0;text-align:center;color: #fff;"><!--TODO:remove this div-->
+            <!--<div class="tmp" style="position:absolute;left: 0;top: 3em;right: 0;text-align:center;color: #fff;">
                 <% if(last&&correct){ %>
                 Кнопка очистит прохождение и вернет в начало обучения
                 <% }else{ %>
                 Эпизод: <%= ep %>, развилка: <%= step %> <%= choose?'':', конечное окно при выборе кнопки с индексом '+chosen %>
                 <% } %>
-            </div>
+            </div>-->
             <% if(choose){ %>
             <img src="../pops-images/ep<%= ep %>-step<%= step %>-pop-base-bg.svg" alt=""/>
             <% }else{ %>

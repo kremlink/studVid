@@ -54,8 +54,8 @@ export let config={
       end:{data:{interactive:'UPop',conf:{cls:'choose'}}}
      },
      choose:[
+	  {src:['../videos/2-3-check.mp4','../videos/2-3-check.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../videos/2-1-boom.mp4','../videos/2-1-boom.mp4'],rewind:'../videos/2-1-boom-rev.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
-      {src:['../videos/2-3-check.mp4','../videos/2-3-check.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../videos/2-2-no.mp4','../videos/2-2-no.mp4'],rewind:'../videos/2-2-no-rev.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
      ]
     },
@@ -66,8 +66,8 @@ export let config={
       end:{data:{interactive:'UPop',conf:{cls:'choose'}}}
      },
      choose:[
+	  {src:['../videos/2-3-1-why.mp4','../videos/2-3-1-why.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../videos/2-1-boom.mp4','../videos/2-1-boom.mp4'],rewind:'../videos/2-1-boom-rev.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
-      {src:['../videos/2-3-1-why.mp4','../videos/2-3-1-why.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../videos/2-2-no.mp4','../videos/2-2-no.mp4'],rewind:'../videos/2-2-no-rev.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
      ]
     },
@@ -78,8 +78,8 @@ export let config={
       end:{data:{interactive:'UPop',conf:{cls:'choose'}}}
      },
      choose:[
+	  {src:['../videos/2-3-2-howwlong.mp4','../videos/2-3-2-howwlong.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../videos/2-1-boom.mp4','../videos/2-1-boom.mp4'],rewind:'../videos/2-1-boom-rev.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
-      {src:['../videos/2-3-2-howwlong.mp4','../videos/2-3-2-howwlong.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../videos/2-2-no.mp4','../videos/2-2-no.mp4'],rewind:'../videos/2-2-no-rev.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
      ]
     },
@@ -90,8 +90,8 @@ export let config={
       end:{data:{interactive:'UPop',conf:{cls:'choose'}}}
      },
      choose:[
+	  {src:['../videos/2-3-3-permit.mp4','../videos/2-3-3-permit.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../videos/2-1-boom.mp4','../videos/2-1-boom.mp4'],rewind:'../videos/2-1-boom-rev.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
-      {src:['../videos/2-3-3-permit.mp4','../videos/2-3-3-permit.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../videos/2-2-no.mp4','../videos/2-2-no.mp4'],rewind:'../videos/2-2-no-rev.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
      ]
     },
@@ -124,8 +124,8 @@ export let config={
       end:{data:{interactive:'UPop',conf:{cls:'choose'}}}
      },
      choose:[
+	  {src:['../videos/6-why.mp4','../videos/6-why.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../videos/6-1-fine.mp4','../videos/6-1-fine.mp4'],rewind:'../videos/6-1-fine-rev.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
-      {src:['../videos/6-why.mp4','../videos/6-why.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../videos/6-2-no.mp4','../videos/6-2-no.mp4'],rewind:'../videos/6-2-no-rev.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
      ]
     },
@@ -136,8 +136,8 @@ export let config={
       end:{data:{interactive:'UPop',conf:{cls:'choose'}}}
      },
      choose:[
+	  {src:['../videos/6-howlong.mp4','../videos/6-howlong.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../videos/6-1-fine.mp4','../videos/6-1-fine.mp4'],rewind:'../videos/6-1-fine-rev.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
-      {src:['../videos/6-howlong.mp4','../videos/6-howlong.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../videos/6-2-no.mp4','../videos/6-2-no.mp4'],rewind:'../videos/6-2-no-rev.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
      ]
     },
@@ -159,8 +159,8 @@ export let config={
       end:{data:{interactive:'UPop',conf:{cls:'choose'}}}
      },
      choose:[
+	  {src:['../videos/7-3-why.mp4','../videos/7-3-why.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../videos/7-1-boom.mp4','../videos/7-1-boom.mp4'],rewind:'../videos/7-1-boom-rev.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
-      {src:['../videos/7-3-why.mp4','../videos/7-3-why.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../videos/7-2-no.mp4','../videos/7-2-no.mp4'],rewind:'../videos/7-2-no-rev.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
      ]
     },
@@ -171,8 +171,8 @@ export let config={
       end:{data:{interactive:'UPop',conf:{cls:'choose'}}}
      },
      choose:[
+	  {src:['../videos/7-3-3-docs.mp4','../videos/7-3-3-docs.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../videos/7-1-boom.mp4','../videos/7-1-boom.mp4'],rewind:'../videos/7-1-boom-rev.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}},
-      {src:['../videos/7-3-3-docs.mp4','../videos/7-3-3-docs.mp4'],data:{interactive:'UPop',conf:{correct:true,cls:'info'}}},
       {src:['../videos/7-3-2-no.mp4','../videos/7-3-2-no.mp4'],rewind:'../videos/7-2-no-rev.mp4',data:{interactive:'UPop',conf:{correct:false,cls:'info'}}}
      ]
     },

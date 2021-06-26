@@ -469,6 +469,10 @@ body {
   max-height: 100vh;
   max-width: 177.7777vh;
   z-index: 1;
+  pointer-events: none;
+}
+.overlay-block .ov-wrap.shown {
+  pointer-events: auto;
 }
 .overlay-block .ov-wrap.start {
   position: absolute;
@@ -492,8 +496,11 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+.overlay-block .ov-wrap.start .ov-inner > img {
+  z-index: auto;
+}
 .overlay-block .ov-wrap.start .btns {
-  top: 93%;
+  top: 92.5%;
   bottom: -30%;
 }
 .overlay-block .ov-wrap.start .btn-cont {
@@ -518,8 +525,14 @@ body {
   transform: translate(0, -50%);
 }
 .overlay-block .ov-inner {
-  width: 30em;
-  height: 13.6363636364em;
+  width: 50em;
+  height: 22.7272727273em;
+}
+@media (min-width: 1025px) {
+  .overlay-block .ov-inner {
+    width: 30em;
+    height: 13.6363636364em;
+  }
 }
 .overlay-block .ov-inner.choose .btns {
   bottom: -22%;
@@ -532,7 +545,15 @@ body {
 }
 .overlay-block .ov-inner.info .btn-cont {
   width: 100%;
-  height: 3.1558441558em;
+  height: 5.2597402597em;
+}
+@media (min-width: 1025px) {
+  .overlay-block .ov-inner.info .btn-cont {
+    height: 3.1558441558em;
+  }
+}
+.overlay-block .ov-inner > img {
+  z-index: 1;
 }
 .overlay-block img {
   position: absolute;
@@ -550,14 +571,24 @@ body {
   white-space: nowrap;
   color: #fff;
   text-align: center;
-  font-size: 0.6em;
+  font-size: 1em;
+}
+@media (min-width: 1025px) {
+  .lets {
+    font-size: 0.6em;
+  }
 }
 
 .form {
   position: relative;
   text-align: center;
-  font-size: 0.6em;
+  font-size: 1em;
   color: rgba(0, 0, 0, 0.75);
+}
+@media (min-width: 1025px) {
+  .form {
+    font-size: 0.6em;
+  }
 }
 .form input {
   display: block;
@@ -615,7 +646,7 @@ body {
 .btns {
   position: absolute;
   left: 2%;
-  top: 100%;
+  top: 99.5%;
   right: 2%;
   display: flex;
 }
@@ -623,8 +654,9 @@ body {
 .btn-cont {
   cursor: pointer;
   position: relative;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-@media (min-width: 1200px) {
+@media (min-width: 1025px) {
   .btn-cont:hover .btn {
     opacity: 0;
   }
@@ -661,7 +693,7 @@ body {
 
 .the-timer {
   z-index: 1;
-  font-size: 0.8em;
+  font-size: 0.5em;
   padding: 0 4em 1.5515151515em 4em;
   color: #fff;
   visibility: hidden;
@@ -683,7 +715,7 @@ body {
 
 .special-btns {
   position: absolute;
-  left: 4em;
+  left: 8em;
   top: 0;
   height: 4em;
   z-index: 2;
@@ -692,16 +724,23 @@ body {
 .start .special-btns {
   display: block;
 }
+.special-btns .return {
+  position: absolute;
+  left: -8em;
+  top: 0;
+  width: 4em;
+  height: 100%;
+}
 .special-btns input {
   opacity: 0;
   position: absolute;
   left: -4em;
   top: 0;
   width: 4em;
-  height: 4em;
+  height: 100%;
   cursor: pointer;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1025px) {
   .special-btns input:hover ~ .sp-toggle .hoverable img {
     opacity: 0;
   }
@@ -875,7 +914,10 @@ body {
   cursor: pointer;
 }
 
-@media (min-width: 1200px) {
+.hoverable {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+@media (min-width: 1025px) {
   .hoverable:hover img {
     opacity: 0;
   }
@@ -894,31 +936,30 @@ body {
   opacity: 0;
 }
 
-.clr {
-  width: 3em;
-  height: 3.2571428571em;
+.s-ctrls {
   position: absolute;
   left: 0;
   top: 0;
+  height: 3.25em;
+  display: flex;
   cursor: pointer;
   z-index: 1;
-  display: none;
 }
-#wrap:not(.start) .clr {
+.s-ctrls .clr {
+  width: 2.9934210526em;
+  display: none;
+  position: relative;
+  margin-left: -1px;
+}
+#wrap:not(.start) .s-ctrls .clr {
   display: block;
 }
-
-.continue {
-  width: 3em;
-  height: 3.2571428571em;
-  position: absolute;
-  left: 2.9em;
-  top: 0;
-  cursor: pointer;
-  z-index: 1;
+.s-ctrls .continue {
+  width: 14.5394736842em;
   display: none;
+  position: relative;
 }
-.goOn:not(.start) .continue {
+.goOn:not(.start) .s-ctrls .continue {
   display: block;
 }
 
@@ -963,12 +1004,18 @@ body {
   background: url(../images/loader.gif) no-repeat;
 }
 .video-js .vjs-control-bar {
-  left: 30%;
-  right: 30%;
+  left: 3%;
+  right: 3%;
   width: auto;
   padding: 0.5em 0;
   height: 4em;
   background: url(../images/player-center.svg) left top/100% 100% no-repeat;
+}
+@media (min-width: 1025px) {
+  .video-js .vjs-control-bar {
+    left: 30%;
+    right: 30%;
+  }
 }
 .paused .video-js .vjs-control-bar, .nope .video-js .vjs-control-bar {
   display: none;
@@ -1029,6 +1076,12 @@ body {
   bottom: 16.5em;
   pointer-events: none;
   transition: none;
+  display: none;
+}
+@media (min-width: 1025px) {
+  .video-js .vjs-volume-panel .vjs-volume-control.vjs-volume-vertical {
+    display: block;
+  }
 }
 .video-js .vjs-volume-bar.vjs-slider-vertical {
   width: 0.5em;
