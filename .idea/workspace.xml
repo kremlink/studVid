@@ -7,16 +7,18 @@
     <bookmark url="file://$PROJECT_DIR$/js/modules/boardMgr/view.js" line="43" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="fixes">
+    <list default="true" id="b3432a06-4344-46fd-80fc-b64ff4fc1bf7" name="Default" comment="btns fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_dev/html/components/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/html/components/head.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_dev/scss/components/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/components/_main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_dev/scss/components/_video.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/scss/components/_video.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/loader.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/index1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modules/player/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/player/view.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -548,14 +550,7 @@
       <workItem from="1621867861523" duration="15632000" />
       <workItem from="1622124770182" duration="28634000" />
       <workItem from="1624216478693" duration="42778000" />
-      <workItem from="1624566302498" duration="3080000" />
-    </task>
-    <task id="LOCAL-00032" summary="&quot;go&quot; interactive after subtitles">
-      <created>1602453672452</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1602453672452</updated>
+      <workItem from="1624566302498" duration="17308000" />
     </task>
     <task id="LOCAL-00033" summary="metrika">
       <created>1602538514871</created>
@@ -893,7 +888,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624393353020</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="btns fixes">
+      <created>1624707633192</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1624707633193</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -939,7 +941,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="- goOn fix" />
     <MESSAGE value="- player data fix&#10;- logic process" />
     <MESSAGE value="- circled when incorrect" />
     <MESSAGE value="- circled" />
@@ -964,7 +965,8 @@
     <MESSAGE value="start&#10;reg&#10;sounds" />
     <MESSAGE value="player controls progress" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="btns fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="btns fixes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

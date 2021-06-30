@@ -523,10 +523,11 @@ body {
   top: 50%;
   right: 0;
   transform: translate(0, -50%);
+  margin-top: -1.5em;
 }
 .overlay-block .ov-inner {
-  width: 50em;
-  height: 22.7272727273em;
+  width: 44em;
+  height: 20em;
 }
 @media (min-width: 1025px) {
   .overlay-block .ov-inner {
@@ -545,7 +546,7 @@ body {
 }
 .overlay-block .ov-inner.info .btn-cont {
   width: 100%;
-  height: 5.2597402597em;
+  height: 4.6285714286em;
 }
 @media (min-width: 1025px) {
   .overlay-block .ov-inner.info .btn-cont {
@@ -566,7 +567,7 @@ body {
 .lets {
   position: absolute;
   left: 50%;
-  top: -40%;
+  top: -20%;
   transform: translate(-50%, 0);
   white-space: nowrap;
   color: #fff;
@@ -576,13 +577,14 @@ body {
 @media (min-width: 1025px) {
   .lets {
     font-size: 0.6em;
+    top: -40%;
   }
 }
 
 .form {
   position: relative;
   text-align: center;
-  font-size: 1em;
+  font-size: 0.9em;
   color: rgba(0, 0, 0, 0.75);
 }
 @media (min-width: 1025px) {
@@ -827,7 +829,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url(../images/loader.gif) center no-repeat;
+  background: url(../images/loader.png) center no-repeat;
 }
 
 .orientation-pop {
@@ -1001,7 +1003,7 @@ body {
   margin: -32px 0 0 -32px;
   width: 64px;
   height: 64px;
-  background: url(../images/loader.gif) no-repeat;
+  background: url(../images/loader.png) no-repeat;
 }
 .video-js .vjs-control-bar {
   left: 3%;

@@ -61,7 +61,10 @@ export let PlayerView=Backbone.View.extend({
   this.listenTo(app.get('aggregator'),'main:toggle',this.setPausable);
   this.listenTo(app.get('aggregator'),'page:state',this.freeze);
 
-  //this.player.on('qualitySelected',()=>!this.firstTime?this.play(/*{time:this.currTime}*/):'');
+  /*this.player.on('qualitySelected',()=>{
+
+       //!this.firstTime
+      });*/
  },
  freeze:function(){
   if(document.visibilityState==='hidden')
@@ -102,11 +105,10 @@ export let PlayerView=Backbone.View.extend({
 
   for(let i=0;i<this.qual.length;i++)
   {
-   this.qual[i].src=this.phase.rewind?src:src[i];
+   this.qual[i].src=_.template(data.srcData.tmpl)({spec:data.srcData.spec[i],src:src});
    if(i===ind)
     this.qual[i].selected=true;
   }
-
   //if(this.phase.goOn)
    //this.player.src(this.qual);else
    this.smoothify(()=>this.player.src(this.qual));
